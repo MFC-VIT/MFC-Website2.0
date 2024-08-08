@@ -4,7 +4,7 @@ import Projects from "./sections/Projects";
 function App() {
   return (
     <main className="min-h-screen h-fit w-full bg-dark">
-      <Projects />
+      
       {/* Insert your section here to see it in dev mode.
     Once dev mode is completed, remove the section from here */}
       {/* You can remove the following div section when developing */}
