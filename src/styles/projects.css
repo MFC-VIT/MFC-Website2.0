@@ -1,9 +1,0 @@
-a {
-    transition: transform 0.3s ease-in-out; /* Adjust duration and easing as needed */
-    /* color: white; */
-  }
-  
-  a:hover {
-    transform: translateX(20px);
-  }
-  
