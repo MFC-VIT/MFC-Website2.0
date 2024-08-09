@@ -12,7 +12,7 @@ export const Footer = () => {
     <div className='relative min-h-screen bg-black h-screen'>
        {/*<p className='text-white absolute top-0 left-0 z-40 ml-4'>FORM CODE LIKE THIS </p>*/}
       <div className='absolute bottom-0 w-full bg-black h-screen text-[#E8DED5]'>
-        <div className='flex justify-center space-x-2 py-4 absolute top-[40vh] left-[50%] transform -translate-x-1/2 z-10'>
+        <div className='flex justify-center space-x-2 py-4 mt-[40vh] lg:mt-[0] absolute top-[40vh] left-[50%] transform -translate-x-1/2 z-10 md:mt-[20vh]'>
           <button
             className='w-8 h-8 bg-[url(../assets/images/Vector-2.svg)] bg-no-repeat bg-center bg-contain cursor-pointer'
             aria-label="Vector Image 2"
@@ -42,14 +42,13 @@ export const Footer = () => {
             aria-label="Vector Image 1"
           />
         </div>
-        <div className='text-center text-[24.34rem] font-apex absolute top-[26.2vh] left-[50%] transform -translate-x-1/2 z-20'>
+        <div className='text-center mt-[55vh] lg:mt-[0vh] text-[6rem] md:mt-[28vh] md:text-[15rem] lg:text-[21.34rem] font-apex absolute top-[26.2vh] left-[50%] transform -translate-x-1/2 z-40'>
           FIREFOX
         </div>
         <div className='flex absolute bg-black z-30 justify-between mt-[90vh] px-4 py-2 text-sm'>
-        
-        <p className='ml-[3vw]'>© 2024 Mozilla Firefox Club. All Rights Reserved</p>
-        <p className='ml-[30vw]'>Privacy Policy</p>
-        <p className='ml-[25vw]'>Mozilla Foundation</p>
+        <p className='lg:ml-[3vw] lg:text-[2vh] lg:mt-[0vh]  text-[1vh] ml-[0.5vw] mt-[5vh] md:text-[1.75vh] md:ml-[0.5vh] md:mt-[2vh]'>© 2024 Mozilla Firefox Club. All Rights Reserved</p>
+        <p className='lg:ml-[30vw] lg:text-[2vh] lg:mt-[0vh] text-[1vh] ml-[3vh] mt-[5vh] md:text-[1.75vh] md:ml-[17.5vw] md:mt-[2vh]'>Privacy Policy</p>
+        <p className='lg:ml-[25vw] lg:text-[2vh] lg:mt-[0vh] text-[1vh] ml-[3vh] mt-[5vh] md:text-[1.75vh] md:ml-[19.5vw] md:mt-[2vh]'>Mozilla Foundation</p>
       </div>
     </div>
   </div>
