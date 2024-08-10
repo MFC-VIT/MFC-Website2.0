@@ -14,3 +14,18 @@
   font-family: apex;
   src: url("../assets//fonts/apex-flunkee.ttf");
 }
+
+#message-box::-webkit-scrollbar {
+  display: none;
+}
+
+#message-box {
+  scrollbar-width: none; 
+}
+
+#message-box {
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+}
+
+
