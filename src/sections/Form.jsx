@@ -75,7 +75,7 @@ const InputElement = ({title, id, type})=>{
 
 const SubmitButton = ()=>{
   return (
-    <button className="text-main mt-10 border border-primary py-[14px] max-sm:py-3 px-10 rounded-3xl text-2xl font-apex tracking-wider shadow-[inset_3px_5px_6px_rgba(0,0,0,0.1),inset_-2px_-0.5px_6px_rgba(0,0,0,0.08)] shadow-orange-600  active:translate-y-0.5">
+    <button className="text-main mt-10 border border-primary py-[14px] max-sm:py-3 px-10 rounded-3xl text-2xl max-sm:text-xl font-apex tracking-wider shadow-[inset_3px_5px_6px_rgba(0,0,0,0.1),inset_-2px_-0.5px_6px_rgba(0,0,0,0.08)] shadow-orange-600  active:translate-y-0.5">
       Submit
     </button>
   )
