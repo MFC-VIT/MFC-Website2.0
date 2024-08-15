@@ -48,7 +48,7 @@ const FormElement = ()=>{
       ">
         <div className="sm:flex max-sm:flex-col sm:justify-around gap-10 max-sm:space-y-8">
           <InputElement title="Full Name" type="input" />
-          <InputElement title="Your Email" type="input" />
+          <InputElement title="Your Email" type="email" />
         </div>
         <div>
           <InputElement title="Your Message" id="message-box" type="textarea" />
@@ -63,11 +63,11 @@ const InputElement = ({title, id, type})=>{
   return (
     <div className="flex flex-col w-full gap-1 max-sm:gap-[2px]">
       <label className="font-yoshiro_b text-main text-2xl max-sm:text-xl" onClick={()=>textElement.current.focus()}>{title}</label>
-      {type == "input" 
+      {type == "textarea" 
         ? (
-          <input className="pr-2 bg-transparent outline-none border-b border-primary placeholder:text-orange-400 focus:placeholder-transparent caret-primary text-orange-400 font-yoshiro max-sm:text-sm" placeholder="Type here" id={id} ref={textElement} />
-        ) : (
           <textarea className="pr-2 max-sm:pr-2 bg-transparent outline-none border-b border-primary placeholder:text-orange-400 focus:placeholder-transparent caret-primary text-orange-400 font-yoshiro max-sm:text-sm resize-none" placeholder="Type here" rows={1} id={id} ref={textElement} />
+        ) : (
+          <input className="pr-2 bg-transparent outline-none border-b border-primary placeholder:text-orange-400 focus:placeholder-transparent caret-primary text-orange-400 font-yoshiro max-sm:text-sm" placeholder="Type here" id={id} ref={textElement} type={type} />
         )
       }
     </div>
