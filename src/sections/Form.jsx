@@ -41,10 +41,10 @@ export const Form = () => {
 const FormElement = ()=>{
   return (
     <div className="relative w-[90%] max-w-[680px] max-sm:w-full md:min-h-[275px] border border-primary mt-10 bg-gray-500 bg-opacity-10
-    after:content-[''] after:absolute after:w-1 after:h-2 after:-start-[2px] after:z-10 after:top-[40%] after:bg-primary
+    after:content-[''] after:absolute after:w-1 after:h-2 after:-start-[2.5px] after:z-10 after:top-[40%] after:bg-primary
     ">
       <div className="w-full h-full relative flex flex-col justify-around p-10 max-sm:px-5 max-sm:py-8 gap-10
-      after:content-[''] after:absolute after:w-2 after:h-1 after:start-[30%] after:z-10 after:-bottom-[2px] after:bg-primary
+      after:content-[''] after:absolute after:w-2 after:h-1 after:start-[30%] after:z-10 after:-bottom-[2.5px] after:bg-primary
       ">
         <div className="sm:flex max-sm:flex-col sm:justify-around gap-10 max-sm:space-y-8">
           <InputElement title="Full Name" type="input" />
