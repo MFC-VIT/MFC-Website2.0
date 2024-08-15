@@ -14,3 +14,92 @@
   font-family: apex;
   src: url("../assets//fonts/apex-flunkee.ttf");
 }
+
+.mr-5px {
+  margin-right: 15px;
+}
+.ml-5px {
+  margin-left: 15px;
+}
+
+
+/* Default styles for boxes */
+.box {
+  padding: 16px;
+}
+
+/* Default styles for mobile devices */
+.hr-line {
+  width: 100px;
+  min-width: 150px; /* Ensures the hr line doesn't get too small */
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .hr-line {
+    width: 200px;
+    min-width: unset; /* Reset the min-width for larger screens */
+  }
+  .box {
+    padding: 24px;
+  }
+}
+
+/* Large devices (desktops/laptops, 1024px and up) */
+@media (min-width: 1024px) {
+  .hr-line {
+    width: 300px;
+  }
+  .box {
+    padding: 32px;
+  }
+}
+
+/* Extra large devices (large desktops, 1280px and up) */
+@media (min-width: 1280px) {
+  .hr-line {
+    width: 400px;
+  }
+  .box {
+    padding: 40px;
+  }
+}
+
+/* Very large devices (4K monitors, 1440px and up) */
+@media (min-width: 1440px) {
+  .hr-line {
+    width: 500px;
+  }
+  .box {
+    padding: 48px;
+  }
+}
+
+/* Adjust box sizes and borders on mobile devices */
+@media (max-width: 767px) {
+  .box {
+    padding: 12px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border-width: 2px;
+  }
+  
+  /* Remove bottom border for the first box */
+  .box:first-child {
+    border-bottom: none;
+  }
+
+  /* Remove top border for the other box */
+  .box + .box {
+    border-top: none;
+  }
+
+  /* Ensure hr line has a minimum width */
+  .hr-line {
+    width: 200px; /* Minimum width on small screens */
+  }
+}
+
+
+
+

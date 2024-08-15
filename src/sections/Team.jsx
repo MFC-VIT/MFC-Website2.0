@@ -1,3 +1,8 @@
+import Toplayout from "../components/TopTeam";
+
 export const Team = () => {
-  return <div>Team</div>;
+  return <div>
+
+    <Toplayout/>
+  </div>;
 };
