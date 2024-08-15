@@ -1,4 +1,5 @@
 import images from "./constants/images";
+import { Form } from "./sections/Form";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <h1 className=" font-apex text-4xl text-primary">DEV MODE</h1>
         <p className="text-main font-yoshiro">Sample Test</p>
       </div>
+      <Form />
     </main>
   );
 }

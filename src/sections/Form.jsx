@@ -1,6 +1,6 @@
 import images from "../constants/images";
 import PropTypes from 'prop-types'
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 export const Form = () => {
 
@@ -59,14 +59,15 @@ const FormElement = ()=>{
 }
 
 const InputElement = ({title, id, type})=>{
+  const textElement = useRef(null);
   return (
     <div className="flex flex-col w-full gap-1 max-sm:gap-[2px]">
-      <label className="font-yoshiro_b text-main text-2xl max-sm:text-xl">{title}</label>
+      <label className="font-yoshiro_b text-main text-2xl max-sm:text-xl" onClick={()=>textElement.current.focus()}>{title}</label>
       {type == "input" 
         ? (
-          <input className="pr-2 bg-transparent outline-none border-b border-primary placeholder:text-orange-400 focus:placeholder-transparent caret-primary text-orange-400 font-yoshiro max-sm:text-sm" placeholder="Type here" id={id} />
+          <input className="pr-2 bg-transparent outline-none border-b border-primary placeholder:text-orange-400 focus:placeholder-transparent caret-primary text-orange-400 font-yoshiro max-sm:text-sm" placeholder="Type here" id={id} ref={textElement} />
         ) : (
-          <textarea className="pr-2 max-sm:pr-2 bg-transparent outline-none border-b border-primary placeholder:text-orange-400 focus:placeholder-transparent caret-primary text-orange-400 font-yoshiro max-sm:text-sm resize-none" placeholder="Type here" rows={1} id={id} />
+          <textarea className="pr-2 max-sm:pr-2 bg-transparent outline-none border-b border-primary placeholder:text-orange-400 focus:placeholder-transparent caret-primary text-orange-400 font-yoshiro max-sm:text-sm resize-none" placeholder="Type here" rows={1} id={id} ref={textElement} />
         )
       }
     </div>
@@ -75,7 +76,7 @@ const InputElement = ({title, id, type})=>{
 
 const SubmitButton = ()=>{
   return (
-    <button className="text-main mt-10 border border-primary py-[14px] max-sm:py-3 px-10 rounded-3xl text-2xl max-sm:text-xl font-apex tracking-wider shadow-[inset_3px_5px_6px_rgba(0,0,0,0.1),inset_-2px_-0.5px_6px_rgba(0,0,0,0.08)] shadow-orange-600  active:translate-y-0.5">
+    <button className="text-main mt-10 max-md:mt-8 border border-primary py-[14px] max-sm:py-3 max-md:py-[12px] px-10 rounded-3xl text-2xl max-md:text-xl font-apex tracking-wider shadow-[inset_3px_5px_6px_rgba(0,0,0,0.1),inset_-2px_-0.5px_6px_rgba(0,0,0,0.08)] shadow-orange-600  active:translate-y-0.5">
       Submit
     </button>
   )
