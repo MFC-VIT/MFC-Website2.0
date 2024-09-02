@@ -1,13 +1,14 @@
-
-import React from "react";
-import Blogs from "../src/sections/Blogs"
+import images from "./constants/images";
+import { Hero } from "./sections/Hero";
+import { Footer } from "./sections/Footer";
 
 function App() {
   return (
-    <main className="min-h-screen h-fit w-full bg-dark flex flex-wrap justify-center gap-4 p-4">
+    <>
+      <Hero/>
       <Blogs/>
-    </main>
-  );
-}
+      <Footer/>
+    </>
 
+}
 export default App;
