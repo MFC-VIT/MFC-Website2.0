@@ -6,9 +6,9 @@ function App() {
   return (
     <>
       <Hero/>
+      <Blogs/>
       <Footer/>
     </>
-  );
-}
 
+}
 export default App;
