@@ -103,3 +103,47 @@
 
 
 
+
+
+#message-box::-webkit-scrollbar {
+  display: none;
+}
+
+#message-box {
+  scrollbar-width: none; 
+}
+
+#message-box {
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+}
+=======
+@font-face {
+  font-family: teko;
+  src: url("../assets//fonts/Teko-Light.ttf");
+}
+
+.img11:hover{
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  --s: 15px;
+  --t: 2px; 
+  --g: 10px; 
+  padding: calc(var(--g) + var(--t));
+  outline: var(--t) solid #E8DED5;
+  outline-offset: calc(-1*var(--t));
+  -webkit-mask:
+    conic-gradient(at var(--s) var(--s),#0000 75%,#000 0)
+    0 0/calc(100% - var(--s)) calc(100% - var(--s)),
+    linear-gradient(#000 0 0) content-box;
+    transition: 0.4s;
+    cursor: pointer;
+
+}
+.img11:active {
+  outline-offset: calc(var(--g)/-1);
+}
+
+
+
+

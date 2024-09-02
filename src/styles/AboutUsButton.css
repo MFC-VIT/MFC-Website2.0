@@ -1,0 +1,29 @@
+.about-button {
+    background-color: #462907;
+    color: #ff6d00;
+    border-radius: 50%;
+    padding: 6vh 2.5vh;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 700;
+    margin-top: 10vh;
+    font-family: 'yoshiro';
+}
+
+@media (max-width: 768px) {
+    .about-button {
+        font-size: 0.7em;
+        padding: 2vh;
+        width: 14vh;
+        height: 14vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-button {
+        font-size: 0.5em;
+        width: 10vh;
+        height: 10vh;
+        margin-top: 5vh;
+    }
+}
