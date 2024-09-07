@@ -1,9 +1,10 @@
+import Toplayout from "../components/TopTeam";
 import Marquee from "../components/Marquee";
-
-function Team() {
-  return (
+export const Team = () => {
+  return <div>
+    <Toplayout/>
     <Marquee />
-  );
+  </div>;
 };
 
 export default Team;
