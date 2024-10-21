@@ -64,7 +64,7 @@ export const Footer = () => {
             <img src={medium} className='md:size-8 size-6 transition-all duration-200 hover:scale-150 max-md:hover:scale-125 hover:mx-2 max-md:hover:mx-1' />
           </a>
         </div>
-        <div className='text-center text-[22vw] p-0 m-0 leading-none font-apex text-[#E8DED5] cursor-e-resize' id="firefox">
+        <div className='text-center text-[22vw] p-0 m-0 leading-none font-apex text-[#E8DED5]' id="firefox">
           FIREFOX
         </div>
         <div className='flex justify-around px-4 text-sm text-[#E8DED5] py-2'>
