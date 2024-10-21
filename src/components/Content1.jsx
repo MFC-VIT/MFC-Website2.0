@@ -1,12 +1,12 @@
-import React from 'react';
+import React from "react";
 
 export default function Content1() {
   return (
-    <div className='flex flex-col items-center justify-center min-h-screen'>
-      <h1 className='text-[#E8DED5] text-[5vh] sm:ml-0 font-normal lg:text-[16.2275600505689vh] font-apex text-center md:text-[12.5vh]'>
+    <div className="flex flex-col items-center justify-center min-h-screen">
+      <h1 className="text-[#E8DED5] text-[5vh] sm:ml-0 font-normal lg:text-[16.2275600505689vh] font-apex text-center md:text-[12.5vh]">
         MOZILLA FIREFOX
       </h1>
-      <p className='text-[#E8DED5] font-bold text-[3.3739583333333335vw] lg:text-[2vw] font-yoshiro_b text-center mt-4'>
+      <p className="text-[#E8DED5] font-bold text-[3.3739583333333335vw] lg:text-[2vw] font-yoshiro_b text-center mt-4">
         Firefox Answers To No One But To You
       </p>
     </div>
