@@ -1,20 +1,14 @@
 import { useEffect } from 'react';
-import facebook from '../assets/images/Vector-2.svg';
-import instagram from '../assets/images/Vector-3.svg';
-import youtube from '../assets/images/Vector-4.svg';
-import github from '../assets/images/Vector-5.svg';
-import linkedin from '../assets/images/Vector-6.svg';
-import twitter from '../assets/images/Vector-7.svg';
-import medium from '../assets/images/Vector-1.svg'
+import { icons } from '../constants/images';
 
 const socials = [
-  { src: facebook, href: "https://www.facebook.com/mfcvit/" },
-  { src: instagram, href: "https://www.instagram.com/mfc_vit/" },
-  { src: youtube, href: "https://www.youtube.com/c/MozillaFirefoxClubVIT" },
-  { src: github, href: "https://github.com/MFC-VIT" },
-  { src: linkedin, href: "https://www.linkedin.com/company/mfcvit/mycompany/" },
-  { src: twitter, href: "https://x.com/mfc_vit" },
-  { src: medium, href: "https://medium.com/mozilla-firefox-club/tagged/mfcvit" },
+  { src: icons.facebook, href: "https://www.facebook.com/mfcvit/" },
+  { src: icons.instagram, href: "https://www.instagram.com/mfc_vit/" },
+  { src: icons.youtube, href: "https://www.youtube.com/c/MozillaFirefoxClubVIT" },
+  { src: icons.github, href: "https://github.com/MFC-VIT" },
+  { src: icons.linkedin, href: "https://www.linkedin.com/company/mfcvit/mycompany/" },
+  { src: icons.twitter, href: "https://x.com/mfc_vit" },
+  { src: icons.medium, href: "https://medium.com/mozilla-firefox-club/tagged/mfcvit" },
 ]
 
 const useDynamicText = (id)=>{
