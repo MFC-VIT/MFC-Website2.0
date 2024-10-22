@@ -43,25 +43,25 @@ export const Footer = () => {
       <div className='relative w-full h-full'>
         <div className='flex justify-center space-x-2 py-4 absolute -top-2 max-lg:-top-8 max-sm:-top-10 left-0 right-0 mt-2'>
           <a href='https://www.facebook.com/mfcvit/' target='_blank' className='h-fit'>
-            <img src={facebook} className='md:size-8 size-6 transition-all duration-200 hover:scale-150 max-md:hover:scale-125 hover:mx-2 max-md:hover:mx-1' />
+            <img src={facebook} className='md:size-8 size-6 transition-all duration-200 hover:scale-150 max-md:hover:scale-125 hover:mx-2 max-md:hover:mx-1 active:scale-100' />
           </a>
           <a href='https://www.instagram.com/mfc_vit/' target='_blank' className='h-fit'>
-            <img src={instagram} className='md:size-8 size-6 transition-all duration-200 hover:scale-150 max-md:hover:scale-125 hover:mx-2 max-md:hover:mx-1' />
+            <img src={instagram} className='md:size-8 size-6 transition-all duration-200 hover:scale-150 max-md:hover:scale-125 hover:mx-2 max-md:hover:mx-1 active:scale-100' />
           </a>
           <a href='https://www.youtube.com/c/MozillaFirefoxClubVIT' target='_blank' className='h-fit'>
-            <img src={youtube} className='md:size-8 size-6 transition-all duration-200 hover:scale-150 max-md:hover:scale-125 hover:mx-2 max-md:hover:mx-1' />
+            <img src={youtube} className='md:size-8 size-6 transition-all duration-200 hover:scale-150 max-md:hover:scale-125 hover:mx-2 max-md:hover:mx-1 active:scale-100' />
           </a>
           <a href='https://github.com/MFC-VIT' target='_blank' className='h-fit'>
-            <img src={github} className='md:size-8 size-6 transition-all duration-200 hover:scale-150 max-md:hover:scale-125 hover:mx-2 max-md:hover:mx-1' />
+            <img src={github} className='md:size-8 size-6 transition-all duration-200 hover:scale-150 max-md:hover:scale-125 hover:mx-2 max-md:hover:mx-1 active:scale-100' />
           </a>
           <a href='https://www.linkedin.com/company/mfcvit/mycompany/' target='_blank' className='h-fit'>
-            <img src={linkedin} className='md:size-8 size-6 transition-all duration-200 hover:scale-150 max-md:hover:scale-125 hover:mx-2 max-md:hover:mx-1' />
+            <img src={linkedin} className='md:size-8 size-6 transition-all duration-200 hover:scale-150 max-md:hover:scale-125 hover:mx-2 max-md:hover:mx-1 active:scale-100' />
           </a>
           <a href='https://x.com/mfc_vit' target='_blank' className='h-fit'>
-            <img src={twitter} className='md:size-8 size-6 transition-all duration-200 hover:scale-150 max-md:hover:scale-125 hover:mx-2 max-md:hover:mx-1' />
+            <img src={twitter} className='md:size-8 size-6 transition-all duration-200 hover:scale-150 max-md:hover:scale-125 hover:mx-2 max-md:hover:mx-1 active:scale-100' />
           </a>
           <a href='https://medium.com/mozilla-firefox-club/tagged/mfcvit' target='_blank' className='h-fit'>
-            <img src={medium} className='md:size-8 size-6 transition-all duration-200 hover:scale-150 max-md:hover:scale-125 hover:mx-2 max-md:hover:mx-1' />
+            <img src={medium} className='md:size-8 size-6 transition-all duration-200 hover:scale-150 max-md:hover:scale-125 hover:mx-2 max-md:hover:mx-1 active:scale-100' />
           </a>
         </div>
         <div className='text-center text-[22vw] p-0 m-0 leading-none font-apex text-[#E8DED5]' id="firefox">
