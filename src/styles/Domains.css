@@ -32,8 +32,8 @@
 
 .our-domains-font {
   font-family: 'apex';
-  color: #E5D2C4;
-  font-size: 5.5vw;
+  color: #E8DED5;
+  font-size: 4vw;
   max-width: 100%;
   overflow: hidden;
   text-align: center;
@@ -158,11 +158,10 @@ img {
 
 .rectangle {
   position: absolute;
-  width:4px;
+  width: 4px;
   height: 9px;
   background: linear-gradient(176.73deg, #FE903E 11.48%, #DF814C 58.4%, #AA5322 106.76%);
 }
-
 
 .rectangle-1 {
   left: 925px;
