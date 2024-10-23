@@ -1,15 +1,5 @@
 import { useEffect } from 'react';
-import { icons } from '../constants/images';
-
-const socials = [
-  { src: icons.facebook, href: "https://www.facebook.com/mfcvit/" },
-  { src: icons.instagram, href: "https://www.instagram.com/mfc_vit/" },
-  { src: icons.youtube, href: "https://www.youtube.com/c/MozillaFirefoxClubVIT" },
-  { src: icons.github, href: "https://github.com/MFC-VIT" },
-  { src: icons.linkedin, href: "https://www.linkedin.com/company/mfcvit/mycompany/" },
-  { src: icons.twitter, href: "https://x.com/mfc_vit" },
-  { src: icons.medium, href: "https://medium.com/mozilla-firefox-club/tagged/mfcvit" },
-]
+import { socials } from '../constants';
 
 const useDynamicText = (id)=>{
   useEffect(()=>{
