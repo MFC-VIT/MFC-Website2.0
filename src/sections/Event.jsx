@@ -1,6 +1,7 @@
 import PropTypes from "prop-types"
 import { BsArrowUpRightCircle } from "react-icons/bs";
 import { events } from "../constants/events";
+import { links } from "../constants";
 
 const Events = () => {
   return (  
@@ -13,7 +14,7 @@ const Events = () => {
           )
         })}
       </div>
-      <SeeMore link={"#events"} />
+      <SeeMore link={links.instagram} />
     </div>
   );
 }
