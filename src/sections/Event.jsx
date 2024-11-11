@@ -31,14 +31,13 @@ const Events = () => {
 
 const Event = ({ title, description, doe, image, link }) => {
   return (
-    <div className="flex max-sm:flex-col justify-between border-[3px] border-y-orange-700 border-x-orange-600 rounded-2xl p-4 min-h-64 gap-5 max-sm:gap-1 bg-black hover:shadow-md transition-all duration-300 hover:sm:shadow-orange-700 sm:hover:scale-105">
-      <div className="flex justify-center items-center">
-        
-        {image && <img
+    <div className="flex max-sm:flex-col justify-between max-sm:justify-center border-[3px] border-y-orange-700 border-x-orange-600 rounded-2xl p-4 px-5 min-h-64 gap-5 max-sm:gap-1 bg-black hover:shadow-md transition-all duration-300 hover:sm:shadow-orange-700 sm:hover:scale-105">
+      {image && <div className="flex justify-center items-center">
+        <img
           src={image}
           className="min-h-36 min-w-36 max-sm:max-h-14 max-sm:max-w-14"
-        />}
-      </div>
+        />
+      </div>}
       <div className="text-white gap-1 max-sm:gap-0 flex flex-col relative">
         <div className="font-apex mb-1 tracking-wider text-primary font-bold text-3xl max-md:text-2xl">
           {title}
