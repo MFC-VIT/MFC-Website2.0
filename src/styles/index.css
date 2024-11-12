@@ -117,7 +117,17 @@
   -ms-overflow-style: none;
   overflow: -moz-scrollbars-none;
 }
-=======
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+}
+  
 @font-face {
   font-family: teko;
   src: url("../assets//fonts/Teko-Light.ttf");
