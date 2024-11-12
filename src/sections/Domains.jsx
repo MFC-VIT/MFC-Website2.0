@@ -69,7 +69,7 @@ const DomainBox = ({ domain, onHover, isActive, onClick }) => {
       onMouseLeave={handleMouseLeave}
       onMouseEnter={handleMouseEnter}
       style={{ transformStyle: "preserve-3d", transform }}
-      className={`relative main-box p-4 flex flex-col justify-center items-center ${isActive ? 'border-orange-500' : 'border-gray-700'}`}
+      className={`relative main-box p-4 flex flex-col justify-center items-center bg-dark ${isActive ? 'border-orange-500' : 'border-gray-700'}`}
       onClick={() => onClick(domain)}
     >
       <img src={domain.imageSrc} alt={domain.name} className="img w-full h-auto object-contain" />
@@ -201,7 +201,7 @@ const Domains = () => {
   }, [selectedDomain]);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen relative text-white p-5 layout-container">
+    <div className="flex flex-col items-center justify-center min-h-screen relative bg-dark text-white p-5 layout-container">
       {isLoading && (
         <div className="text-2xl font-bold">Loading...</div>
       )}
@@ -237,7 +237,7 @@ const Domains = () => {
             {!isMobile && (
               <p
                 ref={textRef}
-                className="text-lg text-center mx-4"
+                className="text-center mx-4"
               >
                 {selectedDomain
                   ? selectedDomain.description

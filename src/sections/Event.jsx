@@ -12,7 +12,7 @@ const truncate = (text, length) => {
 const Events = () => { 
   const {setIsOpen} = useContext(ModalContext);
   return (
-    <div className="flex flex-col items-center" id="events">
+    <div className="flex flex-col items-center my-5" id="events">
       <div className="text-main text-6xl max-md:text-5xl max-sm:text-4xl font-apex">
         Events at MFC
       </div>

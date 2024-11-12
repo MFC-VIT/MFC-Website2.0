@@ -102,11 +102,11 @@ const Projects = () => {
               onMouseLeave={() => setHoveredProjectId(null)}
               ref={(el) => (projectRefs.current[index] = el)}
             >
-              <div className="flex flex-row items-center justify-between">
+              <div className="flex  items-center justify-between">
                 <div className=" w-full">
                   <a
                     href={item.projectLink}
-                    className={`content flex flex-row items-center py-[22px] sm:px-7 overflow-x-hidden gap-2 bg-clip-text text-transparent`}
+                    className={`content flex  items-center py-[22px] sm:px-7 overflow-x-hidden gap-2 bg-clip-text text-transparent`}
                     target="blank"
                   >
                     <p className="font-yoshiro md:tracking-wide overflow-x-hidden">{`{ ${item.projectNumber} }`}</p>

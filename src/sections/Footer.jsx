@@ -34,7 +34,7 @@ const useDynamicText = (id)=>{
 export const Footer = () => {
   useDynamicText("firefox")
   return (
-      <div className='relative w-full h-full'>
+      <div className='relative w-full h-full mt-2'>
         <div className='flex justify-center space-x-2 py-4 absolute -top-2 max-lg:-top-8 max-sm:-top-10 left-0 right-0 mt-2'>
           {socials.map((social, index)=>(
             <a href={social.href} target='_blank' className='h-fit' key={index}>
