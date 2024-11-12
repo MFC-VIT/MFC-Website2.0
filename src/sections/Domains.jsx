@@ -252,7 +252,7 @@ const Domains = () => {
               onClick={handleDomainClick}
             />
           </div>
-          {hoveredDomain && (
+          {/* {hoveredDomain && (
             <div className="flex justify-center">
               <button
                 onClick={handleMoreInfoClick}
@@ -262,7 +262,7 @@ const Domains = () => {
                 More Info
               </button>
             </div>
-          )}
+          )} */}
           {openDrawer && (
             <DragCloseDrawer open={openDrawer} setOpen={setOpenDrawer} domainContent={{ title: selectedDomain.name, description: drawerTexts[selectedDomain.name] }}>
               <h2 className="text-2xl font-bold text-neutral-200">{selectedDomain.name} Details</h2>
