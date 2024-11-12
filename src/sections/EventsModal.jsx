@@ -21,7 +21,7 @@ const EventsModal = ()=>{
         })}
       </div>
     </div>
-    <div className="fixed z-50 md:top-5 md:right-3 max-md:right-1.5 max-md:bottom-5 rounded-full bg-neutral-900 border-2 border-neutral-800 shadow-md shadow-neutral-950 hover:scale-105 active:scale-100 active:shadow-none transition-all duration-200 p-2 max-md:p-1.5 size-fit group hover:border-orange-500">
+    <div className="fixed z-50 md:right-3 max-md:right-1.5 top-5 rounded-full bg-neutral-900 border-2 border-neutral-800 shadow-md shadow-neutral-950 hover:scale-105 active:scale-100 active:shadow-none transition-all duration-200 p-2 max-md:p-1.5 size-fit group hover:border-orange-500">
       <IoClose className="transition-all duration-200 text-neutral-300 group-hover:text-orange-500 text-2xl max-md:text-xl cursor-pointer" onClick={()=>setIsOpen(false)} />
     </div>
   </Modal>
