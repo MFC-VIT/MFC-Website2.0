@@ -13,9 +13,9 @@ function App() {
       <Hero />
       <Projects />
       <Events />
+      <EventsModal />
       <Blogs />
       <Form />
-      <EventsModal />
       <Footer />
     </div>
   );
