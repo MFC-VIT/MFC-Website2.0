@@ -38,7 +38,7 @@ export const Form = () => {
   }, [])
 
   return (
-    <section className="w-full min-h-screen flex justify-center">
+    <section className="w-full min-h-screen flex justify-center my-5">
       <main className='lg:w-[60%] lg:min-w-[800px] flex flex-col items-center p-8 max-sm:py-2 max-sm:px-5 relative'>
           <div className='lg:text-7xl md:text-6xl sm:text-5xl text-[38px] font-apex text-main text-center'>
               CONNECT WITH FIREFOX

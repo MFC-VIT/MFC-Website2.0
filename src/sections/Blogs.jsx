@@ -25,7 +25,7 @@ const useBlogs = (page, limit)=>{
 const Blogs = () => {
   const { blogs, loading } = useBlogs(1, 5);
   return (
-    <div className="flex flex-col items-center justify-center p-4">
+    <div className="flex flex-col items-center justify-center p-4 my-5">
       <h1 className="font-apex text-4xl sm:text-5xl md:text-6xl lg:text-[5vw] text-white mb-8">
         BLOGS
       </h1>

@@ -53,7 +53,7 @@
   flex-wrap: wrap;
 }
 
-img {
+.img {
   max-width: 100%;
   height: auto;
   object-fit: contain;
@@ -70,10 +70,6 @@ img {
   align-items: center;
   position: relative;
   overflow: hidden;
-}
-
-.text-lg {
-  text-align: center;
 }
 
 .section-container {
@@ -110,23 +106,23 @@ img {
 }
 
 .line-1 {
-  top: 411px;
-  left: calc(84% - 200px);
-  width: 100px;
-  transform: rotate(19.5deg);
+  top: 25.25em;
+  left: calc(84% - 20em);
+  width: 16.6em;
+  transform: rotate(9deg);
 }
 
 .line-2 {
-  top: 415.25px;
-  right: calc(83.85% - 200px);
-  width: 87px;
-  transform: rotate(-27.5deg);
+  top: 25.25em;
+  right: calc(84% - 20em);
+  width: 16.6em;
+  transform: rotate(-9deg);
 }
 
 .line-3 {
-  top: 273px;
-  right: calc(65% - 200px);
-  width: 40px;
+  top: 17.7em;
+  right: calc(65% - 15.4em);
+  width: 2.5em;
   transform: rotate(90deg);
 }
 
