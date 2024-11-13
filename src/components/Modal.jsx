@@ -32,7 +32,7 @@ export const Modal = ({ children, isOpen, setIsOpen }) => {
   }, [isOpen]);
 
   return (
-    <div className={`w-full h-screen fixed inset-0 z-0 bg-black bg-opacity-50 backdrop-blur-lg ${isOpen ? "flex" : "hidden"} justify-center items-center px-5`} onClick={()=>setIsOpen(false)}>
+    <div className={`w-full h-screen fixed inset-0 z-50 bg-black bg-opacity-50 backdrop-blur-lg ${isOpen ? "flex" : "hidden"} justify-center items-center px-5`} onClick={()=>setIsOpen(false)}>
       <div className="relative size-full overflow-y-auto no-scrollbar">{children}</div>
     </div>
   )

@@ -105,7 +105,7 @@ const Blogcards = ({
                 name={authorName}
                 color="dark"
                 type={authorName ? "name" : "icon"}
-                loading={authorName}
+                loading={authorName ? true: false}
               />
             )}
             <div className="ml-2 sm:ml-4 font-apex flex flex-col justify-start items-center">
