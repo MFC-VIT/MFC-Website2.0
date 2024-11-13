@@ -9,7 +9,7 @@ const Marquee = () => {
       {
         name: "Amit Priyadharshi",
         designation: "Chairperson",
-        image: "../assets/images/board/22-23/chair.webp",
+        image: "/images/board/22-23/chair.webp",
         socialLinks: {
           linkedin: "#",
           github: "#",
@@ -19,7 +19,7 @@ const Marquee = () => {
       {
         name: "Ishaan Rejra",
         designation: "Vice Chairperson",
-        image: "../assets/images/board/22-23/vc.webp",
+        image: "/images/board/22-23/vc.webp",
         socialLinks: {
           linkedin: "#",
           github: "#",
@@ -29,7 +29,7 @@ const Marquee = () => {
       {
         name: "Animesh Verma",
         designation: "General Secretary",
-        image: "../assets/images/board/22-23/gensec.webp",
+        image: "/images/board/22-23/gensec.webp",
         socialLinks: {
           linkedin: "#",
           github: "#",
@@ -39,7 +39,7 @@ const Marquee = () => {
       {
         name: "Yash Sinha",
         designation: "Co-Secretary",
-        image: "../assets/images/board/22-23/cosec.webp",
+        image: "/images/board/22-23/cosec.webp",
         socialLinks: {
           linkedin: "#",
           github: "#",
@@ -49,7 +49,7 @@ const Marquee = () => {
       {
         name: "Vanshika Nehra",
         designation: "Technical Chair",
-        image: "../assets/images/board/22-23/tech.webp",
+        image: "/images/board/22-23/tech.webp",
         socialLinks: {
           linkedin: "#",
           github: "#",
@@ -59,7 +59,7 @@ const Marquee = () => {
       {
         name: "Reovwin John",
         designation: "Creative Chair",
-        image: "../assets/images/board/22-23/creative.webp",
+        image: "/images/board/22-23/creative.webp",
         socialLinks: {
           linkedin: "#",
           github: "#",
@@ -69,7 +69,7 @@ const Marquee = () => {
       {
         name: "Sayak Mukherjee",
         designation: "Editorial Chair",
-        image: "../assets/images/board/22-23/editorial.webp",
+        image: "/images/board/22-23/editorial.webp",
         socialLinks: {
           linkedin: "#",
           github: "#",
@@ -79,7 +79,7 @@ const Marquee = () => {
       {
         name: "Aryavardhan Modi",
         designation: "Projects Chair",
-        image: "../assets/images/board/22-23/projects.webp",
+        image: "/images/board/22-23/projects.webp",
         socialLinks: {
           linkedin: "#",
           github: "#",
@@ -89,7 +89,7 @@ const Marquee = () => {
       {
         name: "Yash Raj Mani",
         designation: "Research and Development Chair",
-        image: "../assets/images/board/22-23/r&d.webp",
+        image: "/images/board/22-23/r&d.webp",
         socialLinks: {
           linkedin: "#",
           github: "#",
@@ -99,7 +99,7 @@ const Marquee = () => {
       {
         name: "Ann Mary John",
         designation: "Outreach Chair",
-        image: "../assets/images/board/22-23/outreach.webp",
+        image: "/images/board/22-23/outreach.webp",
         socialLinks: {
           linkedin: "#",
           github: "#",
@@ -109,7 +109,7 @@ const Marquee = () => {
       {
         name: "Priyanka Kumari",
         designation: "ML Mentor",
-        image: "../assets/images/board/22-23/ml.webp",
+        image: "/images/board/22-23/ml.webp",
         socialLinks: {
           linkedin: "#",
           github: "#",
@@ -119,7 +119,7 @@ const Marquee = () => {
       {
         name: "Kartikey Srivastava",
         designation: "Media Mentor",
-        image: "../assets/images/board/22-23/media.webp",
+        image: "/images/board/22-23/media.webp",
         socialLinks: {
           linkedin: "#",
           github: "#",
@@ -129,7 +129,7 @@ const Marquee = () => {
       {
         name: "Manya Garg",
         designation: "UI UX Mentor",
-        image: "../assets/images/board/22-23/ui-ux.webp",
+        image: "/images/board/22-23/ui-ux.webp",
         socialLinks: {
           linkedin: "#",
           github: "#",
@@ -141,7 +141,7 @@ const Marquee = () => {
       {
         name: "Prateek Balaji",
         designation: "Chairperson",
-        image: "../assets/images/board/24-25/chair.webp",
+        image: "/images/board/24-25/chair.webp",
         socialLinks: {
           linkedin: "https://www.linkedin.com/in/prateek-balaji/",
           github: "#",
@@ -151,7 +151,7 @@ const Marquee = () => {
       {
         name: "Kartikey Bhatnagar",
         designation: "Vice Chairperson",
-        image: "../assets/images/board/24-25/vc.webp",
+        image: "/images/board/24-25/vc.webp",
         socialLinks: {
           linkedin: "https://in.linkedin.com/in/kartikey-bhatnagar",
           github: "#",
@@ -161,7 +161,7 @@ const Marquee = () => {
       {
         name: "Naisa Gupta",
         designation: "General Secretary",
-        image: "../assets/images/board/24-25/gensec.webp",
+        image: "/images/board/24-25/gensec.webp",
         socialLinks: {
           linkedin: "https://in.linkedin.com/in/naisa-gupta-1b020a1b9",
           github: "#",
@@ -171,7 +171,7 @@ const Marquee = () => {
       {
         name: "Trisha Paul",
         designation: "Co-Secretary",
-        image: "../assets/images/board/24-25/cosec.webp",
+        image: "/images/board/24-25/cosec.webp",
         socialLinks: {
           linkedin:
             "https://in.linkedin.com/in/trisha-paul-929964235?trk=people-guest_people_search-card",
@@ -182,7 +182,7 @@ const Marquee = () => {
       {
         name: "Vedik Agarwal",
         designation: "Technical Chair",
-        image: "../assets/images/board/24-25/tech.webp",
+        image: "/images/board/24-25/tech.webp",
         socialLinks: {
           linkedin: "https://in.linkedin.com/in/vedik-agarwal",
           github: "#",
@@ -192,7 +192,7 @@ const Marquee = () => {
       {
         name: "Aditya Aren",
         designation: "Project Head",
-        image: "../assets/images/board/24-25/project.webp",
+        image: "/images/board/24-25/project.webp",
         socialLinks: {
           linkedin:
             "https://in.linkedin.com/in/aditya-aren-913893235?trk=public_post_feed-actor-name",
@@ -203,7 +203,7 @@ const Marquee = () => {
       {
         name: "Siddhesh Fuladi",
         designation: "Management Head",
-        image: "../assets/images/board/24-25/management.webp",
+        image: "/images/board/24-25/management.webp",
         socialLinks: {
           linkedin: "https://in.linkedin.com/in/siddhesh-fuladi",
           github: "#",
@@ -213,7 +213,7 @@ const Marquee = () => {
       {
         name: "Ayush Patil",
         designation: "Design Head",
-        image: "../assets/images/board/24-25/design.webp",
+        image: "/images/board/24-25/design.webp",
         socialLinks: {
           linkedin: "https://www.linkedin.com/in/ayushp2948/",
           github: "#",
@@ -223,7 +223,7 @@ const Marquee = () => {
       {
         name: "Vaishali Singh",
         designation: "Events Head",
-        image: "../assets/images/board/24-25/events.webp",
+        image: "/images/board/24-25/events.webp",
         socialLinks: {
           linkedin:
             "https://in.linkedin.com/in/vaishali-singh25?trk=public_profile_browsemap",
@@ -234,7 +234,7 @@ const Marquee = () => {
       {
         name: "Stuti Chaudhury",
         designation: "Editorial Head",
-        image: "../assets/images/board/24-25/editorial.webp",
+        image: "/images/board/24-25/editorial.webp",
         socialLinks: {
           linkedin:
             "https://in.linkedin.com/in/stuti-chaudhury-8419a3235?trk=public_profile_browsemap",
@@ -245,7 +245,7 @@ const Marquee = () => {
       {
         name: "Utkarsh Tyagi",
         designation: "Research and Development Head",
-        image: "../assets/images/board/24-25/r&d.webp",
+        image: "/images/board/24-25/r&d.webp",
         socialLinks: {
           linkedin: "https://www.linkedin.com/in/utkarsh-tyagi-/",
           github: "https://github.com/utkarsh-creator",
@@ -255,7 +255,7 @@ const Marquee = () => {
       {
         name: "Nirbhay Tiwari",
         designation: "Publicity Head",
-        image: "../assets/images/board/24-25/publicity.webp",
+        image: "/images/board/24-25/publicity.webp",
         socialLinks: {
           linkedin: "https://in.linkedin.com/in/nirbhay-tiwari-b09817219",
           github: "#",
@@ -265,7 +265,7 @@ const Marquee = () => {
       {
         name: "Hemant Modi",
         designation: "Finance Head",
-        image: "../assets/images/board/24-25/finance.webp",
+        image: "/images/board/24-25/finance.webp",
         socialLinks: {
           linkedin: "https://in.linkedin.com/in/modih",
           github: "#",
@@ -275,7 +275,7 @@ const Marquee = () => {
       {
         name: "Soumyadeep Roy Chowdhury",
         designation: "Outreach Head",
-        image: "../assets/images/board/24-25/outreach.webp",
+        image: "/images/board/24-25/outreach.webp",
         socialLinks: {
           linkedin: "https://in.linkedin.com/in/sdroyc",
           github: "#",
@@ -285,7 +285,7 @@ const Marquee = () => {
       {
         name: "Aditya Prasad",
         designation: "Creative Head",
-        image: "../assets/images/board/24-25/creative.webp",
+        image: "/images/board/24-25/creative.webp",
         socialLinks: {
           linkedin: "https://in.linkedin.com/in/adityaprasad1143",
           github: "#",
@@ -295,7 +295,7 @@ const Marquee = () => {
       {
         name: "Tanisha Ambastha",
         designation: "HR Head",
-        image: "../assets/images/board/24-25/hr.webp",
+        image: "/images/board/24-25/hr.webp",
         socialLinks: {
           linkedin:
             "https://in.linkedin.com/in/tanisha-ambastha-545318237?trk=public_profile_browsemap",
@@ -306,7 +306,7 @@ const Marquee = () => {
       {
         name: "Namah Singhal",
         designation: "UI UX Mentor",
-        image: "../assets/images/board/24-25/ui-ux.webp",
+        image: "/images/board/24-25/ui-ux.webp",
         socialLinks: {
           linkedin: "https://www.linkedin.com/in/namah-singhal-983446217/",
           github: "https://github.com/NAMAH942",
@@ -316,7 +316,7 @@ const Marquee = () => {
       {
         name: "Himakshi Chaturvedi",
         designation: "Media Mentor",
-        image: "../assets/images/board/24-25/media.webp",
+        image: "/images/board/24-25/media.webp",
         socialLinks: {
           linkedin: "https://in.linkedin.com/in/himakshi-chaturvedi",
           github: "#",
@@ -326,7 +326,7 @@ const Marquee = () => {
       {
         name: "Ashutosh Prabhudesai",
         designation: "AI ML Mentor",
-        image: "../assets/images/board/24-25/ml.webp",
+        image: "/images/board/24-25/ml.webp",
         socialLinks: {
           linkedin: "https://in.linkedin.com/in/prabhudesaiashutosh02",
           github: "#",
@@ -336,7 +336,7 @@ const Marquee = () => {
       {
         name: "Sushant Saurav",
         designation: "Web Development Mentor",
-        image: "../assets/images/board/24-25/web.webp",
+        image: "/images/board/24-25/web.webp",
         socialLinks: {
           linkedin: "https://in.linkedin.com/in/sushant-saurav-baa17b220",
           github: "#",
@@ -348,7 +348,7 @@ const Marquee = () => {
       {
         name: "Utkarsh Tyagi",
         designation: "Chairperson",
-        image: "../assets/images/board/24-25/chair.webp",
+        image: "/images/board/24-25/chair.webp",
         socialLinks: {
           linkedin: "https://www.linkedin.com/in/utkarsh-tyagi-/",
           github: "https://github.com/utkarsh-creator",
@@ -358,7 +358,7 @@ const Marquee = () => {
       {
         name: "Namah Singhal",
         designation: "General Secretary",
-        image: "../assets/images/board/24-25/gensec.webp",
+        image: "/images/board/24-25/gensec.webp",
         socialLinks: {
           linkedin: "https://www.linkedin.com/in/namah-singhal-983446217/",
           github: "https://github.com/NAMAH942",
@@ -368,7 +368,7 @@ const Marquee = () => {
       {
         name: "Chaitanay Kapoor",
         designation: "Vice Chairperson",
-        image: "../assets/images/board/24-25/vc.webp",
+        image: "/images/board/24-25/vc.webp",
         socialLinks: {
           linkedin: "https://www.linkedin.com/in/chaitanay-kapoor-717bb8299/",
           github: "https://github.com/chaitanay2004",
@@ -378,7 +378,7 @@ const Marquee = () => {
       {
         name: "Vinayak Raina",
         designation: "Co-Secretary",
-        image: "../assets/images/board/24-25/cosec.webp",
+        image: "/images/board/24-25/cosec.webp",
         socialLinks: {
           linkedin: "https://www.linkedin.com/in/vinayak-raina-08a71a253",
           github: "https://github.com/RAINAVINAYAK16",
@@ -388,7 +388,7 @@ const Marquee = () => {
       {
         name: "Keshav Aneja",
         designation: "Technical Head",
-        image: "../assets/images/board/24-25/tech.webp",
+        image: "/images/board/24-25/tech.webp",
         socialLinks: {
           linkedin: "https://www.linkedin.com/in/keshav-aneja",
           github: "https://github.com/Keshav-Aneja",
@@ -398,7 +398,7 @@ const Marquee = () => {
       {
         name: "Harshit PG",
         designation: "Projects Head",
-        image: "../assets/images/board/24-25/project.webp",
+        image: "/images/board/24-25/project.webp",
         socialLinks: {
           linkedin: "https://www.linkedin.com/in/harshit-p-g-a87623272/",
           github: "https://github.com/HarshitPG",
@@ -408,7 +408,7 @@ const Marquee = () => {
       {
         name: "Sameer Mahindru",
         designation: "Events Head",
-        image: "../assets/images/board/24-25/events.webp",
+        image: "/images/board/24-25/events.webp",
         socialLinks: {
           linkedin: "https://www.linkedin.com/in/sameer-mahindru-39ba91248/",
           github: "https://github.com/CodesBySammy",
@@ -418,7 +418,7 @@ const Marquee = () => {
       {
         name: "Kandarp Chandra",
         designation: "Research and Development Head",
-        image: "../assets/images/board/24-25/r&d.webp",
+        image: "/images/board/24-25/r&d.webp",
         socialLinks: {
           linkedin: "https://www.linkedin.com/in/kandarp-chandra-b32ba4251/",
           github: "https://github.com/kandarpchandra",
@@ -428,7 +428,7 @@ const Marquee = () => {
       {
         name: "Kanishka Viswanathan",
         designation: "Publicity Head",
-        image: "../assets/images/board/24-25/publicity.webp",
+        image: "/images/board/24-25/publicity.webp",
         socialLinks: {
           linkedin: "http://www.linkedin.com/in/kanishka-viswanathan",
           github: "https://github.com/KanishkaViswanathan",
@@ -438,7 +438,7 @@ const Marquee = () => {
       {
         name: "Divyansh Gautam",
         designation: "Design Head",
-        image: "../assets/images/board/24-25/design.webp",
+        image: "/images/board/24-25/design.webp",
         socialLinks: {
           linkedin: "https://www.linkedin.com/in/divyansh-gautam-323b47266",
           github: "https://github.com/i-divyansh",
@@ -448,7 +448,7 @@ const Marquee = () => {
       {
         name: "Himika Bansal",
         designation: "HR Head",
-        image: "../assets/images/board/24-25/hr.webp",
+        image: "/images/board/24-25/hr.webp",
         socialLinks: {
           linkedin: "http://www.linkedin.com/in/himika-bansal",
           github: "https://github.com/himika-bansal",
@@ -458,7 +458,7 @@ const Marquee = () => {
       {
         name: "Anshul Kedia",
         designation: "Finance Head",
-        image: "../assets/images/board/24-25/finance.webp",
+        image: "/images/board/24-25/finance.webp",
         socialLinks: {
           linkedin: "http://www.linkedin.com/in/anshul-kedia-78965b245",
           github: "https://github.com/anshulkedia",
@@ -468,7 +468,7 @@ const Marquee = () => {
       {
         name: "Harshvardhan Singh",
         designation: "Management Head",
-        image: "../assets/images/board/24-25/management.webp",
+        image: "/images/board/24-25/management.webp",
         socialLinks: {
           linkedin: "https://www.linkedin.com/in/harshvardhan-singh-b66728250/",
           github: "https://github.com/harshvar36",
@@ -478,7 +478,7 @@ const Marquee = () => {
       {
         name: "Akshat Kumar Jha",
         designation: "Editorial Head",
-        image: "../assets/images/board/24-25/editorial.webp",
+        image: "/images/board/24-25/editorial.webp",
         socialLinks: {
           linkedin: "https://www.linkedin.com/in/akshat-jha-bbb861254",
           github: "https://github.com/axe-hat",
@@ -488,7 +488,7 @@ const Marquee = () => {
       {
         name: "Kanha Khantaal",
         designation: "Outreach Head",
-        image: "../assets/images/board/24-25/outreach.webp",
+        image: "/images/board/24-25/outreach.webp",
         socialLinks: {
           linkedin: "https://www.linkedin.com/in/kanha-khantaal-829302258",
           github: "https://github.com/Kanha02052002",
@@ -498,7 +498,7 @@ const Marquee = () => {
       {
         name: "Samaksh Arjani",
         designation: "Creative Head",
-        image: "../assets/images/board/24-25/creative.webp",
+        image: "/images/board/24-25/creative.webp",
         socialLinks: {
           linkedin: "https://www.linkedin.com/in/samaksh-arjani-262a12253/",
           github: "https://github.com/samaksharjani2004",
@@ -534,7 +534,7 @@ const Marquee = () => {
             <img
               src={member.image}
               alt={`${member.name} Image`}
-              className="member-image"
+              className="member-image object-fit"
             />
             <h2 className="name">{member.name}</h2>
             <p className="designation">{member.designation}</p>
@@ -544,21 +544,21 @@ const Marquee = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src="..assets/images/Vector-6.svg" alt="LinkedIn" />
+                <img src="/images/Vector-6.svg" alt="LinkedIn" />
               </a>
               <a
                 href={member.socialLinks.github}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src="..assets/images/Vector-5.svg" alt="GitHub" />
+                <img src="/images/Vector-5.svg" alt="GitHub" />
               </a>
               <a
                 href={member.socialLinks.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src="..assets/images/Vector-3.svg" alt="Instagram" />
+                <img src="/images/Vector-3.svg" alt="Instagram" />
               </a>
             </div>
           </div>

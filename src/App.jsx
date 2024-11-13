@@ -7,7 +7,7 @@ import Blogs from "./sections/Blogs";
 import Events from "./sections/Event";
 import EventsModal from "./sections/EventsModal";
 import Domains from "./sections/Domains";
-
+import Team from "./sections/Team";
 function App() {
   return (
     <div className="bg-dark flex flex-col gap-28">
@@ -16,6 +16,7 @@ function App() {
       <Projects />
       <Events />
       <Blogs />
+      <Team />
       <Form />
       <Footer />
       <EventsModal />
