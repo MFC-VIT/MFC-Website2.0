@@ -9,7 +9,7 @@ import { BLOGS_ENDPOINT, links } from "../constants";
 // Blog { id, title, body, authorName, autheredDate, imgLink, mediumLink }
 
 const useBlogs = (page, limit) => {
-  const [blogs, setBlogs] = useState({});
+  const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     axios
