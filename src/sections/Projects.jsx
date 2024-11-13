@@ -50,8 +50,6 @@ const Projects = () => {
     },
   ];
 
-  
-
   useEffect(() => {
     projects.forEach((_, index) => {
       const contentRef = projectRefs.current[index].querySelector(".content");
@@ -86,14 +84,14 @@ const Projects = () => {
   }, [hoveredProjectId]);
 
   return (
-    <div className="min-h-screen h-fit w-full flex flex-col pt-32 pb-28">
-      <div className="flex items-center justify-center flex-col text-main text-2xl font-yoshiro_b w-full sm:tracking-wider sm:text-3xl">
+    <div className="min-h-screen h-fit w-full flex flex-col pt-32 pb-28 relative">
+      <div className="flex items-center justify-center flex-col text-main text-2xl font-yoshiro_b w-full sm:tracking-wider sm:text-3xl mb-12">
         <p>FEATURED PROJECTS</p>
         <p>AND RESEARCH</p>
       </div>
-
+      <div className="w-[20vw] aspect-square bg-primary blur-[220px] rounded-full absolute top-1/2 -translate-y-1/2 right-0 z-[10]"></div>
       <div className="w-full flex items-end justify-center flex-grow">
-        <div className="max:md:w-[85%] w-[75%] h-auto">
+        <div className="max:md:w-[85%] w-[85%] h-auto">
           {projects.map((item, index) => (
             <div
               key={item.id}

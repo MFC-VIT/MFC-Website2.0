@@ -5,8 +5,9 @@ import Navbar1 from "../components/Navbar1";
 export const Hero = () => {
   return (
     <>
-      <div className=" relative  w-full h-screen">
-        <span className=" w-full absolute z-0 ">
+      <div className=" relative  w-full h-screen ">
+        <div className="w-[90vw] h-[5vh] bg-primary blur-[80px] rounded-b-full absolute left-1/2 -translate-x-1/2 top-0 z-[10]"></div>
+        <span className=" w-full absolute z-0 top-16">
           <Landing3D />
         </span>
         <span>

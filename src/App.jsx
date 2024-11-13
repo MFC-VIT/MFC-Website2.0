@@ -10,7 +10,7 @@ import Domains from "./sections/Domains";
 
 function App() {
   return (
-    <div className="bg-dark flex flex-col gap-5">
+    <div className="bg-dark flex flex-col gap-28">
       <Hero />
       <Domains />
       <Projects />

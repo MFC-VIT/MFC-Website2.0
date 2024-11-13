@@ -1,26 +1,34 @@
-import React, { useState, useEffect, useRef } from 'react';
-import gsap from 'gsap';
-import { motion, useMotionValue, useSpring, useMotionTemplate } from 'framer-motion';
+import React, { useState, useEffect, useRef } from "react";
+import gsap from "gsap";
+import {
+  motion,
+  useMotionValue,
+  useSpring,
+  useMotionTemplate,
+} from "framer-motion";
 import "../styles/Domains.css";
-import designImage from '../assets/images/design.webp';
-import technicalImage from '../assets/images/technical.webp';
-import managementImage from '../assets/images/management.webp';
-import DragCloseDrawer from '../components/DragCloseDrawer';
+import designImage from "../assets/images/design.webp";
+import technicalImage from "../assets/images/technical.webp";
+import managementImage from "../assets/images/management.webp";
+import DragCloseDrawer from "../components/DragCloseDrawer";
 
 const domains = [
   {
-    name: 'DESIGN',
-    description: 'This domain promotes curiosity and interest in graphics and media design, enriching the club\'s creativity. Our team crafts visually impactful media and intuitive UI/UX designs, ensuring engaging and seamless user experiences.',
+    name: "DESIGN",
+    description:
+      "This domain promotes curiosity and interest in graphics and media design, enriching the club's creativity. Our team crafts visually impactful media and intuitive UI/UX designs, ensuring engaging and seamless user experiences.",
     imageSrc: designImage,
   },
   {
-    name: 'TECHNICAL',
-    description: 'This domain provides students with a platform where they are encouraged to discover, explore and learn more about technology.',
+    name: "TECHNICAL",
+    description:
+      "This domain provides students with a platform where they are encouraged to discover, explore and learn more about technology.",
     imageSrc: technicalImage,
   },
   {
-    name: 'MANAGEMENT',
-    description: 'The members of this domain specialize in maintaining smooth and effective functioning of the club, essentially maintaining the cohesive working environment between the rest of the Domains.',
+    name: "MANAGEMENT",
+    description:
+      "The members of this domain specialize in maintaining smooth and effective functioning of the club, essentially maintaining the cohesive working environment between the rest of the Domains.",
     imageSrc: managementImage,
   },
 ];
@@ -59,7 +67,7 @@ const DomainBox = ({ domain, onHover, isActive, onClick }) => {
   };
 
   const handleMouseEnter = () => {
-    onHover(domain); 
+    onHover(domain);
   };
 
   return (
@@ -69,10 +77,16 @@ const DomainBox = ({ domain, onHover, isActive, onClick }) => {
       onMouseLeave={handleMouseLeave}
       onMouseEnter={handleMouseEnter}
       style={{ transformStyle: "preserve-3d", transform }}
-      className={`relative main-box p-4 flex flex-col justify-center items-center bg-dark ${isActive ? 'border-orange-500' : 'border-gray-700'}`}
+      className={`relative main-box p-4 flex flex-col justify-center items-center bg-dark ${
+        isActive ? "border-orange-500" : "border-gray-700"
+      }`}
       onClick={() => onClick(domain)}
     >
-      <img src={domain.imageSrc} alt={domain.name} className="img w-full h-auto object-contain" />
+      <img
+        src={domain.imageSrc}
+        alt={domain.name}
+        className="img w-full h-auto object-contain"
+      />
       <div className="domain-box">{domain.name}</div>
     </motion.div>
   );
@@ -85,63 +99,97 @@ const Domains = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
   const [hoveredDomain, setHoveredDomain] = useState(null);
   const descriptionRef = useRef(null);
-  const textRef = useRef(null); 
+  const textRef = useRef(null);
 
-  const initialText = 'Dive into the World of Domains. Our Mozilla Firefox Club is built on three dynamic, innovative, and engaging core domains.';
+  const initialText =
+    "Dive into the World of Domains. Our Mozilla Firefox Club is built on three dynamic, innovative, and engaging core domains.";
   const drawerTexts = {
     DESIGN: (
       <>
-        The Design domain fosters a deep curiosity and passion for graphics and media design, significantly enriching the creativity within the club. Our talented team focuses on crafting visually impactful media and creating intuitive UI/UX designs that prioritize user engagement. We believe that every design element should contribute to a seamless and enjoyable user experience, making our projects not only aesthetically pleasing but also functional and accessible.
-        <br /><br />
+        The Design domain fosters a deep curiosity and passion for graphics and
+        media design, significantly enriching the creativity within the club.
+        Our talented team focuses on crafting visually impactful media and
+        creating intuitive UI/UX designs that prioritize user engagement. We
+        believe that every design element should contribute to a seamless and
+        enjoyable user experience, making our projects not only aesthetically
+        pleasing but also functional and accessible.
+        <br />
+        <br />
         Subdomains:
-        <br />
-        - <strong>Graphic Design</strong>: This involves creating visual content to communicate messages. It encompasses everything from logos to posters and advertisements.
-        <br />
-        - <strong>UI/UX</strong>: User Interface and User Experience design focus on optimizing the interaction between users and products, ensuring that the design is not only attractive but also user-friendly.
-        <br />
-        - <strong>3D Design</strong>: This includes the creation of three-dimensional models and animations, which can be used in various applications such as games, films, and simulations.
-        <br />
-        - <strong>Videography/Photography</strong>: This subdomain captures moments and visuals through video and photography, enhancing the storytelling aspect of our projects.
+        <br />- <strong>Graphic Design</strong>: This involves creating visual
+        content to communicate messages. It encompasses everything from logos to
+        posters and advertisements.
+        <br />- <strong>UI/UX</strong>: User Interface and User Experience
+        design focus on optimizing the interaction between users and products,
+        ensuring that the design is not only attractive but also user-friendly.
+        <br />- <strong>3D Design</strong>: This includes the creation of
+        three-dimensional models and animations, which can be used in various
+        applications such as games, films, and simulations.
+        <br />- <strong>Videography/Photography</strong>: This subdomain
+        captures moments and visuals through video and photography, enhancing
+        the storytelling aspect of our projects.
       </>
     ),
     TECHNICAL: (
       <>
-        The Technical domain provides students with a dynamic platform that encourages them to discover, explore, and deepen their understanding of technology. This domain empowers members to engage with various technological disciplines, fostering innovation and practical skills. Our projects aim to integrate cutting-edge technology, providing real-world applications and experiences.
-        <br /><br />
+        The Technical domain provides students with a dynamic platform that
+        encourages them to discover, explore, and deepen their understanding of
+        technology. This domain empowers members to engage with various
+        technological disciplines, fostering innovation and practical skills.
+        Our projects aim to integrate cutting-edge technology, providing
+        real-world applications and experiences.
+        <br />
+        <br />
         Subdomains:
-        <br />
-        - <strong>Front End</strong>: This focuses on the client-side of applications, dealing with everything that users see and interact with, ensuring a responsive and engaging interface.
-        <br />
-        - <strong>Back End</strong>: This involves server-side development, focusing on databases, server logic, and application architecture to support the front-end functionality.
-        <br />
-        - <strong>Full Stack</strong>: This encompasses both front-end and back-end development, equipping members with the skills to manage and develop comprehensive web applications.
-        <br />
-        - <strong>AI/ML</strong>: Artificial Intelligence and Machine Learning are explored in this subdomain, where students delve into algorithms and models that enable machines to learn from data.
-        <br />
-        - <strong>Game Development</strong>: This subdomain focuses on designing and developing interactive games across various platforms, enhancing creativity and technical skills.
-        <br />
-        - <strong>App Development</strong>: This involves creating mobile and web applications, allowing students to bring their ideas to life in user-friendly formats.
+        <br />- <strong>Front End</strong>: This focuses on the client-side of
+        applications, dealing with everything that users see and interact with,
+        ensuring a responsive and engaging interface.
+        <br />- <strong>Back End</strong>: This involves server-side
+        development, focusing on databases, server logic, and application
+        architecture to support the front-end functionality.
+        <br />- <strong>Full Stack</strong>: This encompasses both front-end and
+        back-end development, equipping members with the skills to manage and
+        develop comprehensive web applications.
+        <br />- <strong>AI/ML</strong>: Artificial Intelligence and Machine
+        Learning are explored in this subdomain, where students delve into
+        algorithms and models that enable machines to learn from data.
+        <br />- <strong>Game Development</strong>: This subdomain focuses on
+        designing and developing interactive games across various platforms,
+        enhancing creativity and technical skills.
+        <br />- <strong>App Development</strong>: This involves creating mobile
+        and web applications, allowing students to bring their ideas to life in
+        user-friendly formats.
       </>
     ),
     MANAGEMENT: (
       <>
-        The Management domain consists of members who specialize in maintaining the smooth and effective functioning of the club. They play a crucial role in ensuring cohesive collaboration among the different domains, facilitating communication and operational efficiency. This domain is vital for the club's overall success, handling various aspects of organization and strategy.
-        <br /><br />
+        The Management domain consists of members who specialize in maintaining
+        the smooth and effective functioning of the club. They play a crucial
+        role in ensuring cohesive collaboration among the different domains,
+        facilitating communication and operational efficiency. This domain is
+        vital for the club's overall success, handling various aspects of
+        organization and strategy.
+        <br />
+        <br />
         Subdomains:
-        <br />
-        - <strong>Outreach</strong>: This focuses on building relationships with external organizations, sponsors, and the community to promote the club and its activities.
-        <br />
-        - <strong>Finance</strong>: This subdomain manages the club's budget, funding, and financial planning to ensure sustainability and resource allocation.
-        <br />
-        - <strong>Editorial</strong>: This involves creating and managing content for the club’s publications, including newsletters, blogs, and social media, ensuring consistent messaging and engagement.
-        <br />
-        - <strong>General Ops</strong>: This encompasses the overall operations of the club, including event planning, logistics, and member management.
-        <br />
-        - <strong>Publicity</strong>: This subdomain is responsible for marketing the club's events and initiatives, utilizing various platforms to reach a wider audience and attract new members.
+        <br />- <strong>Outreach</strong>: This focuses on building
+        relationships with external organizations, sponsors, and the community
+        to promote the club and its activities.
+        <br />- <strong>Finance</strong>: This subdomain manages the club's
+        budget, funding, and financial planning to ensure sustainability and
+        resource allocation.
+        <br />- <strong>Editorial</strong>: This involves creating and managing
+        content for the club’s publications, including newsletters, blogs, and
+        social media, ensuring consistent messaging and engagement.
+        <br />- <strong>General Ops</strong>: This encompasses the overall
+        operations of the club, including event planning, logistics, and member
+        management.
+        <br />- <strong>Publicity</strong>: This subdomain is responsible for
+        marketing the club's events and initiatives, utilizing various platforms
+        to reach a wider audience and attract new members.
       </>
     ),
   };
-  
 
   useEffect(() => {
     const timer = setTimeout(() => setIsLoading(false), 1500);
@@ -152,8 +200,8 @@ const Domains = () => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 480);
     };
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const handleDomainHover = (domain) => {
@@ -169,8 +217,8 @@ const Domains = () => {
   };
 
   const handleHoverOverDomainsText = () => {
-    setHoveredDomain(null); 
-    setSelectedDomain({ name: 'OUR DOMAINS', description: initialText });
+    setHoveredDomain(null);
+    setSelectedDomain({ name: "OUR DOMAINS", description: initialText });
     if (textRef.current) {
       gsap.fromTo(
         textRef.current,
@@ -202,9 +250,7 @@ const Domains = () => {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen relative bg-dark text-white p-5 layout-container">
-      {isLoading && (
-        <div className="text-2xl font-bold">Loading...</div>
-      )}
+      {isLoading && <div className="text-2xl font-bold">Loading...</div>}
 
       {!isLoading && (
         <div>
@@ -225,8 +271,12 @@ const Domains = () => {
               OUR DOMAINS
             </div>
           </div>
-
-          <div className={`section-container ${isMobile ? 'flex-col gap-20' : 'flex-row'}`}>
+          <div className="w-[20vw] aspect-square bg-primary blur-[250px] rounded-full absolute top-[20vw] left-1/2 -translate-x-1/2 z-[10]"></div>
+          <div
+            className={`section-container ${
+              isMobile ? "flex-col gap-20" : "flex-row"
+            }`}
+          >
             <DomainBox
               domain={domains[0]}
               onHover={handleDomainHover}
@@ -235,13 +285,8 @@ const Domains = () => {
             />
 
             {!isMobile && (
-              <p
-                ref={textRef}
-                className="text-center mx-4"
-              >
-                {selectedDomain
-                  ? selectedDomain.description
-                  : initialText}
+              <p ref={textRef} className="text-center mx-4">
+                {selectedDomain ? selectedDomain.description : initialText}
               </p>
             )}
 
@@ -264,14 +309,33 @@ const Domains = () => {
             </div>
           )} */}
           {openDrawer && (
-            <DragCloseDrawer open={openDrawer} setOpen={setOpenDrawer} domainContent={{ title: selectedDomain.name, description: drawerTexts[selectedDomain.name] }}>
-              <h2 className="text-2xl font-bold text-neutral-200">{selectedDomain.name} Details</h2>
+            <DragCloseDrawer
+              open={openDrawer}
+              setOpen={setOpenDrawer}
+              domainContent={{
+                title: selectedDomain.name,
+                description: drawerTexts[selectedDomain.name],
+              }}
+            >
+              <h2 className="text-2xl font-bold text-neutral-200">
+                {selectedDomain.name} Details
+              </h2>
               <p>{drawerTexts[selectedDomain.name]}</p>
             </DragCloseDrawer>
           )}
-          <div className="line line-1"></div>
+          <div className="--line-1 absolute w-[23%] h-[1px] bg-primary top-1/2 left-[30%] -translate-x-[71%]"></div>
+          <div className="--line-2 absolute w-[23%] h-[1px] bg-primary top-1/2 right-[30%] translate-x-[71%]"></div>
+          <div className="--line-3 absolute w-[1px] h-[60px] bg-primary top-1/2 left-[13.6%]"></div>
+          <div className="--line-4 absolute w-[1px] h-[60px] bg-primary top-1/2 right-[13.6%]"></div>
+          <div className="--line-4 absolute w-[1px] h-[40px] bg-primary top-[36.5%] left-1/2 -translate-x-1/2"></div>
+          <div className="--add-line absolute w-[1px] h-36 bg-primary top-[30.5%] -translate-x-[68%] left-[25%]"></div>
+          <div className="--add-line absolute w-[1px] h-36 bg-primary top-[30.5%] -translate-x-[68%] right-[25%]"></div>
+          <div className="w-[280px] h-[1px] bg-primary top-[30.5%] left-[25%] absolute"></div>
+          <div className="w-[280px] h-[1px] bg-primary top-[30.5%] right-[25%] absolute"></div>
+
+          {/* <div className="line line-1"></div>
           <div className="line line-2"></div>
-          <div className="line line-3"></div>
+          <div className="line line-3"></div> */}
           <div className="rectangle"></div>
         </div>
       )}

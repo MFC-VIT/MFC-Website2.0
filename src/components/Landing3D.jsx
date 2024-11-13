@@ -156,11 +156,11 @@ const Landing3D = () => {
       <div
         id="imageContainer"
         ref={imageContainerRef}
-        className="relative md:max-h-[768px] min-h-screen min-w-full md:w-[768px] h-[320px] w-[320px] overflow-hidden flex justify-center items-center rounded-[10px] max-w-full max-h-[100svh] transition-all ease-in-out duration-500 hover:saturate-100"
+        className="relative md:max-h-[768px] min-h-screen min-w-full md:w-[768px] h-[320px] w-[320px] overflow-hidden flex justify-center items-center rounded-[10px] max-w-full max-h-[100svh] transition-all ease-in-out duration-500 hover:saturate-100 scale-[60%] opacity-75"
       >
         <img
           id="myImage"
-          className=" "
+          className=""
           ref={imageElementRef}
           src="https://www.mozillavit.in/img/fox.png"
           alt=""

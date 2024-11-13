@@ -8,31 +8,34 @@ import { BLOGS_ENDPOINT, links } from "../constants";
 
 // Blog { id, title, body, authorName, autheredDate, imgLink, mediumLink }
 
-const useBlogs = (page, limit)=>{
-  const [ blogs, setBlogs ] = useState({});
-  const [ loading, setLoading ] = useState(true); 
-  useEffect(()=>{
-    axios.get(BLOGS_ENDPOINT+`?page=${page}&limit=${limit}`).then((response)=>{
-      console.log(response.data)
-      setBlogs(response.data);
-      setLoading(false);
-    }).catch(error=>console.log(error));
-  }, [page, limit])
+const useBlogs = (page, limit) => {
+  const [blogs, setBlogs] = useState({});
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    axios
+      .get(BLOGS_ENDPOINT + `?page=${page}&limit=${limit}`)
+      .then((response) => {
+        console.log(response.data);
+        setBlogs(response.data);
+        setLoading(false);
+      })
+      .catch((error) => console.log(error));
+  }, [page, limit]);
 
   return { blogs, loading };
-} 
+};
 
 const Blogs = () => {
   const { blogs, loading } = useBlogs(1, 5);
   return (
-    <div className="flex flex-col items-center justify-center p-4 my-5">
-      <h1 className="font-apex text-4xl sm:text-5xl md:text-6xl lg:text-[5vw] text-white mb-8">
+    <div className="w-[85%] mx-auto flex flex-col gap-12 items-center justify-center my-5">
+      <h1 className="font-apex text-4xl sm:text-5xl md:text-6xl lg:text-[5vw] text-white ">
         BLOGS
       </h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 xl:grid-rows-3 gap-3 w-full max-w-7xl mx-auto">
-        {loading 
-        ? <Skeleton />
-        : (
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 xl:grid-rows-3 gap-3 w-full mx-auto">
+        {loading ? (
+          <Skeleton />
+        ) : (
           <>
             <Blogcards
               height="100%"
@@ -72,7 +75,7 @@ const Blogs = () => {
               authorTitle="FIREFOX"
               buttonText="EXPLORE"
               className="col-span-1 sm:col-span-2 lg:col-span-3 xl:col-start-4 xl:col-span-2 xl:row-start-2"
-              />
+            />
             <Blogcards
               height="100%"
               width="100%"
@@ -97,30 +100,31 @@ const Blogs = () => {
   );
 };
 
-
-const Skeleton = ()=>{
-  return <>
-    <Blogcards
-      height="100%"
-      width="100%"
-      className="col-span-1 sm:col-span-2 lg:col-span-3 xl:col-start-1 xl:col-span-2 xl:row-start-1 animate-pulse opacity-20"
-    />
-    <Blogcards
-      height="100%"
-      width="100%"
-      className="col-span-1 sm:col-span-2 lg:col-span-3 xl:col-start-3 xl:col-span-3 xl:row-start-1 animate-pulse opacity-20"
-    />
-    <Blogcards
-      height="100%"
-      width="100%"
-      className="col-span-1 sm:col-span-2 lg:col-span-3 xl:col-start-4 xl:col-span-2 xl:row-start-2 animate-pulse opacity-20"
-    />
-    <Blogcards
-      height="100%"
-      width="100%"
-      className="col-span-1 sm:col-span-2 lg:col-span-3 xl:col-start-1 xl:col-span-3 xl:row-start-2 xl:row-span-2 animate-pulse opacity-20"
-    />
-  </>
-}
+const Skeleton = () => {
+  return (
+    <>
+      <Blogcards
+        height="100%"
+        width="100%"
+        className="col-span-1 sm:col-span-2 lg:col-span-3 xl:col-start-1 xl:col-span-2 xl:row-start-1 animate-pulse opacity-20"
+      />
+      <Blogcards
+        height="100%"
+        width="100%"
+        className="col-span-1 sm:col-span-2 lg:col-span-3 xl:col-start-3 xl:col-span-3 xl:row-start-1 animate-pulse opacity-20"
+      />
+      <Blogcards
+        height="100%"
+        width="100%"
+        className="col-span-1 sm:col-span-2 lg:col-span-3 xl:col-start-4 xl:col-span-2 xl:row-start-2 animate-pulse opacity-20"
+      />
+      <Blogcards
+        height="100%"
+        width="100%"
+        className="col-span-1 sm:col-span-2 lg:col-span-3 xl:col-start-1 xl:col-span-3 xl:row-start-2 xl:row-span-2 animate-pulse opacity-20"
+      />
+    </>
+  );
+};
 
 export default Blogs;
