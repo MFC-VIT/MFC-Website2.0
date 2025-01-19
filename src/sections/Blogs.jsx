@@ -9,7 +9,7 @@ import { BLOGS_ENDPOINT, links } from "../constants";
 // Blog { id, title, body, authorName, autheredDate, imgLink, mediumLink }
 
 const useBlogs = (page, limit) => {
-  const [blogs, setBlogs] = useState({});
+  const [blogs, setBlogs] = useState(null);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     axios
@@ -40,7 +40,7 @@ const Blogs = () => {
             <Blogcards
               height="100%"
               width="100%"
-              imageSrc={blogs[0].imageLink || mainimage}
+              imageSrc={blogs[0].imgLink || mainimage}
               title={blogs[0].title}
               content={blogs[0].body}
               // avatarSrc={authorimage}
@@ -53,7 +53,7 @@ const Blogs = () => {
             <Blogcards
               height="100%"
               width="100%"
-              imageSrc={blogs[1].imageLink || mainimage}
+              imageSrc={blogs[1].imgLink || mainimage}
               title={blogs[1].title}
               content={blogs[1].body}
               // avatarSrc={authorimage}
@@ -66,7 +66,7 @@ const Blogs = () => {
             <Blogcards
               height="100%"
               width="100%"
-              imageSrc={blogs[2].imageLink || mainimage}
+              imageSrc={blogs[2].imgLink || mainimage}
               title={blogs[2].title}
               content={blogs[2].body}
               // avatarSrc={authorimage}
@@ -79,7 +79,7 @@ const Blogs = () => {
             <Blogcards
               height="100%"
               width="100%"
-              imageSrc={blogs[3].imageLink || mainimage}
+              imageSrc={blogs[3].imgLink || mainimage}
               title={blogs[3].title}
               content={blogs[3].body}
               // avatarSrc={authorimage}
