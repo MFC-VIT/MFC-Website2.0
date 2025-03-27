@@ -5,10 +5,12 @@ const NewsletterCarousel = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [error, setError] = useState(null);
 
+  const API_URL = import.meta.env.VITE_API_URL
+
   useEffect(() => {
     const fetchNewsletters = async () => {
       try {
-        const response = await fetch('http://localhost:3000/api/v1/newsLetter/getAllNewsLetters');
+        const response = await fetch(`${API_URL}/api/v1/newsLetter/getAllNewsLetters`);
         
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
