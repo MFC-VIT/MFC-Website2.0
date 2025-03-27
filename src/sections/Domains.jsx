@@ -11,6 +11,7 @@ import designImage from "../assets/images/design.webp";
 import technicalImage from "../assets/images/technical.webp";
 import managementImage from "../assets/images/management.webp";
 import DragCloseDrawer from "../components/DragCloseDrawer";
+import { techSubDomain } from "../constants/subdomains";
 
 const domains = [
   {
@@ -18,6 +19,7 @@ const domains = [
     description:
       "This domain promotes curiosity and interest in graphics and media design, enriching the club's creativity. Our team crafts visually impactful media and intuitive UI/UX designs, ensuring engaging and seamless user experiences.",
     imageSrc: designImage,
+    techsubDomains : techSubDomain
   },
   {
     name: "TECHNICAL",
