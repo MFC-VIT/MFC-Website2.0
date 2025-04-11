@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from "prop-types";
 
 function SponsorLogo({ name, description, image }) {
   return (
@@ -24,5 +24,11 @@ function SponsorLogo({ name, description, image }) {
     </div>
   );
 }
+
+SponsorLogo.propTypes = {
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  image : PropTypes.string.isRequired
+};
 
 export default SponsorLogo;

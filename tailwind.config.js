@@ -21,7 +21,37 @@ export default {
         normal: 400,
         bold: 700,
       },
+      perspective: {
+        '1000': '1000px',
+      },
+      rotate: {
+        'y-180': 'rotateY(180deg)',
+      },
+      backfaceVisibility: {
+        'hidden': 'hidden',
+      },
+      transformStyle: {
+        'preserve-3d': 'preserve-3d',
+      },
     },  
   },
-  plugins: [],
+  plugins:  [
+    function ({ addUtilities }) {
+      const newUtilities = {
+        '.perspective-1000': {
+          perspective: '1000px',
+        },
+        '.preserve-3d': {
+          transformStyle: 'preserve-3d',
+        },
+        '.backface-hidden': {
+          backfaceVisibility: 'hidden',
+        },
+        '.rotate-y-180': {
+          transform: 'rotateY(180deg)',
+        },
+      };
+      addUtilities(newUtilities);
+    },
+  ],
 };

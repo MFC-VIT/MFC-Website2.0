@@ -1,32 +1,150 @@
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { HiOutlineMenuAlt3 } from "react-icons/hi";
+import { IoClose } from "react-icons/io5";
 import final from "../assets/images/finallogo2.svg";
 
-export default function Navbar1() {
+export default function EnhancedNavbar() {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeItem, setActiveItem] = useState(null);
+
+  // Handle scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const navItems = [
+    { name: "ABOUT", path: "/about" },
+    { name: "DOMAINS", path: "/domains" },
+    { name: "WORKS", path: "/works" },
+    { name: "BLOG", path: "/blog" },
+    { name: "NEWSLETTER", path: "/newsletter" },
+    { name: "PROJECTS", path: "/projects" },
+    { name: "MEET THE TEAM", path: "/team" },
+  ];
+
   return (
-    <div className="flex  w-[65vw] md:w-[45vw] lg:w-[50vw] h-[10vh] lg:h-[10vh] rounded-none absolute mt-[5vh] justify-around left-[50%] transform -translate-x-1/2 items-center px-6 z-20">
-      <img
-        className="cursor-pointer lg:h-[8vh] lg:w-[2.5vw] md:h-[8vh] md:w-[2.5vw] h-[4vh] mt-[0.5vh] lg:mt-[0.5vh] lg:mr-[1vw]"
-        src={final}
-      />
-      <div className="nav-items w-full flex items-center justify-between">
-        <button className="img11 text-[#E8DED5] text-lg md:text-xl lg:text-2xl w-full  font-teko leading-[6vh]">
-          ABOUT
-        </button>
-        <button className="img11 text-[#E8DED5] text-lg md:text-xl lg:text-2xl w-full  font-teko leading-[6vh]">
-          DOMAINS
-        </button>
-        <button className="img11 text-[#E8DED5] text-lg md:text-xl lg:text-2xl w-full  font-teko leading-[6vh]">
-          WORK
-        </button>
-        <button className="img11 text-[#E8DED5] text-lg md:text-xl lg:text-2xl w-full  font-teko leading-[6vh]">
-          FAQS
-        </button>
-        <button className="img11 text-[#E8DED5] text-lg md:text-xl lg:text-2xl w-full  font-teko leading-[6vh] mr-[2vw]">
-          BLOG
-        </button>
+    <motion.nav
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        isScrolled
+          ? "bg-[#0a0807]/90 backdrop-blur-md py-2 shadow-lg"
+          : "py-5 mt-[2vh]"
+      }`}
+    >
+      <div className="container mx-auto px-4 flex items-center justify-between">
+        {/* Logo */}
+        <motion.div
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="flex items-center"
+        >
+          <a href="/" aria-label="Home">
+            <img
+              src={final}
+              alt="Brand Logo"
+              className="h-10 md:h-12 w-auto"
+            />
+          </a>
+        </motion.div>
+
+        {/* Desktop Navigation */}
+        <div className="hidden lg:flex items-center space-x-1">
+          {navItems.map((item) => (
+            <motion.a
+              key={item.name}
+              href={item.path}
+              className={`img11 relative px-4 py-2 text-xl font-teko tracking-wide ${
+                activeItem === item.name
+                  ? "text-[#FF6D00]"
+                  : "text-[#E8DED5] hover:text-[#FF6D00]"
+              } transition-colors duration-300`}
+              onMouseEnter={() => setActiveItem(item.name)}
+              onMouseLeave={() => setActiveItem(null)}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              {item.name}
+              {activeItem === item.name && (
+                <motion.div
+                  layoutId="navbar-underline"
+                  className="absolute bottom-0 left-0 right-0 h-[2px]"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                />
+              )}
+            </motion.a>
+          ))}
+        </div>
+
+        {/* CTA Button */}
+        <motion.button
+          whileHover={{ scale: 1.05, backgroundColor: "#FF8C40" }}
+          whileTap={{ scale: 0.95 }}
+          className="hidden md:block text-[#0a0807] font-semibold font-teko py-2 bg-[#FF6D00] rounded-sm text-lg lg:text-xl text-nowrap tracking-wide px-8"
+        >
+          GET IN TOUCH
+        </motion.button>
+
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          className="lg:hidden text-[#E8DED5] focus:outline-none"
+          aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+        >
+          {isMobileMenuOpen ? (
+            <IoClose size={28} />
+          ) : (
+            <HiOutlineMenuAlt3 size={28} />
+          )}
+        </motion.button>
       </div>
-      <button className="text-[#0a0807] font-semibold font-teko py-2 bg-[#FF6D00] rounded-sm text-lg lg:text-xl text-nowrap tracking-wide px-8">
-        GET IN TOUCH
-      </button>
-    </div>
+
+
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="lg:hidden bg-[#0a0807]/95 backdrop-blur-md overflow-hidden"
+          >
+            <div className="container mx-auto px-4 py-4">
+              <div className="flex flex-col space-y-4">
+                {navItems.map((item) => (
+                  <motion.a
+                    key={item.name}
+                    href={item.path}
+                    className="img11 text-[#E8DED5] hover:text-[#FF6D00] font-teko text-2xl py-2 border-b border-gray-800 transition-colors duration-300"
+                    whileHover={{ x: 10, color: "#FF6D00" }}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {item.name}
+                  </motion.a>
+                ))}
+                <motion.button
+                  whileHover={{ scale: 1.02, backgroundColor: "#FF8C40" }}
+                  whileTap={{ scale: 0.98 }}
+                  className="text-[#0a0807] font-semibold font-teko py-3 bg-[#FF6D00] rounded-sm text-xl text-nowrap tracking-wide px-8 mt-2"
+                >
+                  GET IN TOUCH
+                </motion.button>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.nav>
   );
 }
