@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
-import MEET from "../assets/images/management.webp";
+import Fox from "../assets/images/fox.png";
 
 
 const Projects = () => {
@@ -45,9 +45,9 @@ const Projects = () => {
 
   return (
     <div className="min-h-screen h-fit w-full flex flex-col pt-32 pb-28 relative">
-      <div className="flex items-center justify-center flex-col text-main text-2xl font-apex w-full sm:tracking-wider sm:text-3xl mb-12">
-        <p>FEATURED PROJECTS</p>
-        <p>AND RESEARCH</p>
+      <div className="flex items-center justify-center flex-col text-main font-apex w-full sm:tracking-wider sm:text-3xl mb-12">
+        <p className="text-5xl">FEATURED PROJECTS</p>
+        <p className="text-5xl">AND RESEARCH</p>
       </div>
 
       <div className="bg-opacity-[40%] w-[20vw] aspect-square bg-orange-600 blur-[400px] rounded-full absolute top-1/2 -translate-y-1/2 left-0 "></div>
@@ -91,11 +91,11 @@ const Projects = () => {
           ))}
         </div>
 
-        <div className="hidden md:flex  pt-20 w-[30%] h-full justify-center items-center">
+        <div className="hidden md:flex pt-16 opacity-50 w-[30%] h-full justify-center items-center">
           <img
-            src={MEET}
+            src={Fox}
             alt="Right Section Visual"
-            className="w-full h-auto max-h-[600px] object-contain"
+            className="w-[80%] h-auto max-h-[600px] object-contain"
           />
         </div>
       </div>

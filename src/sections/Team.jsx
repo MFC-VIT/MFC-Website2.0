@@ -1,9 +1,9 @@
 import Toplayout from "../components/TopTeam";
-import Marquee from "../components/TeamGrid";
+import TeamGrid from "../components/TeamGrid";
 export const Team = () => {
   return <div>
     <Toplayout/>
-    <Marquee />
+    <TeamGrid />
   </div>;
 };
 

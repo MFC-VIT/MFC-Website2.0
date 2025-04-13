@@ -137,7 +137,7 @@ const AboutUs = () => {
 
                 <div className="w-full flex flex-col lg:flex-row items-center justify-between gap-10">
                     <motion.div
-                        className="lg:w-1/2 text-center lg:text-right"
+                        className="lg:w-1/2 text-center"
                         initial={{ opacity: 0, x: -50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}

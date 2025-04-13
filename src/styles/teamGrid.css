@@ -49,8 +49,7 @@
 }
 
 .dropdown option {
-  background-color: #ff6d00;
-  color: #fff;
+  color: white;
   padding: 10px;
   font-size: 1rem;
 }

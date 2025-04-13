@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import PropTypes from 'prop-types'; 
 
 
@@ -660,13 +660,13 @@ const BlogSection = () => {
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="text-center mb-12"
         >
-          <h1 className="text-white text-5xl md:text-7xl font-bold tracking-wider inline-block relative">
+          <h1 className="text-stone-300 font-apex text-5xl md:text-7xl font-bold tracking-wider inline-block relative">
             BLOGS
             <motion.span
               initial={{ scaleX: 0 }}
               animate={{ scaleX: 1 }}
               transition={{ duration: 0.8, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
-              className="absolute -bottom-2 left-0 w-full h-1 bg-orange-500 origin-left"
+              className="absolute -bottom-2 rounded-lg left-0 w-full h-1 bg-orange-500 origin-left"
             ></motion.span>
           </h1>
         </motion.div>

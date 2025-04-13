@@ -1,9 +1,10 @@
 import PropTypes from "prop-types";
-import { BsArrowUpRightCircle } from "react-icons/bs";
+import { BsArrowUpRightCircle, BsCalendarEvent } from "react-icons/bs";
 import { events } from "../constants/events";
 import { links } from "../constants";
-import { useContext } from "react";
+import { useContext, useState, useEffect } from "react";
 import { ModalContext } from "../components/Modal";
+import { motion } from "framer-motion";
 
 const truncate = (text, length) => {
   return text.length > length ? text.substring(0, length) + "..." : text;
@@ -11,52 +12,135 @@ const truncate = (text, length) => {
 
 const Events = () => {
   const { setIsOpen } = useContext(ModalContext);
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [visibleEvents, setVisibleEvents] = useState(4);
+  const [isInView, setIsInView] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsInView(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    const section = document.getElementById("events");
+    if (section) observer.observe(section);
+
+    return () => {
+      if (section) observer.unobserve(section);
+    };
+  }, []);
+
   return (
-    <div
-      className="w-[85%] mx-auto flex flex-col gap-12 items-center my-5 relative"
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+      transition={{ duration: 0.8 }}
+      className="w-[90%] max-w-7xl mx-auto flex flex-col gap-14 items-center my-12 relative"
       id="events"
     >
-      <div className="text-main text-6xl max-md:text-5xl max-sm:text-4xl font-apex">
-        Events at MFC
-      </div>
-      <div className="w-[20vw] aspect-square bg-primary blur-[250px] rounded-full absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 z-[10]"></div>
-      <div className="grid grid-cols-2 grid-rows-2 gap-10 max-md:gap-6  max-md:p-5 max-md:px-10 max-sm:px-6 max-lg:flex max-lg:flex-col z-20">
-        {events.slice(0, 4).map((event, index) => {
+      <motion.div 
+        initial={{ y: -20 }}
+        animate={isInView ? { y: 0 } : { y: -20 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="relative"
+      >
+        <h2 className="text-main text-6xl max-md:text-5xl max-sm:text-4xl font-apex">
+          Events at MFC
+        </h2>
+        <div className="h-1 w-24 bg-primary mt-3 mx-auto rounded-full"></div>
+      </motion.div>
+      
+      <div className="w-[25vw] aspect-square bg-primary blur-[300px] opacity-30 rounded-full absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 z-[10] animate-pulse"></div>
+      
+      <div className="grid grid-cols-2 grid-rows-auto gap-12 max-md:gap-8 max-md:p-5 max-md:px-10 max-sm:px-6 max-lg:grid-cols-1 z-20 w-full">
+        {events.slice(0, visibleEvents).map((event, index) => {
           return (
-            <Event
-              {...events[index]}
+            <motion.div
               key={index}
-              link={events[index].link || "#events"}
-            />
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ duration: 0.5, delay: index * 0.1 + 0.3 }}
+              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseLeave={() => setHoveredIndex(null)}
+            >
+              <Event
+                {...event}
+                isHovered={hoveredIndex === index}
+                link={event.link || "#events"}
+              />
+            </motion.div>
           );
         })}
       </div>
-      <SeeMore link={links.instagram} onClick={() => setIsOpen(true)} />
-    </div>
+      
+      {events.length > visibleEvents ? (
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.5, delay: 0.7 }}
+        >
+          <SeeMore 
+            link={links.instagram} 
+            onClick={() => {
+              if (visibleEvents < events.length) {
+                setVisibleEvents(prev => prev + 4);
+              } else {
+                setIsOpen(true);
+              }
+            }}
+            text={visibleEvents < events.length ? "Load more events" : "Explore all events"}
+          />
+        </motion.div>
+      ) : (
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.5, delay: 0.7 }}
+        >
+          <SeeMore link={links.instagram} onClick={() => setIsOpen(true)} text="Explore all events" />
+        </motion.div>
+      )}
+    </motion.div>
   );
 };
 
-export const Event = ({ title, description, doe, image, link }) => {
+export const Event = ({ title, description, doe, image, link, isHovered }) => {
   return (
-    <div className="flex max-sm:flex-col justify-between max-sm:justify-center border-[3px] border-primary/30 rounded-2xl p-4 px-5 min-h-64 gap-5 max-sm:gap-1 bg-black hover:shadow-md transition-all duration-300 hover:sm:shadow-primary/30 cursor-pointer sm:hover:scale-105">
+    <div 
+      className={`flex max-sm:flex-col justify-between max-sm:justify-center border-[3px] ${isHovered ? 'border-primary/70' : 'border-primary/30'} rounded-2xl p-6 px-7 min-h-[280px] gap-5 max-sm:gap-3 bg-black/90 backdrop-blur-sm hover:shadow-lg transition-all duration-300 hover:shadow-primary/20 cursor-pointer sm:hover:scale-[1.02] group`}
+    >
       {image && (
         <div className="flex justify-center items-center">
-          <img
-            src={image}
-            className="min-h-36 min-w-36 max-sm:max-h-14 max-sm:max-w-14"
-          />
+          <div className="overflow-hidden rounded-xl group-hover:shadow-md group-hover:shadow-primary/20 transition-all duration-300">
+            <img
+              src={image}
+              className="min-h-40 min-w-40 max-sm:min-h-24 max-sm:min-w-24 object-cover transition-all duration-500 group-hover:scale-110"
+              alt={title}
+            />
+          </div>
         </div>
       )}
-      <div className="text-white gap-1 max-sm:gap-0 flex flex-col relative">
-        <div className="font-apex mb-1 tracking-wider text-primary font-bold text-3xl max-md:text-2xl">
+      <div className="text-white gap-3 max-sm:gap-2 flex flex-col relative flex-1 p-2">
+        <div className="font-yoshiro mb-1 tracking-wider text-primary font-bold text-3xl max-md:text-2xl group-hover:text-orange-400 transition-colors duration-300">
           {title}
+          <div className="h-[1px] bg-primary rounded-full"></div>
         </div>
-        <div className="font-yoshiro text-main text-lg max-md:text-base tracking-wide text-ellipsis">
-          {truncate(description, 200)}
+        
+        <div className="font-yoshiro text-main/90 text-lg max-md:text-base tracking-wide leading-relaxed">
+          {truncate(description, 180)}
         </div>
-        <div className="font-yoshiro text-orange-500 mb-3">{doe}</div>
-        <div className="w-full flex justify-end absolute bottom-0">
-          <Link link={link} text="Explore" textClass={"text-lg"} />
+        
+        <div className="font-yoshiro text-stone-300 mb-8 flex items-center gap-2">
+          <BsCalendarEvent className="text-orange-400" />
+          <span className="group-hover:text-orange-300 transition-colors duration-300">{doe}</span>
+        </div>
+        
+        <div className="w-full flex justify-end absolute bottom-0 right-0">
+          <Link link={link} text="Explore" textClass={"text-lg font-yoshiro tracking-wider"} />
         </div>
       </div>
     </div>
@@ -69,18 +153,19 @@ Event.propTypes = {
   doe: PropTypes.string,
   image: PropTypes.string,
   link: PropTypes.string,
+  isHovered: PropTypes.bool,
 };
 
-const Link = ({ link, text }) => {
+const Link = ({ link, text, textClass }) => {
   return (
     <a
       href={link}
-      className="w-fit border-2 border-[#F7813F] bg-gradient-to-b from-neutral-700 via-neutral-800 to-neutral-900 hover:bg-gradient-to-b hover:from-orange-500 hover:via-orange-400 hover:to-orange-500 border-x-orange-600 border-t-orange-500 border-y-orange-700 hover:border-none transition-all duration-300 hover:shadow-md hover:sm:shadow-orange-700 hover:sm:-translate-x-1 hover:sm:-translate-y-1 active:sm:translate-x-0 active:sm:translate-y-0 active:shadow-none py-2 px-3 sm:px-4 rounded-full flex items-center font-apex gap-1 sm:gap-2 group"
+      className={`w-fit border-2 border-[#F7813F] bg-gradient-to-b from-neutral-800 via-neutral-900 to-black hover:bg-gradient-to-b hover:from-orange-500 hover:via-orange-400 hover:to-orange-500 border-x-orange-600 border-t-orange-500 border-y-orange-700 hover:border-none transition-all duration-300 hover:shadow-md hover:sm:shadow-orange-700/50 hover:sm:-translate-x-1 hover:sm:-translate-y-1 active:sm:translate-x-0 active:sm:translate-y-0 active:shadow-none py-2 px-4 sm:px-5 rounded-full flex items-center font-apex gap-1 sm:gap-2 group ${textClass}`}
     >
-      <span className="text-main text-sm max-sm:text-xs tracking-wider group-hover:text-white">
+      <span className="text-main text-sm max-sm:text-xs tracking-wider group-hover:text-white transition-colors duration-300">
         {text}
       </span>
-      <BsArrowUpRightCircle className="text-base text-[#F7813F] hidden group-hover:block transition-all duration-300 group-hover:text-white" />
+      <BsArrowUpRightCircle className="text-base text-[#F7813F] opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:text-white" />
     </a>
   );
 };
@@ -88,26 +173,27 @@ const Link = ({ link, text }) => {
 Link.propTypes = {
   link: PropTypes.string,
   text: PropTypes.string,
+  textClass: PropTypes.string,
 };
 
-const SeeMore = ({ link, onClick }) => {
+const SeeMore = ({ link, onClick, text = "Explore all events" }) => {
   return (
-    <div
-      href={link}
+    <button
       onClick={onClick}
-      className="w-fit border-2 border-[#F7813F] bg-gradient-to-b from-neutral-700 via-neutral-800 to-neutral-900 hover:bg-gradient-to-b hover:from-orange-500 hover:via-orange-400 hover:to-orange-500 border-x-orange-600 border-t-orange-500 border-y-orange-700 hover:border-none transition-all duration-300 hover:shadow-md hover:sm:shadow-orange-700 hover:sm:-translate-x-1 hover:sm:-translate-y-1 active:sm:translate-x-0 active:sm:translate-y-0 active:shadow-none py-2 px-3 sm:px-4 rounded-full flex items-center font-apex gap-1 sm:gap-2 group -mt-4"
+      className="w-fit border-2 border-[#F7813F] bg-gradient-to-b from-neutral-800 via-neutral-900 to-black hover:bg-gradient-to-b hover:from-orange-500 hover:via-orange-400 hover:to-orange-500 border-x-orange-600 border-t-orange-500 border-y-orange-700 hover:border-none transition-all duration-300 hover:shadow-lg hover:shadow-orange-700/30 hover:-translate-y-1 active:translate-y-0 active:shadow-none py-3 px-6 rounded-full flex items-center font-apex gap-2 sm:gap-3 group mt-4"
     >
       <span className="text-orange-100 text-base max-sm:text-sm tracking-wider group-hover:text-white">
-        {"Explore all events"}
+        {text}
       </span>
-      <BsArrowUpRightCircle className="text-base text-[#F7813F] hidden group-hover:block transition-all duration-300 group-hover:text-white size-5" />
-    </div>
+      <BsArrowUpRightCircle className="text-[#F7813F] opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:text-white size-5" />
+    </button>
   );
 };
 
 SeeMore.propTypes = {
   link: PropTypes.string,
   onClick: PropTypes.func,
+  text: PropTypes.string,
 };
 
 export default Events;

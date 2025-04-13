@@ -2,7 +2,7 @@ import { useState } from "react";
 import "../styles/teamGrid.css";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
-const Marquee = () => {
+const TeamGrid = () => {
   const [selectedYear, setSelectedYear] = useState("2024-25");
 
   const boardMembers = boardMembersData[selectedYear] || [];
@@ -41,21 +41,21 @@ const Marquee = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fab fa-linkedin-in"></i>
+                <i className="fab fa-linkedin-in text-orange-500"></i>
               </a>
               <a
                 href={member.socialLinks.github}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fab fa-github"></i>
+                <i className="fab fa-github text-orange-500"></i>
               </a>
               <a
                 href={member.socialLinks.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fab fa-instagram"></i>
+                <i className="fab fa-instagram text-orange-500"></i>
               </a>
             </div>
           </div>
@@ -65,7 +65,7 @@ const Marquee = () => {
   );
 };
 
-export default Marquee;
+export default TeamGrid;
 
 const boardMembersData = {
   "2022-23": [
