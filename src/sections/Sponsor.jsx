@@ -1,11 +1,10 @@
-import React from "react";
-import SponsorLogo from "./components/SponsorLogo.jsx";
+import SponsorLogo from "../components/SponsorLogo.jsx";
 //import sponsor1 from "../assets/images/sponsor1.png";
 //import sponsor2 from "../assets/images/sponsor2.png";
 //import sponsor3 from "../assets/images/sponsor3.png"; 
 //import sponsor4 from "../assets/images/sponsor4.png";
 //import sponsor5 from "../assets/images/sponsor5.png";
-function App() {
+function Sponsor() {
 
   const sponsors = [
     {
@@ -52,4 +51,4 @@ function App() {
   );
 }
 
-export default App;
+export default Sponsor;

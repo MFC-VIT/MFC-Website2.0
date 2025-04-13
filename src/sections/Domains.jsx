@@ -273,7 +273,7 @@ const Domains = () => {
               OUR DOMAINS
             </div>
           </div>
-          <div className="w-[20vw] aspect-square bg-primary blur-[250px] rounded-full absolute top-[20vw] left-1/2 -translate-x-1/2 z-[10]"></div>
+          <div className="w-[20vw] aspect-square bg-primary bg-opacity-[30%] blur-[400px] rounded-full absolute top-[20vw] left-1/2 -translate-x-1/2 "></div>
           <div
             className={`section-container ${
               isMobile ? "flex-col gap-20" : "flex-row"
