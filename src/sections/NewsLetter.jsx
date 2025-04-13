@@ -71,9 +71,23 @@ const NewsletterCarousel = () => {
   ];
 
   return (
-    <div className="bg-black min-h-screen flex flex-col items-center justify-center px-4 py-8">
-      <h1 className="text-white text-4xl md:text-6xl font-bold mb-12 uppercase">Newsletter</h1>
-      
+    <div className="bg-black min-h-screen flex flex-col items-center justify-center p-8 relative">
+      <div 
+  className="absolute w-[600px] h-[600px] bg-orange-500/30 rounded-full blur-[100px] -z-10"
+  style={{
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    backgroundColor: 'rgba(249, 115, 22, 0.3)',
+    borderRadius: '50%',
+    filter: 'blur(100px)',
+    zIndex: 1
+  }}
+></div>
+        <div className="w-full max-w-6xl h-0.5 bg-orange-500 mb-8"></div>
+      <h1 className="text-white text-4xl md:text-5xl font-bold mb-12 uppercase">Newsletter</h1>
+      <div className="w-full max-w-6xl h-0.5 bg-orange-500 mb-8"></div>
       <div className="relative w-full max-w-6xl flex items-center justify-center">
         {/* Left Navigation Arrow */}
         <button 
@@ -90,22 +104,22 @@ const NewsletterCarousel = () => {
           className="flex items-center justify-center space-x-4 md:space-x-8 w-full"
           style={{
             perspective: '1000px',
-            transformStyle: 'preserve-3d'
+            transformStyle: 'preserve-3d',
+            zIndex: 3,
           }}
         >
           {displayNewsletters.map((newsletter, index) => {
-            // Define rotation and scale based on index
             const transformStyles = {
-              0: 'rotateY(30deg) scale(0.9)',   // Left newsletter
-              1: 'rotateY(0deg) scale(1.1)',    // Center newsletter
-              2: 'rotateY(-30deg) scale(0.9)'   // Right newsletter
+              0: 'rotateY(0deg) scale(0.9)', 
+              1: 'rotateY(0deg) scale(1.1)',   
+              2: 'rotateY(0deg) scale(0.9)' 
             };
 
             return (
               <div 
                 key={newsletter._id}
                 className={`
-                  transition-all duration-500 ease-in-out transform
+                  transition-all duration-20000 ease-in-out transform
                   ${index === 1 
                     ? 'opacity-100 z-20' 
                     : 'opacity-70 z-10'}
@@ -117,17 +131,33 @@ const NewsletterCarousel = () => {
                 }}
                 onClick={() => openPdf(newsletter.pdf_link)}
               >
-                <div className="relative">
-                  <img 
-                    src={newsletter.cover_url} 
-                    alt={`Newsletter ${newsletter.title}`}
-                    className="w-full max-w-xs h-auto object-cover rounded-xl shadow-2xl"
-                  />
-                  <div className="absolute inset-0 border-4 border-orange-500 rounded-xl pointer-events-none"></div>
+                <div 
+                  className="bg-black p-4 rounded-lg shadow-2xl flex items-center justify-center"
+                  style={{
+                    width: '300px',
+                    height: '400px',
+                    overflow: 'hidden'
+                  }}
+                >
+                  <div className="bg-white border-2 border-orange-600 rounded-lg overflow-hidden max-w-full max-h-full">
+                    <div className="relative">
+                      <img 
+                        src={newsletter.cover_url} 
+                        className="w-full h-auto object-cover"
+                      />
+                      <div className="absolute bottom-0 left-0 right-0 bg-orange-600 text-white text-center py-1">
+                        <span className="text-xs font-bold">
+                          EDITION-1, VOLUME 1
+                        </span>
+                      </div>
+                    </div>
+                    <div className="p-2 bg-white">
+                      <h3 className="text-sm font-semibold text-gray-800 text-center truncate">
+                        {newsletter.title}
+                      </h3>
+                    </div>
+                  </div>
                 </div>
-                <p className="text-white text-center mt-4 text-sm md:text-lg truncate">
-                  {newsletter.title}
-                </p>
               </div>
             );
           })}
