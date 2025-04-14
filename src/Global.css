@@ -1,0 +1,61 @@
+@keyframes pulse-slow {
+
+    0%,
+    100% {
+        opacity: 0.2;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.animate-pulse-slow {
+    animation: pulse-slow 5s infinite;
+}
+
+.perspective {
+    perspective: 2000px;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(249, 115, 22, 0.5);
+    border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(249, 115, 22, 0.7);
+}
+
+.line-clamp-2 {
+    display: -webkit-box;
+    display: box;
+    /* Add this for compatibility with other browsers */
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    /* Add this for compatibility with other browsers */
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+    /* Add this for compatibility with other browsers */
+    overflow: hidden;
+}
+
+
+.perspective-container {
+    perspective: 2000px;
+    transform-style: preserve-3d;
+}
+
+.backface-hidden {
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+}

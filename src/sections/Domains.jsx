@@ -334,10 +334,6 @@ const Domains = () => {
           <div className="--add-line absolute w-[1px] h-36 bg-primary top-[30.5%] -translate-x-[68%] right-[25%]"></div>
           <div className="w-[280px] h-[1px] bg-primary top-[30.5%] left-[25%] absolute"></div>
           <div className="w-[280px] h-[1px] bg-primary top-[30.5%] right-[25%] absolute"></div>
-
-          {/* <div className="line line-1"></div>
-          <div className="line line-2"></div>
-          <div className="line line-3"></div> */}
           <div className="rectangle"></div>
         </div>
       )}

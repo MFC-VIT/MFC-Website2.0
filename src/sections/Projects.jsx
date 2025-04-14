@@ -46,7 +46,7 @@ const Projects = () => {
   return (
     <div className="min-h-screen h-fit w-full flex flex-col pt-32 pb-28 relative">
       <div className="flex items-center justify-center flex-col text-main font-apex w-full sm:tracking-wider sm:text-3xl mb-12">
-        <p className="text-5xl">FEATURED PROJECTS</p>
+        <p className="text-5xl text-center">FEATURED PROJECTS</p>
         <p className="text-5xl">AND RESEARCH</p>
       </div>
 

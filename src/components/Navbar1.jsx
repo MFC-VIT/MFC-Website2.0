@@ -9,7 +9,6 @@ export default function EnhancedNavbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeItem, setActiveItem] = useState(null);
 
-  // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -40,7 +39,6 @@ export default function EnhancedNavbar() {
       }`}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
-        {/* Logo */}
         <motion.div
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
@@ -55,7 +53,6 @@ export default function EnhancedNavbar() {
           </a>
         </motion.div>
 
-        {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center space-x-1">
           {navItems.map((item) => (
             <motion.a
@@ -86,7 +83,6 @@ export default function EnhancedNavbar() {
           ))}
         </div>
 
-        {/* CTA Button */}
         <motion.button
           whileHover={{ scale: 1.05, backgroundColor: "#FF8C40" }}
           whileTap={{ scale: 0.95 }}
