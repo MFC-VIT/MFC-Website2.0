@@ -217,10 +217,9 @@ const AboutUs = () => {
                             </div>
                         </div>
 
-                        {/* Navigation buttons */}
                         <motion.button
                             onClick={prevSlide}
-                            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-black/80 backdrop-blur-sm border border-orange-500 flex items-center justify-center text-orange-500 hover:bg-orange-500 hover:text-black transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-orange-400"
+                            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-black/80 backdrop-blur-sm border border-orange-500 hidden lg:flex items-center justify-center text-orange-500 hover:bg-orange-500 hover:text-black transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-orange-400"
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }}
                             aria-label="Previous slide"
@@ -232,7 +231,7 @@ const AboutUs = () => {
 
                         <motion.button
                             onClick={nextSlide}
-                            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 w-12 h-12 rounded-full bg-black/80 backdrop-blur-sm border border-orange-500 flex items-center justify-center text-orange-500 hover:bg-orange-500 hover:text-black transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-orange-400"
+                            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 w-12 h-12 rounded-full bg-black/80 backdrop-blur-sm border border-orange-500 hidden lg:flex items-center justify-center text-orange-500 hover:bg-orange-500 hover:text-black transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-orange-400"
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }}
                             aria-label="Next slide"

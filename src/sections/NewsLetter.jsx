@@ -12,8 +12,8 @@ const NewsletterShowcase = () => {
   const [animationDirection, setAnimationDirection] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedNewsletter, setSelectedNewsletter] = useState(null);
-  const [isHovering, setIsHovering] = useState(false);
-  const autoplayRef = useRef(null);
+  // const [isHovering, setIsHovering] = useState(false);
+  // const autoplayRef = useRef(null);
   const carouselRef = useRef(null);
 
   const API_URL = import.meta.env.VITE_API_URL;
@@ -87,19 +87,19 @@ const NewsletterShowcase = () => {
     }
   };
 
-  useEffect(() => {
-    if (isHovering) return;
+  // useEffect(() => {
+  //   if (isHovering) return;
 
-    autoplayRef.current = setInterval(() => {
-      handleNext();
-    }, 5000);
+  //   autoplayRef.current = setInterval(() => {
+  //     handleNext();
+  //   }, 5000);
 
-    return () => {
-      if (autoplayRef.current) {
-        clearInterval(autoplayRef.current);
-      }
-    };
-  }, [activeIndex, isHovering, newsletters.length]);
+  //   return () => {
+  //     if (autoplayRef.current) {
+  //       clearInterval(autoplayRef.current);
+  //     }
+  //   };
+  // }, [activeIndex, isHovering, newsletters.length]);
 
   const handlePrev = () => {
     setAnimationDirection(-1);
@@ -219,7 +219,7 @@ const NewsletterShowcase = () => {
               variants={sideCardVariants}
               initial="hidden"
               animate="visible"
-              custom={true} 
+              custom={true}
               className="absolute left-0 md:left-10 z-10 cursor-pointer"
               onClick={handlePrev}
             >
@@ -271,7 +271,7 @@ const NewsletterShowcase = () => {
               variants={sideCardVariants}
               initial="hidden"
               animate="visible"
-              custom={false} 
+              custom={false}
               className="absolute right-0 md:right-10 z-10 cursor-pointer"
               onClick={handleNext}
             >
@@ -282,7 +282,7 @@ const NewsletterShowcase = () => {
             </motion.div>
           </div>
 
-          
+
           <button
             onClick={handlePrev}
             className="absolute left-4 top-1/2 -translate-y-1/2 z-30 
@@ -341,7 +341,7 @@ const NewsletterShowcase = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
+            className="fixed inset-0 z-50 flex items-center justify-center p-2 md:p-4 bg-black/80 backdrop-blur-sm overflow-y-auto"
             onClick={closeModal}
           >
             <motion.div
@@ -367,7 +367,8 @@ const NewsletterShowcase = () => {
                   duration: 0.3
                 }
               }}
-              className="relative bg-black border border-orange-500/30 rounded-xl shadow-2xl max-w-5xl w-full max-h-[90vh] overflow-hidden perspective-container"
+              className="relative bg-black border border-orange-500/30 rounded-xl shadow-2xl max-w-5xl w-full max-h-[90vh] md:max-h-[90vh] overflow-hidden perspective-container"
+              style={{ maxWidth: '95vw' }}
               onClick={e => e.stopPropagation()}
             >
               <button
@@ -380,9 +381,10 @@ const NewsletterShowcase = () => {
                 </svg>
               </button>
 
-              <div className="flex flex-col md:flex-row h-full">
-                <div className="w-full md:w-1/2 bg-gradient-to-b from-orange-900/20 to-black p-8 flex items-center justify-center">
-                  <div className="relative max-w-sm w-full">
+              <div className="flex flex-col md:flex-row max-h-[90vh] overflow-hidden">
+                {/* Newsletter Cover - Smaller on mobile */}
+                <div className="w-full md:w-1/2 bg-gradient-to-b from-orange-900/20 to-black p-4 md:p-8 flex items-center justify-center max-h-[40vh] md:max-h-none">
+                  <div className="relative max-w-[200px] md:max-w-sm w-full">
                     <div className="absolute inset-0 bg-orange-500/20 rounded-xl blur-xl"></div>
                     <div className="relative bg-white border-2 border-orange-600 rounded-lg overflow-hidden shadow-xl transform transition-transform hover:scale-105 duration-300">
                       <div className="relative">
@@ -406,29 +408,29 @@ const NewsletterShowcase = () => {
                   </div>
                 </div>
 
-                <div className="w-full md:w-1/2 p-8 flex flex-col">
-                  <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                <div className="w-full md:w-1/2 p-4 md:p-8 flex flex-col overflow-y-auto max-h-[50vh] md:max-h-[90vh]">
+                  <h2 className="text-xl md:text-3xl font-bold text-white mb-2 md:mb-4">
                     {selectedNewsletter.title}
                   </h2>
 
-                  <div className="mb-6 flex items-center space-x-4">
+                  <div className="mb-4 md:mb-6 flex items-center space-x-4">
                     <div className="px-3 py-1 rounded-full bg-orange-500/20 text-orange-400 text-sm">
                       {selectedNewsletter.formattedDate}
                     </div>
                     <div className="text-white/60 text-sm">Edition {activeIndex + 1}</div>
                   </div>
 
-                  <div className="prose prose-invert prose-orange mb-8 flex-grow overflow-y-auto pr-4 custom-scrollbar">
+                  <div className="prose prose-invert prose-orange mb-6 overflow-y-auto pr-2 custom-scrollbar">
                     <p className="text-white/80 leading-relaxed">
                       This newsletter covers the latest updates, insights, and developments in our field.
                       Browse through the publication to discover valuable information and stay informed
                       about recent trends and innovations.
                     </p>
 
-                    <h3 className="text-orange-500 mt-6 mb-2">What's Inside</h3>
-                    <ul className="text-white/80 space-y-2">
+                    <h3 className="text-orange-500 mt-4 md:mt-6 mb-1 md:mb-2 text-sm md:text-base">What&apos;s Inside</h3>
+                    <ul className="text-white/80 space-y-1 md:space-y-2 text-sm md:text-base">
                       <li className="flex items-start">
-                        <svg className="h-5 w-5 text-orange-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg className="h-4 w-4 md:h-5 md:w-5 text-orange-500 mr-1 md:mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
                         <span>Latest industry trends and developments</span>
@@ -459,15 +461,16 @@ const NewsletterShowcase = () => {
                       href={selectedNewsletter.pdf_link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-full bg-orange-600 text-white py-3 px-6 rounded-lg font-medium flex items-center justify-center hover:bg-orange-700 transition-colors focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-black"
+                      className="w-full bg-orange-600 text-white py-2 md:py-3 px-4 md:px-6 rounded-lg font-medium flex items-center justify-center hover:bg-orange-700 transition-colors focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-black text-sm md:text-base"
                     >
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 md:h-5 md:w-5 mr-1 md:mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                       </svg>
                       Open PDF Newsletter
                     </a>
 
-                    <div className="mt-4 text-center">
+                    <div className="mt-4 md:mt-auto text-center">
                       <button
                         onClick={closeModal}
                         className="text-white/60 hover:text-white transition-colors text-sm"
@@ -602,7 +605,7 @@ NewsletterCard.defaultProps = {
 
 NewsletterShowcase.propTypes = {
   apiUrl: PropTypes.string,
-  autoplayInterval: PropTypes.number,
+  // autoplayInterval: PropTypes.number,
   theme: PropTypes.shape({
     primary: PropTypes.string,
     secondary: PropTypes.string,
@@ -613,10 +616,10 @@ NewsletterShowcase.propTypes = {
 
 NewsletterShowcase.defaultProps = {
   apiUrl: import.meta.env.VITE_API_URL,
-  autoplayInterval: 5000,
+  // autoplayInterval: 5000,
   theme: {
     primary: 'rgb(249, 115, 22)',
-    secondary: 'rgb(194, 65, 12)', 
+    secondary: 'rgb(194, 65, 12)',
     background: 'rgb(0, 0, 0)',
     text: 'rgb(255, 255, 255)'
   }

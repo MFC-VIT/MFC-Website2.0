@@ -16,7 +16,7 @@ function App() {
     <div className="bg-dark flex flex-col gap-28">
       <Hero />
       <AboutUs />
-      <Domains />
+      {/* <Domains /> */}
       <Projects />
       <Events />
       <BlogsSection />

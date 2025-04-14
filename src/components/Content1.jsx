@@ -2,28 +2,21 @@ import { useRef, useEffect, useState, useMemo } from "react";
 import { motion, useAnimationControls, useInView } from "framer-motion";
 
 export default function Content1() {
-  // Refs
   const sectionRef = useRef(null);
   const carouselRef = useRef(null);
   const isInView = useInView(sectionRef, { once: false, amount: 0.2 });
-  
-  // Animation controls
   const controls = useAnimationControls();
   const titleControls = useAnimationControls();
   const subtitleControls = useAnimationControls();
-  
-  // State
   const [itemWidth, setItemWidth] = useState(0);
   const [isLoaded, setIsLoaded] = useState(false);
   const [typingComplete, setTypingComplete] = useState(false);
   const [currentCharIndex, setCurrentCharIndex] = useState(0);
-  
-  // Constants
-  const carouselItems = ["Open Minds", "Open Ideas", "Open Source", "Open Future"];
+  const carouselItems = useMemo(() => ["Open Minds", "Open Ideas", "Open Source"], []);
   const titleText = "MOZILLA FIREFOX";
   const subtitleText = "Firefox Answers To No One But To You";
 
-  // Typing effect for title
+
   useEffect(() => {
     if (isInView && !typingComplete) {
       const typingInterval = setInterval(() => {
@@ -33,7 +26,6 @@ export default function Content1() {
           clearInterval(typingInterval);
           setTypingComplete(true);
           
-          // Trigger subtitle and carousel animations once typing is complete
           subtitleControls.start({
             opacity: 1,
             y: 0,
@@ -44,13 +36,12 @@ export default function Content1() {
             startCarouselAnimation();
           }, 400);
         }
-      }, 80); // Adjust typing speed here
+      }, 80);
       
       return () => clearInterval(typingInterval);
     }
   }, [isInView, currentCharIndex, typingComplete]);
 
-  // Initial animations when component mounts
   useEffect(() => {
     if (isInView && !isLoaded) {
       titleControls.start({
@@ -61,7 +52,6 @@ export default function Content1() {
     }
   }, [isInView, isLoaded, titleControls]);
 
-  // Carousel animation setup
   const startCarouselAnimation = () => {
     if (!carouselRef.current) return;
 
@@ -76,7 +66,7 @@ export default function Content1() {
     controls.start({
       x: [0, -totalWidth],
       transition: {
-        duration: totalWidth / 40, // Speed adjustment
+        duration: totalWidth / 40,
         ease: "linear",
         repeat: Infinity,
         repeatType: "loop",
@@ -84,7 +74,6 @@ export default function Content1() {
     });
   };
 
-  // Handle window resize
   useEffect(() => {
     const calculateAnimation = () => {
       if (typingComplete) {
@@ -99,7 +88,6 @@ export default function Content1() {
     };
   }, [controls, typingComplete]);
 
-  // Calculate clones for seamless looping
   const cloneCount = useMemo(() => {
     return Math.ceil((typeof window !== 'undefined' ? window.innerWidth : 1200) / (itemWidth || 200));
   }, [itemWidth]);
@@ -117,7 +105,6 @@ export default function Content1() {
     return [...clonedStart, ...carouselItems.map((item, index) => ({ item, id: `original-${index}` })), ...clonedEnd];
   }, [carouselItems, cloneCount]);
 
-  // Parallax effect
   useEffect(() => {
     const handleScroll = () => {
       if (!sectionRef.current) return;
@@ -142,15 +129,13 @@ export default function Content1() {
         backgroundImage: "radial-gradient(circle at 50% 50%, rgba(229, 62, 62, 0.05) 0%, transparent 70%)",
       }}
     >
-      {/* Animated background elements */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-red-500/5 rounded-full filter blur-3xl animate-pulse"></div>
         <div className="absolute bottom-1/3 right-1/3 w-48 h-48 bg-orange-500/5 rounded-full filter blur-3xl animate-pulse" style={{ animationDelay: '1.5s' }}></div>
       </div>
       
-      {/* Main content */}
       <motion.h1 
-        className="text-stone-300 text-[5vh] sm:ml-0 font-normal lg:text-[16.2275600505689vh] font-apex text-center md:text-[12.5vh] relative"
+        className="text-stone-300 text-[8.5vh] sm:ml-0 font-normal lg:text-[16.2275600505689vh] font-apex text-center md:text-[12.5vh] relative"
         initial={{ opacity: 0 }}
         animate={titleControls}
       >
@@ -168,7 +153,6 @@ export default function Content1() {
           />
         </span>
         
-        {/* Highlight glow effect */}
         {typingComplete && (
           <motion.div 
             className="absolute inset-0 bg-red-500/10 filter blur-xl rounded-full"
@@ -190,7 +174,6 @@ export default function Content1() {
         {subtitleText}
       </motion.p>
 
-      {/* Carousel */}
       <motion.div 
         className="w-full overflow-hidden mt-6 bg-gradient-to-r from-[#0a0807]/30 via-[#0a0807]/50 to-[#0a0807]/30 backdrop-blur-sm py-4 border-y border-stone-700/30"
         initial={{ opacity: 0 }}
@@ -221,7 +204,6 @@ export default function Content1() {
         </motion.div>
       </motion.div>
       
-      {/* Interactive element indicator */}
       <motion.div
         className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex flex-col items-center mt-12 pointer-events-auto"
         initial={{ opacity: 0, y: 20 }}

@@ -39,13 +39,10 @@
 .line-clamp-2 {
     display: -webkit-box;
     display: box;
-    /* Add this for compatibility with other browsers */
     -webkit-line-clamp: 2;
     line-clamp: 2;
-    /* Add this for compatibility with other browsers */
     -webkit-box-orient: vertical;
     box-orient: vertical;
-    /* Add this for compatibility with other browsers */
     overflow: hidden;
 }
 
@@ -58,4 +55,18 @@
 .backface-hidden {
     backface-visibility: hidden;
     transform-style: preserve-3d;
+}
+
+.modal-scrollable {
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+}
+
+.custom-scrollbar {
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
 }
