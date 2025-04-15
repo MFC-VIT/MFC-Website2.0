@@ -10,19 +10,19 @@ const AboutUs = () => {
     const slides = [
         {
             id: 1,
-            image: '/images/about-slide-1.jpg',
+            image: 'https://res.cloudinary.com/abhi-server/image/upload/v1744721073/WhatsApp_Image_2025-04-15_at_18.13.42_5e6e68d7_xfsros.jpg',
             alt: 'Team members collaborating on digital projects',
             caption: 'Our team working on open source initiatives'
         },
         {
             id: 2,
-            image: '/images/about-slide-2.jpg',
+            image: 'https://res.cloudinary.com/abhi-server/image/upload/v1744722058/WhatsApp_Image_2025-04-15_at_18.29.35_998d584c_hqeydz.jpg',
             alt: 'Community event with diverse participants',
             caption: 'Annual Mozilla Firefox Club hackathon'
         },
         {
             id: 3,
-            image: '/images/about-slide-3.jpg',
+            image: 'https://res.cloudinary.com/abhi-server/image/upload/v1744720703/WhatsApp_Image_2025-04-15_at_18.07.24_dc477423_q23lyf.jpg',
             alt: 'Educational workshop session',
             caption: 'Teaching web technologies to new members'
         }
@@ -156,6 +156,7 @@ const AboutUs = () => {
                             className="mt-8 px-8 py-3  bg-transparent border-2 border-orange-500 text-orange-400 rounded-full hover:bg-orange-500 hover:text-black transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-opacity-50"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
+                            onClick={(e)=>{window.open("https://www.linkedin.com/company/mfcvit/", "_blank")}}
                         >
                             Join Our Community
                         </motion.button>

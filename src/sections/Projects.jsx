@@ -44,7 +44,7 @@ const Projects = () => {
   }, [hoveredProjectId]);
 
   return (
-    <div className="min-h-screen h-fit w-full flex flex-col pt-32 pb-28 relative">
+    <div id = "projects" className="min-h-screen h-fit w-full flex flex-col pt-32 pb-28 relative">
       <div className="flex items-center justify-center flex-col text-main font-apex w-full sm:tracking-wider sm:text-3xl mb-12">
         <p className="text-5xl text-center">FEATURED PROJECTS</p>
         <p className="text-5xl">AND RESEARCH</p>
@@ -83,7 +83,7 @@ const Projects = () => {
                   src={item.projectImage}
                   alt={item.projectName}
                   ref={(el) => (imageRefs.current[index] = el)}
-                  className="absolute z-10 right-10 w-64 h-64 max-md:hidden overflow-hidden flex items-center justify-center text-center"
+                  className="absolute z-10 right-10 w-90 h-80 max-md:hidden overflow-hidden flex items-center justify-center text-center"
                   style={{ opacity: 0, transform: "translateX(20px)" }}
                 />
               </div>
@@ -109,23 +109,23 @@ const projects = [
   {
     id: 1,
     projectNumber: "1",
-    projectName: "DJANGO SERIES",
-    projectLink: "https://www.mozillavit.in/",
+    projectName: "Roommate-Dhoondo",
+    projectLink: "https://roommate-dhoondo.mfcvit.in",
     projectImage:
-      "https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YWJzdHJhY3R8ZW58MHx8MHx8fDA%3D",
+      "https://res.cloudinary.com/abhi-server/image/upload/v1744722884/Screenshot_2025-04-15_184405_bbuq2r.png",
   },
   {
     id: 2,
     projectNumber: "2",
-    projectName: "BUG VENTURE",
-    projectLink: "https://www.mozillavit.in/",
+    projectName: "Enrollment Portal",
+    projectLink: "https://enrollments.mfcvit.in/",
     projectImage:
-      "https://images.unsplash.com/photo-1557672172-298e090bd0f1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YWJzdHJhY3R8ZW58MHx8MHx8fDA%3D",
+      "https://res.cloudinary.com/abhi-server/image/upload/v1744723075/Screenshot_2025-04-15_184737_htgyro.png",
   },
   {
     id: 3,
     projectNumber: "3",
-    projectName: "MOZOCODE",
+    projectName: "Tech Wars",
     projectLink: "https://www.mozillavit.in/",
     projectImage:
       "https://images.unsplash.com/photo-1541356665065-22676f35dd40?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YWJzdHJhY3R8ZW58MHx8MHx8fDA%3D",

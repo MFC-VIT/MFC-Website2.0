@@ -111,7 +111,7 @@ const Events = () => {
 export const Event = ({ title, description, doe, image, link, isHovered }) => {
   return (
     <div 
-      className={`flex max-sm:flex-col justify-between max-sm:justify-center border-[3px] ${isHovered ? 'border-primary/70' : 'border-primary/30'} rounded-2xl p-6 px-7 min-h-[280px] gap-5 max-sm:gap-3 bg-black/90 backdrop-blur-sm hover:shadow-lg transition-all duration-300 hover:shadow-primary/20 cursor-pointer sm:hover:scale-[1.02] group`}
+      id="events" className={`flex max-sm:flex-col justify-between max-sm:justify-center border-[3px] ${isHovered ? 'border-primary/70' : 'border-primary/30'} rounded-2xl p-6 px-7 min-h-[280px] gap-5 max-sm:gap-3 bg-black/90 backdrop-blur-sm hover:shadow-lg transition-all duration-300 hover:shadow-primary/20 cursor-pointer sm:hover:scale-[1.02] group`}
     >
       {image && (
         <div className="flex justify-center items-center">

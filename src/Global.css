@@ -70,3 +70,7 @@
 .custom-scrollbar::-webkit-scrollbar {
     width: 4px;
 }
+
+html {
+    scroll-behavior: smooth;
+}

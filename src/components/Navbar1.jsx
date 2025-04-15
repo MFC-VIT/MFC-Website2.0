@@ -18,13 +18,13 @@ export default function EnhancedNavbar() {
   }, []);
 
   const navItems = [
-    { name: "ABOUT", path: "/about" },
-    { name: "DOMAINS", path: "/domains" },
-    { name: "WORKS", path: "/works" },
-    { name: "BLOG", path: "/blog" },
-    { name: "NEWSLETTER", path: "/newsletter" },
-    { name: "PROJECTS", path: "/projects" },
-    { name: "MEET THE TEAM", path: "/team" },
+    { name: "ABOUT", id: "main-content" },
+    { name: "DOMAINS", id: "domain" },
+    { name: "WORKS", id: "events" },
+    { name: "BLOG", id: "blogs" },
+    { name: "NEWSLETTER", id: "newsletter" },
+    { name: "PROJECTS", id: "projects" },
+    { name: "MEET THE TEAM", id: "team" },
   ];
 
   return (
@@ -57,7 +57,7 @@ export default function EnhancedNavbar() {
           {navItems.map((item) => (
             <motion.a
               key={item.name}
-              href={item.path}
+              href={`#${item.id}`}
               className={`img11 relative px-4 py-2 text-xl font-teko tracking-wide ${
                 activeItem === item.name
                   ? "text-[#FF6D00]"
@@ -121,7 +121,7 @@ export default function EnhancedNavbar() {
                 {navItems.map((item) => (
                   <motion.a
                     key={item.name}
-                    href={item.path}
+                    href={`#${item.id}`}
                     className="img11 text-[#E8DED5] hover:text-[#FF6D00] font-teko text-2xl py-2 border-b border-gray-800 transition-colors duration-300"
                     whileHover={{ x: 10, color: "#FF6D00" }}
                     onClick={() => setIsMobileMenuOpen(false)}

@@ -192,7 +192,7 @@ const NewsletterShowcase = () => {
   const nextIndex = (activeIndex + 1) % newsletters.length;
 
   return (
-    <section className="bg-black min-h-screen relative overflow-hidden">
+    <section id="newsletter" className="bg-black min-h-screen relative overflow-hidden">
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <div className="w-[800px] h-[800px] bg-orange-500/20 rounded-full blur-[150px] animate-pulse-slow"></div>
       </div>

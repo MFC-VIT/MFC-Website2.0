@@ -5,10 +5,6 @@ const Toplayout = () => {
     <>
       <div className="text-[#E8DED5]">
         <div className="flex flex-col items-center">
-          <h1 className="text-center font-apex font-normal leading-12 md:text-5xl lg:text-6xl">
-            MEET <br /> OUR TEAM
-          </h1>
-
           <div className="flex justify-center items-center mt-5 md:mt-10 lg:mt-16">
             <img
               className="max-w-[250px] h-[300px] object-cover shadow-md filter grayscale(50%) rounded-lg"
@@ -38,6 +34,10 @@ const Toplayout = () => {
               the unique needs of learners. <br />
             </p>
           </div>
+          <h1 className="text-center font-apex font-normal leading-12 md:text-5xl lg:text-6xl">
+            MEET <br /> OUR TEAM
+          </h1>
+
         </div>
       </div>
     </>

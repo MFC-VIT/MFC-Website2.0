@@ -48,7 +48,7 @@ export const Form = () => {
           </div>
           <div className="text-main p-1.5 px-4 rounded-full bg-amber-950 flex items-center gap-2">
             <img src={images.gmailIcon} className="size-4" alt="" />
-            <span className="text-xs font-yoshiro text-main">{"pr.mozillavit@gmail.com"}</span>
+            <span className="text-xs font-yoshiro text-main">{"mozillafirefox@vit.ac.in"}</span>
           </div>
           <FormElement onNameChange={(name)=>setName(name)} onEmailChange={(email)=>setEmail(email)} onMessageChange={(message)=>setMessage(message)} />
           <SubmitButton handleSubmit={handleSendMail} />

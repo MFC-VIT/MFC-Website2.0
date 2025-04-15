@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import PropTypes from 'prop-types'; 
+import { BsWindowSidebar } from 'react-icons/bs';
 
 
 const useIntersectionObserver = (options = {}) => {
@@ -71,31 +72,31 @@ const fetchBlogPosts = () => {
         {
           id: 'blog-001',
           slug: 'nikhil-on-top-future-of-ai',
-          title: 'NIKHIL ON TOP',
-          subtitle: 'The Future of AI',
-          image: 'https://source.unsplash.com/random/800x1000?tech,ai',
+          title: 'Red Teaming: The Golden Ticket Attack',
+          subtitle: 'Simulating the Ultimate Breach in Modern Red Teaming',
+          image: 'https://res.cloudinary.com/abhi-server/image/upload/v1744620695/1_xtMTiQmgvYOUthu8Ly1O2w_vrnuo0.webp',
           blurDataURL: generateBlurDataURL(40, 50),
-          excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.',
+          excerpt: 'The world of cybersecurity is constantly evolving, with new threats emerging regularly. To stay ahead of these ever-growing risks, organizations need to prepare proactively. One of the most effective ways to achieve this is through red teaming. This approach simulates real-world cyberattacks to evaluate an organization’s defenses, response strategies, and overall resilience. In this blog, we’ll delve into red teaming and focus on one of its most advanced techniques: the Golden Ticket Attack.',
           readTime: '4 min read',
           author: {
-            name: 'Nikhil',
+            name: 'Utkarsh Tygai',
             avatar: 'https://source.unsplash.com/random/100x100?portrait',
           },
-          publishDate: '2025-04-01',
-          categories: ['Technology', 'AI'],
+          publishDate: '2024-12-28',
+          categories: ['Technology', 'Security'],
           featured: true,
         },
         {
           id: 'blog-002',
           slug: 'nikhil-on-top-digital-art',
-          title: 'NIKHIL ON TOP',
+          title: 'Understanding the Windows Directory System',
           subtitle: 'Digital Art Revolution',
-          image: 'https://source.unsplash.com/random/800x1000?art,digital',
+          image: 'https://res.cloudinary.com/abhi-server/image/upload/v1744620995/Screenshot_2025-04-14_142621_na1x6d.png',
           blurDataURL: generateBlurDataURL(40, 50),
-          excerpt: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
+          excerpt: 'The directory structure in Windows is essential for managing files and folders on a computer system. Understanding Windows directory layout is critical for effective file management and navigation. In this post, we will look at the many components of the Windows directory structure and provide insights into its organization, file paths, and functionality. But firstly, we need to understand File Systems.',
           readTime: '6 min read',
           author: {
-            name: 'Nikhil',
+            name: 'Yathaartha Srivastava',
             avatar: 'https://source.unsplash.com/random/100x100?portrait',
           },
           publishDate: '2025-03-25',
@@ -105,51 +106,51 @@ const fetchBlogPosts = () => {
         {
           id: 'blog-003',
           slug: 'nikhil-on-top-cybersecurity',
-          title: 'NIKHIL ON TOP',
+          title: 'Algorithmic Secrets of Viral Content',
           subtitle: 'Cybersecurity Trends',
-          image: 'https://source.unsplash.com/random/800x1000?security,cyber',
+          image: 'https://res.cloudinary.com/abhi-server/image/upload/v1744621198/1_hpa6rNYRX524A2djnDHToQ_qrtdi4.webp',
           blurDataURL: generateBlurDataURL(40, 50),
-          excerpt: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.',
-          readTime: '5 min read',
+          excerpt: 'Have you ever wondered why random content like meme templates, catchy songs, or viral dance moves suddenly dominate social media feeds?',
+          readTime: '9 min read',
           author: {
-            name: 'Nikhil',
+            name: 'Sujaa Shri',
             avatar: 'https://source.unsplash.com/random/100x100?portrait',
           },
-          publishDate: '2025-03-18',
+          publishDate: '2024-11-11',
           categories: ['Security', 'Technology'],
           featured: false,
         },
         {
           id: 'blog-004',
           slug: 'nikhil-on-top-blockchain',
-          title: 'NIKHIL ON TOP',
+          title: 'The Rise of AI Powered Code Generation',
           subtitle: 'Blockchain Evolution',
-          image: 'https://source.unsplash.com/random/800x1000?blockchain,crypto',
+          image: 'https://res.cloudinary.com/abhi-server/image/upload/v1744621513/0_5-GQBqSzRsVDmdlH_kgrxrn.webp',
           blurDataURL: generateBlurDataURL(40, 50),
           excerpt: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi.',
           readTime: '7 min read',
           author: {
-            name: 'Nikhil',
+            name: 'Vajran Kannadasan',
             avatar: 'https://source.unsplash.com/random/100x100?portrait',
           },
-          publishDate: '2025-03-10',
+          publishDate: '2024-10-31',
           categories: ['Blockchain', 'Finance'],
           featured: false,
         },
         {
           id: 'blog-005',
-          slug: 'nikhil-on-top-virtual-reality',
-          title: 'NIKHIL ON TOP',
+          slug: 'Everything you need to know about NFT’s',
+          title: 'Everything you need to know about NFT’s',
           subtitle: 'Virtual Reality Frontiers',
-          image: 'https://source.unsplash.com/random/800x1000?vr,virtual',
+          image: 'https://res.cloudinary.com/abhi-server/image/upload/v1744621629/1_gpiOCaUF2nzxVNW65wI2Gw_dcsblm.webp',
           blurDataURL: generateBlurDataURL(40, 50),
           excerpt: 'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.',
           readTime: '4 min read',
           author: {
-            name: 'Nikhil',
+            name: 'Manya garg',
             avatar: 'https://source.unsplash.com/random/100x100?portrait',
           },
-          publishDate: '2025-03-05',
+          publishDate: '2022-06-12',
           categories: ['VR', 'Technology'],
           featured: false,
         },
@@ -176,6 +177,7 @@ const fetchBlogPosts = () => {
 };
 
 const BlogCard = ({ blog, index, priority }) => {
+  const [tilt, setTilt] = useState({ x: 0, y: 0 });
   const [isFlipped, setIsFlipped] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const cardRef = useRef(null);
@@ -203,12 +205,14 @@ const BlogCard = ({ blog, index, priority }) => {
     const rotateY = ((x - centerX) / centerX) * 5; 
     const rotateX = ((centerY - y) / centerY) * 5; 
 
-    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+    setTilt({ x: rotateX, y: rotateY });
+    //card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
   };
 
   const resetCardTransform = () => {
     if (!cardRef.current || isFlipped) return;
-    cardRef.current.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+    setTilt({ x: 0, y: 0 });
+    //cardRef.current.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
   };
 
   useEffect(() => {
@@ -270,6 +274,13 @@ const BlogCard = ({ blog, index, priority }) => {
       role="button"
       aria-pressed={isFlipped}
       aria-label={`Blog post: ${blog.title} - ${blog.subtitle}. Press enter to read more.`}
+      style={{
+        perspective: 1000,
+        transformStyle: "preserve-3d",
+        willChange: "transform",
+        transform: `rotateX(${tilt.x}deg) rotateY(${tilt.y}deg) scale3d(1.02, 1.02, 1.02)`,
+        transition: isHovered ? "transform 0.15s cubic-bezier(.22,1,.36,1)" : "transform 0.5s cubic-bezier(.22,1,.36,1)",
+      }}
     >
       <div className={`relative w-full h-full rounded-xl overflow-hidden transition-all duration-700 ${isFlipped ? 'shadow-2xl shadow-orange-500/30' : 'shadow-lg'}`}>
         <div className={`absolute inset-0 rounded-xl border border-orange-500 ${isHovered ? 'opacity-100' : 'opacity-70'} transition-opacity duration-300 z-10 pointer-events-none`}></div>
@@ -299,8 +310,14 @@ const BlogCard = ({ blog, index, priority }) => {
                   ))}
                 </h2>
 
-                <div className={`overflow-hidden transition-all duration-500 ${isHovered ? 'h-8 mt-4 opacity-100' : 'h-0 opacity-0'}`}>
-                  <p className="text-orange-300 text-center text-lg font-medium">{blog.subtitle}</p>
+                <div
+                  className={`overflow-hidden transition-all duration-500 pointer-events-none ${
+                    isHovered ? 'h-8 mt-4 opacity-100' : 'h-0 opacity-0'
+                  }`}
+                >
+                  <p className="text-orange-300 text-center text-lg font-medium">
+                    {blog.subtitle}
+                  </p>
                 </div>
               </div>
             </div>
@@ -399,7 +416,8 @@ const BlogCard = ({ blog, index, priority }) => {
                 </div>
                 <button
                   className="text-orange-500 hover:text-orange-400 transition-colors flex items-center space-x-1"
-                  aria-label="Read full article"
+                  aria-label="Read full article" 
+                  onClick={()=>{window.open("https://medium.com/mozilla-firefox-club", "_blank")}}
                 >
                   <span>Full Article</span>
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -487,7 +505,7 @@ const FeaturedBlog = ({ blog }) => {
               </div>
             </div>
 
-            <button className="bg-orange-600 hover:bg-orange-500 text-white px-6 py-2 rounded-full flex items-center space-x-2 transform transition-all duration-300 hover:translate-x-1">
+            <button className="bg-orange-600 hover:bg-orange-500 text-white px-6 py-2 rounded-full flex items-center space-x-2 transform transition-all duration-300 hover:translate-x-1" onClick={()=>{window.open("https://medium.com/mozilla-firefox-club", "_blank")}}>
               <span>Read Article</span>
               <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -632,7 +650,7 @@ const BlogSection = () => {
   };
 
   return (
-    <div className="w-full bg-gray-950 min-h-screen py-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <div id="blogs" className="w-full bg-gray-950 min-h-screen py-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-0 -left-1/4 w-1/2 h-1/2 bg-gradient-to-br from-orange-600/10 via-purple-600/5 to-transparent rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 -right-1/4 w-1/2 h-1/2 bg-gradient-to-tl from-blue-600/10 via-indigo-600/5 to-transparent rounded-full blur-3xl"></div>
