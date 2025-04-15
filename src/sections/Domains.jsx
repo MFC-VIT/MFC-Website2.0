@@ -251,7 +251,7 @@ const Domains = () => {
   }, [selectedDomain]);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen relative bg-dark text-white p-5 layout-container">
+    <div id="domain" className="flex flex-col items-center justify-center min-h-screen relative bg-dark text-white p-5 layout-container">
       {isLoading && <div className="text-2xl font-bold">Loading...</div>}
 
       {!isLoading && (

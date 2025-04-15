@@ -54,7 +54,7 @@ export const Footer = () => {
       <div className="w-[70vw] h-[80vh] bg-gradient-to-t from-primary/70 to-transparent  blur-[300px]  rounded-t-full absolute bottom-0 left-1/2 -translate-x-1/2 z-[0]"></div>
       <div className="flex justify-around px-4 text-sm text-[#E8DED5] py-2 relative z-20">
         <p className="max-sm:text-[1vh] text-[1.75vh] md:text-[2vh] hover:underline hover:underline-offset-2">
-          © 2024 Mozilla Firefox Club. All Rights Reserved
+          © 2025 Mozilla Firefox Club. All Rights Reserved
         </p>
         <p className="max-sm:text-[1vh] text-[1.75vh] md:text-[2vh] cursor-pointer hover:underline hover:underline-offset-2">
           Privacy Policy

@@ -13,9 +13,9 @@ const EventsModal = ()=>{
         {events.map((event, index) => {
           return (
             <Event
-            {...event}
-            key={index}
-            link={event.link || "#events"}
+              {...event}
+              key={index}
+              link={event.link || "#events"}
             />
           );
         })}

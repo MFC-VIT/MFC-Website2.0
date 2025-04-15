@@ -8,7 +8,7 @@ const TeamGrid = () => {
   const boardMembers = boardMembersData[selectedYear] || [];
 
   return (
-    <div>
+    <div id="team">
       <div className="dropdown-container">
         <label htmlFor="year-select" className="dropdown-label">
           Select Year:
@@ -19,9 +19,10 @@ const TeamGrid = () => {
           onChange={(e) => setSelectedYear(e.target.value)}
           className="dropdown dropdown-toggle"
         >
-          <option value="2020-21">2020-21</option>
-          <option value="2021-22">2021-22</option>
           <option value="2022-23">2022-23</option>
+          <option value="2023-24">2023-24</option>
+          <option value="2024-25">2024-25</option>
+          <option value="2025-26">2025-26</option>
         </select>
       </div>
 
@@ -204,7 +205,7 @@ const boardMembersData = {
     {
       name: "Prateek Balaji",
       designation: "Chairperson",
-      image: "/images/board/24-25/chair.webp",
+      image: "/images/board/23-24/chair.webp",
       socialLinks: {
         linkedin: "https://www.linkedin.com/in/prateek-balaji/",
         github: "#",
@@ -214,7 +215,7 @@ const boardMembersData = {
     {
       name: "Kartikey Bhatnagar",
       designation: "Vice Chairperson",
-      image: "/images/board/24-25/vc.webp",
+      image: "/images/board/23-24/vc.webp",
       socialLinks: {
         linkedin: "https://in.linkedin.com/in/kartikey-bhatnagar",
         github: "#",
@@ -224,7 +225,7 @@ const boardMembersData = {
     {
       name: "Naisa Gupta",
       designation: "General Secretary",
-      image: "/images/board/24-25/gensec.webp",
+      image: "/images/board/23-24/gensec.webp",
       socialLinks: {
         linkedin: "https://in.linkedin.com/in/naisa-gupta-1b020a1b9",
         github: "#",
@@ -234,7 +235,7 @@ const boardMembersData = {
     {
       name: "Trisha Paul",
       designation: "Co-Secretary",
-      image: "/images/board/24-25/cosec.webp",
+      image: "/images/board/23-24/cosec.webp",
       socialLinks: {
         linkedin:
           "https://in.linkedin.com/in/trisha-paul-929964235?trk=people-guest_people_search-card",
@@ -245,7 +246,7 @@ const boardMembersData = {
     {
       name: "Vedik Agarwal",
       designation: "Technical Chair",
-      image: "/images/board/24-25/tech.webp",
+      image: "/images/board/23-24/tech.webp",
       socialLinks: {
         linkedin: "https://in.linkedin.com/in/vedik-agarwal",
         github: "#",
@@ -255,7 +256,7 @@ const boardMembersData = {
     {
       name: "Aditya Aren",
       designation: "Project Head",
-      image: "/images/board/24-25/project.webp",
+      image: "/images/board/23-24/project.webp",
       socialLinks: {
         linkedin:
           "https://in.linkedin.com/in/aditya-aren-913893235?trk=public_post_feed-actor-name",
@@ -266,7 +267,7 @@ const boardMembersData = {
     {
       name: "Siddhesh Fuladi",
       designation: "Management Head",
-      image: "/images/board/24-25/management.webp",
+      image: "/images/board/23-24/management.webp",
       socialLinks: {
         linkedin: "https://in.linkedin.com/in/siddhesh-fuladi",
         github: "#",
@@ -276,7 +277,7 @@ const boardMembersData = {
     {
       name: "Ayush Patil",
       designation: "Design Head",
-      image: "/images/board/24-25/design.webp",
+      image: "/images/board/23-24/design.webp",
       socialLinks: {
         linkedin: "https://www.linkedin.com/in/ayushp2948/",
         github: "#",
@@ -286,7 +287,7 @@ const boardMembersData = {
     {
       name: "Vaishali Singh",
       designation: "Events Head",
-      image: "/images/board/24-25/events.webp",
+      image: "/images/board/23-24/events.webp",
       socialLinks: {
         linkedin:
           "https://in.linkedin.com/in/vaishali-singh25?trk=public_profile_browsemap",
@@ -297,7 +298,7 @@ const boardMembersData = {
     {
       name: "Stuti Chaudhury",
       designation: "Editorial Head",
-      image: "/images/board/24-25/editorial.webp",
+      image: "/images/board/23-24/editorial.webp",
       socialLinks: {
         linkedin:
           "https://in.linkedin.com/in/stuti-chaudhury-8419a3235?trk=public_profile_browsemap",
@@ -308,7 +309,7 @@ const boardMembersData = {
     {
       name: "Utkarsh Tyagi",
       designation: "Research and Development Head",
-      image: "/images/board/24-25/r&d.webp",
+      image: "/images/board/23-24/r&d.webp",
       socialLinks: {
         linkedin: "https://www.linkedin.com/in/utkarsh-tyagi-/",
         github: "https://github.com/utkarsh-creator",
@@ -318,7 +319,7 @@ const boardMembersData = {
     {
       name: "Nirbhay Tiwari",
       designation: "Publicity Head",
-      image: "/images/board/24-25/publicity.webp",
+      image: "/images/board/23-24/publicity.webp",
       socialLinks: {
         linkedin: "https://in.linkedin.com/in/nirbhay-tiwari-b09817219",
         github: "#",
@@ -328,7 +329,7 @@ const boardMembersData = {
     {
       name: "Hemant Modi",
       designation: "Finance Head",
-      image: "/images/board/24-25/finance.webp",
+      image: "/images/board/23-24/finance.webp",
       socialLinks: {
         linkedin: "https://in.linkedin.com/in/modih",
         github: "#",
@@ -338,7 +339,7 @@ const boardMembersData = {
     {
       name: "Soumyadeep Roy Chowdhury",
       designation: "Outreach Head",
-      image: "/images/board/24-25/outreach.webp",
+      image: "/images/board/23-24/outreach.webp",
       socialLinks: {
         linkedin: "https://in.linkedin.com/in/sdroyc",
         github: "#",
@@ -348,7 +349,7 @@ const boardMembersData = {
     {
       name: "Aditya Prasad",
       designation: "Creative Head",
-      image: "/images/board/24-25/creative.webp",
+      image: "/images/board/23-24/creative.webp",
       socialLinks: {
         linkedin: "https://in.linkedin.com/in/adityaprasad1143",
         github: "#",
@@ -358,7 +359,7 @@ const boardMembersData = {
     {
       name: "Tanisha Ambastha",
       designation: "HR Head",
-      image: "/images/board/24-25/hr.webp",
+      image: "/images/board/23-24/hr.webp",
       socialLinks: {
         linkedin:
           "https://in.linkedin.com/in/tanisha-ambastha-545318237?trk=public_profile_browsemap",
@@ -369,7 +370,7 @@ const boardMembersData = {
     {
       name: "Namah Singhal",
       designation: "UI UX Mentor",
-      image: "/images/board/24-25/ui-ux.webp",
+      image: "/images/board/23-24/ui-ux.webp",
       socialLinks: {
         linkedin: "https://www.linkedin.com/in/namah-singhal-983446217/",
         github: "https://github.com/NAMAH942",
@@ -379,7 +380,7 @@ const boardMembersData = {
     {
       name: "Himakshi Chaturvedi",
       designation: "Media Mentor",
-      image: "/images/board/24-25/media.webp",
+      image: "/images/board/23-24/media.webp",
       socialLinks: {
         linkedin: "https://in.linkedin.com/in/himakshi-chaturvedi",
         github: "#",
@@ -389,7 +390,7 @@ const boardMembersData = {
     {
       name: "Ashutosh Prabhudesai",
       designation: "AI ML Mentor",
-      image: "/images/board/24-25/ml.webp",
+      image: "/images/board/23-24/ml.webp",
       socialLinks: {
         linkedin: "https://in.linkedin.com/in/prabhudesaiashutosh02",
         github: "#",
@@ -399,7 +400,7 @@ const boardMembersData = {
     {
       name: "Sushant Saurav",
       designation: "Web Development Mentor",
-      image: "/images/board/24-25/web.webp",
+      image: "/images/board/23-24/web.webp",
       socialLinks: {
         linkedin: "https://in.linkedin.com/in/sushant-saurav-baa17b220",
         github: "#",
@@ -461,7 +462,7 @@ const boardMembersData = {
     {
       name: "Harshit PG",
       designation: "Projects Head",
-      image: "/images/board/24-25/project.webp",
+      image: "https://res.cloudinary.com/abhi-server/image/upload/v1744698914/IMG_8908_ribuyq.jpg",
       socialLinks: {
         linkedin: "https://www.linkedin.com/in/harshit-p-g-a87623272/",
         github: "https://github.com/HarshitPG",
@@ -519,16 +520,6 @@ const boardMembersData = {
       },
     },
     {
-      name: "Anshul Kedia",
-      designation: "Finance Head",
-      image: "/images/board/24-25/finance.webp",
-      socialLinks: {
-        linkedin: "http://www.linkedin.com/in/anshul-kedia-78965b245",
-        github: "https://github.com/anshulkedia",
-        instagram: "https://www.instagram.com/anshul.kediaaa/",
-      },
-    },
-    {
       name: "Harshvardhan Singh",
       designation: "Management Head",
       image: "/images/board/24-25/management.webp",
@@ -536,6 +527,16 @@ const boardMembersData = {
         linkedin: "https://www.linkedin.com/in/harshvardhan-singh-b66728250/",
         github: "https://github.com/harshvar36",
         instagram: "https://www.instagram.com/harshvar_0036/",
+      },
+    },
+    {
+      name: "Anshul Kedia",
+      designation: "Finance Head",
+      image: "/images/board/24-25/finance.webp",
+      socialLinks: {
+        linkedin: "http://www.linkedin.com/in/anshul-kedia-78965b245",
+        github: "https://github.com/anshulkedia",
+        instagram: "https://www.instagram.com/anshul.kediaaa/",
       },
     },
     {
@@ -569,5 +570,167 @@ const boardMembersData = {
       },
     },
   ],
+  "2025-26":[
+    {
+      name: "Harshvardhan Singh",
+      designation: "ChairPerson",
+      image: "https://res.cloudinary.com/abhi-server/image/upload/v1744698895/IMG_8940_ssejcl.jpg",
+      socialLinks: {
+        linkedin: "https://www.linkedin.com/in/harshvardhan-singh-b66728250/",
+        github: "https://github.com/harshvar36",
+        instagram: "https://www.instagram.com/harshvar_0036/",
+      },
+    },
+    {
+      name: "Kanha Khantaal",
+      designation: "General Secretary",
+      image: "https://res.cloudinary.com/abhi-server/image/upload/v1744699415/IMG_8886_axougi.jpg",
+      socialLinks: {
+        linkedin: "https://www.linkedin.com/in/kanha-khantaal-829302258",
+        github: "https://github.com/Kanha02052002",
+        instagram: "https://www.instagram.com/k2g_02/",
+      },
+    },
+    {
+      name: "Samriddhi Sharma",
+      designation: "Vice Chairperson",
+      image: "https://res.cloudinary.com/abhi-server/image/upload/v1744699323/IMG_8820_stfyff.jpg",
+      socialLinks: {
+        linkedin: "http://www.linkedin.com/in/samriddhi-s-",
+        github: "https://github.com/ck-ss",
+        instagram: "https://www.instagram.com/samriddhi__sharma__/",
+      },
+    },
+    {
+      name: "Keshav Gujrathi",
+      designation: "Co-Secretary",
+      image: "https://res.cloudinary.com/abhi-server/image/upload/v1744699365/IMG_8851_celrwo.jpg",
+      socialLinks: {
+        linkedin: "http://www.linkedin.com/in/keshavgujrathi",
+        github: "https://github.com/keshavgujrathi",
+        instagram: "https://www.instagram.com/keshavgujrathi/",
+      },
+    },
+    {
+      name: "Abhinav Garg",
+      designation: "Technical Head",
+      image: "https://res.cloudinary.com/abhi-server/image/upload/v1744699403/IMG_8869_togwb7.jpg",
+      socialLinks: {
+        linkedin: "https://www.linkedin.com/in/abhinav-garg05",
+        github: "https://github.com/ABHINAVGARG05",
+        instagram: "#",
+      },
+    },
+    {
+      name: "Suvidh Jain",
+      designation: "Projects Head",
+      image: "https://res.cloudinary.com/abhi-server/image/upload/v1744699404/IMG_8876_xybmsc.jpg",
+      socialLinks: {
+        linkedin: "https://www.linkedin.com/in/suvidh-jain-72a88728a/",
+        github: "https://github.com/SuvidhJ",
+        instagram: "https://www.instagram.com/harshitpg/",
+      },
+    },
+    {
+      name: "Bihan Banerjee",
+      designation: "Events Head",
+      image: "https://res.cloudinary.com/abhi-server/image/upload/v1744721350/WhatsApp_Image_2025-04-15_at_13.02.03_8b7a9ba6_rdn63h.jpg",
+      socialLinks: {
+        linkedin: "https://www.linkedin.com/in/bihan-banerjee-70905228b",
+        github: "https://github.com/Bihan-Banerjee",
+        instagram: "https://www.instagram.com/banerjee.bihan",
+      },
+    },
+    {
+      name: "Prateek Batra",
+      designation: "Research and Development Head",
+      image: "https://res.cloudinary.com/abhi-server/image/upload/v1744699401/IMG_8868_lpiy3w.jpg",
+      socialLinks: {
+        linkedin: "http://www.linkedin.com/in/prateekbatradel",
+        github: "https://github.com/PrateekBatra23",
+        instagram: "https://www.instagram.com/prateekbatra23/",
+      },
+    },
+    {
+      name: "Mahima Gupta",
+      designation: "Publicity Head",
+      image: "https://res.cloudinary.com/abhi-server/image/upload/v1744699352/IMG_8843_qxoka4.jpg",
+      socialLinks: {
+        linkedin: "http://www.linkedin.com/in/mahima-gupta-a51b1728a",
+        github: "https://github.com/mahimag07",
+        instagram: "https://www.instagram.com/mahimaaagupta/",
+      },
+    },
+    {
+      name: "Linga Nikhil Arya",
+      designation: "Design Head",
+      image: "https://res.cloudinary.com/abhi-server/image/upload/v1744698916/IMG_8905_rhfoee.jpg",
+      socialLinks: {
+        linkedin: "https://www.linkedin.com/in/divyansh-gautam-323b47266",
+        github: "https://github.com/i-divyansh",
+        instagram: "https://www.instagram.com/i._divyansh/",
+      },
+    },
+    {
+      name: "Rishi Chalana",
+      designation: "Management Head",
+      image: "https://res.cloudinary.com/abhi-server/image/upload/v1744721143/IMG_6670_qqx8at.jpg",
+      socialLinks: {
+        linkedin: "https://www.linkedin.com/in/rishi-chalana-08654520a",
+        github: "https://github.com/RishiChalana",
+        instagram: "https://www.instagram.com/rishi__chalana",
+      },
+    },
+    {
+      name: "Somil Gupta",
+      designation: "Outreach Head",
+      image: "https://res.cloudinary.com/abhi-server/image/upload/v1744698903/IMG_8929_ofhgw7.jpg",
+      socialLinks: {
+        linkedin: "https://www.linkedin.com/in/somil-gupta-040479285/",
+        github: "https://github.com/Somil1109",
+        instagram: "https://www.instagram.com/somil_1542/",
+      },
+    },
+    {
+      name: "Nandini Khantaal",
+      designation: "HR Head",
+      image: "https://res.cloudinary.com/abhi-server/image/upload/v1744699329/IMG_8828_jaxvtl.jpg",
+      socialLinks: {
+        linkedin: "http://www.linkedin.com/in/himika-bansal",
+        github: "https://github.com/himika-bansal",
+        instagram: "https://www.instagram.com/himika.bansal/",
+      },
+    },
+    {
+      name: "Ansh Jerath",
+      designation: "Finance Head",
+      image: "https://res.cloudinary.com/abhi-server/image/upload/v1744699413/IMG_8881_etpdsr.jpg",
+      socialLinks: {
+        linkedin: "http://www.linkedin.com/in/ansh-jerath-a25412214",
+        github: "https://github.com/darkhorse0204",
+        instagram: "https://www.instagram.com/ansh.jerath/",
+      },
+    },
+    {
+      name: "Kokil Agarwal",
+      designation: "Creative Head",
+      image: "https://res.cloudinary.com/abhi-server/image/upload/v1744698865/IMG_8987_poq27m.jpg",
+      socialLinks: {
+        linkedin: "https://www.linkedin.com/in/kokil-agarwal",
+        github: "https://github.com/KokilAgarwal",
+        instagram: "https://www.instagram.com/kokil__agarwal",
+      },
+    },
+    {
+      name: "Saanvi Sharma",
+      designation: "Public Relations Head",
+      image: "https://res.cloudinary.com/abhi-server/image/upload/v1744698906/IMG_8924_k2h4ko.jpg",
+      socialLinks: {
+        linkedin: "https://www.linkedin.com/in/samaksh-arjani-262a12253/",
+        github: "https://github.com/samaksharjani2004",
+        instagram: "https://www.instagram.com/chiiinuu._6/",
+      },
+    },
+  ]
 };
 
