@@ -3,7 +3,7 @@ import "../styles/teamGrid.css";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const TeamGrid = () => {
-  const [selectedYear, setSelectedYear] = useState("2024-25");
+  const [selectedYear, setSelectedYear] = useState("2025-26");
 
   const boardMembers = boardMembersData[selectedYear] || [];
 
