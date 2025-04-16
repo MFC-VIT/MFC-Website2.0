@@ -27,4 +27,4 @@ const NODE_ENV = import.meta.env.VITE_NODE_ENV;
 export const BE_URL = NODE_ENV === "production" ? PROD_BE_URL : DEV_BE_URL;
 
 export const BLOGS_ENDPOINT = BE_URL + "blogs";
-export const MAIL_ENDPOINT = BE_URL + "/contact";
+export const MAIL_ENDPOINT = PROD_BE_URL + "/api/contact";
