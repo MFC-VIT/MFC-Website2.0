@@ -32,13 +32,13 @@ export default function EnhancedNavbar() {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 smooth-scroll ${
         isScrolled
           ? "bg-[#0a0807]/90 backdrop-blur-md py-2 shadow-lg"
           : "py-5 mt-[2vh]"
       }`}
     >
-      <div className="container mx-auto px-4 flex items-center justify-between">
+      <div className="container mx-auto px-4 flex items-center justify-between smooth-scroll">
         <motion.div
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
@@ -67,6 +67,14 @@ export default function EnhancedNavbar() {
               onMouseLeave={() => setActiveItem(null)}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={(e) => {
+                e.preventDefault();
+                setIsMobileMenuOpen(false);
+                const section = document.getElementById(item.id);
+                if (section) {
+                  section.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
             >
               {item.name}
               {activeItem === item.name && (
@@ -87,6 +95,9 @@ export default function EnhancedNavbar() {
           whileHover={{ scale: 1.05, backgroundColor: "#FF8C40" }}
           whileTap={{ scale: 0.95 }}
           className="hidden md:block text-[#0a0807] font-semibold font-teko py-2 bg-[#FF6D00] rounded-sm text-lg lg:text-xl text-nowrap tracking-wide px-8"
+          onClick={() => {
+            document.getElementById("form")?.scrollIntoView({ behavior: "smooth" });
+          }}
         >
           GET IN TOUCH
         </motion.button>

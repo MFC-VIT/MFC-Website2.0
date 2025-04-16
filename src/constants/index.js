@@ -21,10 +21,10 @@ export const socials = [
 ]
 
 
-const PROD_BE_URL = import.meta.env.VITE_BE_URL;
+const PROD_BE_URL = import.meta.env.VITE_API_URL;
 const DEV_BE_URL = import.meta.env.VITE_DEV_URL;
 const NODE_ENV = import.meta.env.VITE_NODE_ENV;
 export const BE_URL = NODE_ENV === "production" ? PROD_BE_URL : DEV_BE_URL;
 
 export const BLOGS_ENDPOINT = BE_URL + "blogs";
-export const MAIL_ENDPOINT = BE_URL + "send-mail";
+export const MAIL_ENDPOINT = BE_URL + "/contact";

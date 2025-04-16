@@ -15,31 +15,39 @@ const Projects = () => {
 
       if (hoveredProjectId === index + 1) {
         gsap.to(contentRef, {
-          x: 20,
+          y: 20,
           color: "#ff6d00",
           duration: 0.5,
           ease: "power2.out",
         });
         gsap.to(imageRefs.current[index], {
+          height: "auto",
           opacity: 1,
-          x: 0,
-          duration: 0.25,
+          duration: 0.5,
           ease: "power2.out",
+          onStart: () => {
+            imageRefs.current[index].style.display = "block";
+          },
         });
       } else {
         gsap.to(contentRef, {
-          x: 0,
+          y: 0,
           color: "#e8ded5",
           duration: 0.5,
           ease: "power2.out",
         });
         gsap.to(imageRefs.current[index], {
+          height: 0,
           opacity: 0,
-          x: 0,
-          duration: 0.25,
-          ease: "power2.out",
+          duration: 0.5,
+          ease: "power2.inOut",
+          onComplete: () => {
+            imageRefs.current[index].style.display = "none";
+          },
         });
       }
+      
+      
     });
   }, [hoveredProjectId]);
 
@@ -78,14 +86,21 @@ const Projects = () => {
                       {item.projectName}
                     </p>
                   </a>
+                  <div
+                    className="image-container transition-all duration-300 ease-in-out"
+                    style={{
+                      opacity: 0,
+                      transform: "translateY(-10px)",
+                    }}
+                    ref={(el) => (imageRefs.current[index] = el)}
+                  >
+                    <img
+                      src={item.projectImage}
+                      alt={item.projectName}
+                      className="mt-4 w-full max-w-md object-contain rounded-md shadow-md"
+                    />
+                  </div>
                 </div>
-                <img
-                  src={item.projectImage}
-                  alt={item.projectName}
-                  ref={(el) => (imageRefs.current[index] = el)}
-                  className="absolute z-10 right-10 w-90 h-80 max-md:hidden overflow-hidden flex items-center justify-center text-center"
-                  style={{ opacity: 0, transform: "translateX(20px)" }}
-                />
               </div>
             </div>
           ))}
