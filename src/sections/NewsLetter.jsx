@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { format } from 'date-fns';
 import PropTypes from 'prop-types';
 import { useSwipeable } from 'react-swipeable';
+import axios from "axios";
 
 const NewsletterShowcase = () => {
   const [newsletters, setNewsletters] = useState([]);
@@ -100,6 +101,30 @@ const NewsletterShowcase = () => {
   //     }
   //   };
   // }, [activeIndex, isHovering, newsletters.length]);
+
+const [email, setEmail] = useState('');
+const [message, setMessage] = useState('');
+
+const SubmitEmail = async (e) => {
+  e.preventDefault();
+
+  try {
+    const response = await axios.post(`${API_URL}/v1/newsLetter/subscribeNewsletter`, {
+      email: email.trim(),
+    });
+
+    setMessage(response.data.message);
+    setEmail("");
+    setTimeout(() => setMessage(''), 3000);
+  } catch (error) {
+    if (error.response) {
+      setMessage(error.response.data.message || "Something went wrong.");
+    } else {
+      setMessage("Network error. Please try again.");
+    }
+  }
+};
+
 
   const handlePrev = () => {
     setAnimationDirection(-1);
@@ -493,11 +518,13 @@ const NewsletterShowcase = () => {
             <p className="text-white/70">Get the latest editions delivered directly to your inbox</p>
           </div>
 
-          <form className="flex flex-col md:flex-row gap-4">
+          <form className="flex flex-col md:flex-row gap-4" onSubmit={SubmitEmail}>
             <input
               type="email"
               placeholder="Enter your email address"
+              value={ email }
               className="flex-grow px-4 py-3 rounded-lg bg-black/50 border border-orange-500/30 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-orange-500"
+              onChange={(e)=>{setEmail(e.target.value)}}
               required
             />
             <button
@@ -511,6 +538,12 @@ const NewsletterShowcase = () => {
           <p className="text-white/50 text-sm text-center mt-4">
             We respect your privacy. Unsubscribe at any time.
           </p>
+
+          {message && (
+            <p className="text-white/50 text-sm text-center mt-4">
+              {message}
+            </p>
+          )}
         </div>
       </div>
     </section>
