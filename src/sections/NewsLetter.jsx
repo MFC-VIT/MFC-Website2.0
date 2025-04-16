@@ -109,7 +109,7 @@ const SubmitEmail = async (e) => {
   e.preventDefault();
 
   try {
-    const response = await axios.post(`${API_URL}/v1/newsLetter/subscribeNewsletter`, {
+    const response = await axios.post(`${API_URL}/api/v1/newsLetter/subscribeNewsletter`, {
       email: email.trim(),
     });
 
