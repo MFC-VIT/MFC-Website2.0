@@ -1,4 +1,5 @@
 import "../styles/About.css";
+import React from 'react';
 import AboutUsButton from "../components/AboutUsButton"
 
 function About({ onAboutUsClick, buttonRef }) {

@@ -1,3 +1,4 @@
+import React from 'react';
 import PropTypes from "prop-types";
 import { BsArrowUpRightCircle, BsCalendarEvent } from "react-icons/bs";
 import { events } from "../constants/events";

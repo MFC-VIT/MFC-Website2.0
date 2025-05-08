@@ -1,3 +1,4 @@
+import React from 'react';
 import Content1 from "../components/Content1";
 // import Landing3D from "../components/Landing3D";
 import Navbar1 from "../components/Navbar1";

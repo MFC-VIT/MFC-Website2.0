@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 import arrow from "../assets/images/arrowIcon.svg";
 import PropTypes from "prop-types"
 

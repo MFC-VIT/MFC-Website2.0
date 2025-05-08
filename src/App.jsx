@@ -32,6 +32,8 @@
 
 // export default App;
 
+
+import React from 'react'
 import { useEffect, useState, lazy, Suspense } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Hero } from "./sections/Hero";
@@ -39,8 +41,8 @@ import { Footer } from "./sections/Footer";
 import Loader from './components/Loader';
 
 import { useCallback } from "react";
-import Particles from "react-particles";
-import { loadSlim } from "tsparticles-slim";
+// import Particles from "react-particles";
+// import { loadSlim } from "tsparticles-slim";
 
 const AboutUs = lazy(() => import('./sections/AboutUs'));
 const Projects = lazy(() => import('./sections/Projects'));
@@ -149,7 +151,7 @@ function App() {
             }}
           />
           
-          <Particles
+          {/* <Particles
             id="tsparticles"
             init={particlesInit}
             className="fixed inset-0 z-0"
@@ -220,7 +222,7 @@ function App() {
               },
               detectRetina: true,
             }}
-          />
+          /> */}
           
           <div className="flex flex-col relative z-10">
             <Hero />

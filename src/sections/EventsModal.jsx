@@ -3,6 +3,7 @@ import { Modal, ModalContext } from "../components/Modal";
 import { events } from "../constants/events";
 import { Event } from "./Event";
 import { IoClose } from "react-icons/io5";
+import React from 'react';
 
 const EventsModal = ()=>{
   const {isOpen, setIsOpen} = useContext(ModalContext);

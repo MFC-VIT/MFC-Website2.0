@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { useEffect } from "react";
 import { useState } from "react";
 import { MAIL_ENDPOINT } from "../constants";
+import React from 'react';
 
 export const Form = () => {
   const [name, setName] = useState("");

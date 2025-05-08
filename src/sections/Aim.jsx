@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import "../styles/index.css";
+
 export const Aim = () => {
   // const modal = document.querySelector('modal')
   //   const cardbtn = document.querySelector('card__product')

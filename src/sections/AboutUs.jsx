@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import React from 'react';
 
 const AboutUs = () => {
     const [currentSlide, setCurrentSlide] = useState(0);

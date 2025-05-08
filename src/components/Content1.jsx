@@ -1,5 +1,6 @@
 import { useRef, useEffect, useState, useMemo } from "react";
 import { motion, useAnimationControls, useInView } from "framer-motion";
+import React from 'react';
 
 export default function Content1() {
   const sectionRef = useRef(null);

@@ -1,4 +1,5 @@
 import SponsorLogo from "../components/SponsorLogo.jsx";
+import React from 'react';
 //import sponsor1 from "../assets/images/sponsor1.png";
 //import sponsor2 from "../assets/images/sponsor2.png";
 //import sponsor3 from "../assets/images/sponsor3.png"; 

@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
 import final from "../assets/images/finallogo2.svg";
+import React from 'react';
 
 export default function EnhancedNavbar() {
   const [isScrolled, setIsScrolled] = useState(false);

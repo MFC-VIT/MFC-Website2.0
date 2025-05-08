@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { socials } from "../constants";
+import React from 'react';
 
 const useDynamicText = (id) => {
   useEffect(() => {
