@@ -237,7 +237,7 @@ function App() {
               >
                 <AboutUs />
               </motion.section>
-              
+                 
               <motion.section
                 initial="hidden"
                 whileInView="visible"
