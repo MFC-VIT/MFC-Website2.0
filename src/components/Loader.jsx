@@ -3,12 +3,13 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
 
+// ...existing code...
 const Loader = ({ colors, size = "lg" }) => {
   const circleSize = size === "sm" ? "w-8 h-8" : "w-24 h-24";
   const innerSize = size === "sm" ? "w-4 h-4" : "w-12 h-12";
   
   return (
-    <div className="relative">
+    <div className="relative flex flex-col items-center"> {/* Added flex flex-col items-center */}
       <motion.div
         className={`${circleSize} rounded-full relative`}
         style={{ background: `linear-gradient(45deg, ${colors.primary}, ${colors.accent})` }}
@@ -44,6 +45,7 @@ const Loader = ({ colors, size = "lg" }) => {
     </div>
   );
 };
+
 
 Loader.propTypes = {
     colors: PropTypes.object,

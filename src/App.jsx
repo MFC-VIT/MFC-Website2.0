@@ -300,11 +300,13 @@ function App() {
               
               <Footer />
               <EventsModal />
+
+               <Domains/> 
             </Suspense>
           </div>
         </motion.div>
       )}
-        <Domains/>
+       
     </AnimatePresence>
   
 
