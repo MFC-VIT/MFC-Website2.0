@@ -594,7 +594,7 @@ const boardMembersData = {
     {
       name: "Samriddhi Sharma",
       designation: "Vice Chairperson",
-      image: "https://res.cloudinary.com/abhi-server/image/upload/v1744699323/IMG_8820_stfyff.jpg",
+      image: "https://res.cloudinary.com/abhi-server/image/upload/v1747631941/Screenshot_2025-05-19_104851_appdkh.png",
       socialLinks: {
         linkedin: "http://www.linkedin.com/in/samriddhi-s-",
         github: "https://github.com/ck-ss",
@@ -666,9 +666,9 @@ const boardMembersData = {
       designation: "Design Head",
       image: "https://res.cloudinary.com/abhi-server/image/upload/v1744698916/IMG_8905_rhfoee.jpg",
       socialLinks: {
-        linkedin: "https://www.linkedin.com/in/divyansh-gautam-323b47266",
-        github: "https://github.com/i-divyansh",
-        instagram: "https://www.instagram.com/i._divyansh/",
+        linkedin: "https://www.linkedin.com/in/nikhil-arya-linga-941a3028a/",
+        github: "https://github.com/nikhillinga",
+        instagram: "https://www.instagram.com/nikhil_linga?igsh=NDh3ZzNzaG1wcnJn&utm_source=qr",
       },
     },
     {
