@@ -307,44 +307,9 @@ const Projects = () => {
 export default Projects;
 
 const projects = [
-  {
-    id: 1,
-    projectNumber: "1",
-    projectName: "Roommate-Dhoondo",
-    projectLink: "https://roommate-dhoondo.mfcvit.in",
-    projectImage:
-      "https://res.cloudinary.com/abhi-server/image/upload/v1744722884/Screenshot_2025-04-15_184405_bbuq2r.png",
-  },
-  {
-    id: 2,
-    projectNumber: "2",
-    projectName: "Enrollment Portal",
-    projectLink: "https://enrollments.mfcvit.in/",
-    projectImage:
-      "https://res.cloudinary.com/abhi-server/image/upload/v1744723075/Screenshot_2025-04-15_184737_htgyro.png",
-  },
-  {
-    id: 3,
-    projectNumber: "3",
-    projectName: "Tech Wars",
-    projectLink: "https://github.com/MFC-VIT/TechWars-Frontend.git",
-    projectImage:
-      "https://res.cloudinary.com/abhi-server/image/upload/v1747631791/Screenshot_2025-05-19_104614_vhm9ye.png",
-  },
-  {
-    id: 4,
-    projectNumber: "4",
-    projectName: "SOTY",
-    projectLink: "https://github.com/SuvidhJ/SOTY",
-    projectImage:
-      "https://res.cloudinary.com/abhi-server/image/upload/v1747631030/Screenshot_2025-05-19_103257_yz4waw.png",
-  },
-  {
-    id: 5,
-    projectNumber: "5",
-    projectName: "CODE TO SURVIVE",
-    projectLink: "https://github.com/MFC-VIT/CTS-Frontend.git",
-    projectImage:
-      "https://res.cloudinary.com/abhi-server/image/upload/v1747631613/Screenshot_2025-05-19_104318_ghngz0.png",
-  },
+  { id: 1, projectNumber: "01", projectName: "Roommate-Dhoondo", tagline: "Seamlessly find your next roommate.", description: "A MERN stack platform connecting individuals seeking compatible roommates, featuring advanced search, profiles, and messaging.", projectLink: "https://roommate-dhoondo.mfcvit.in", projectImage: "https://res.cloudinary.com/abhi-server/image/upload/v1744722884/Screenshot_2025-04-15_184405_bbuq2r.png", tags: ["React", "Node.js", "MongoDB", "Express"]},
+    { id: 2, projectNumber: "02", projectName: "Enrollment Portal", tagline: "Streamlined student enrollment system.", description: "Digitizes MFC VIT's student enrollment for clubs, managing applications and communication efficiently.", projectLink: "https://enrollments.mfcvit.in/", projectImage: "https://res.cloudinary.com/abhi-server/image/upload/v1744723075/Screenshot_2025-04-15_184737_htgyro.png", tags: ["Next.js", "Firebase", "TailwindCSS"]},
+    { id: 3, projectNumber: "03", projectName: "Tech Wars", tagline: "Engaging platform for competitive tech events.", description: "Mozilla VIT's flagship event website with schedules, registration, and real-time updates. Designed for high traffic.", projectLink: "https://github.com/MFC-VIT/TechWars-Frontend.git", projectImage: "https://res.cloudinary.com/abhi-server/image/upload/v1747631791/Screenshot_2025-05-19_104614_vhm9ye.png", tags: ["React", "Gatsby", "CMS", "Events"]},
+    { id: 4, projectNumber: "04", projectName: "SOTY", tagline: "Immersive scrolling experiences.", description: "An exploration of parallax scrolling for dynamic web narratives, showcasing advanced CSS and JavaScript for visual storytelling.", projectLink: "https://github.com/SuvidhJ/SOTY", projectImage: "https://res.cloudinary.com/abhi-server/image/upload/v1747631030/Screenshot_2025-05-19_103257_yz4waw.png", tags: ["JavaScript", "GSAP", "UI/UX", "Web Design"]},
+    { id: 5, projectNumber: "05", projectName: "CODE TO SURVIVE", tagline: "Conceptualizing tomorrow's digital interfaces.", description: "A design-driven project on futuristic UI/UX concepts, featuring interactive prototypes that push interface boundaries.", projectLink: "https://github.com/MFC-VIT/CTS-Frontend.git", projectImage: "https://res.cloudinary.com/abhi-server/image/upload/v1747631613/Screenshot_2025-05-19_104318_ghngz0.png", tags: ["UI Design", "UX Research", "Prototyping", "Figma"]},
 ];
