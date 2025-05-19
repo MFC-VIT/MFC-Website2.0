@@ -141,24 +141,24 @@ const projects = [
     id: 3,
     projectNumber: "3",
     projectName: "Tech Wars",
-    projectLink: "https://www.mozillavit.in/",
+    projectLink: "https://github.com/MFC-VIT/TechWars-Frontend.git",
     projectImage:
-      "https://images.unsplash.com/photo-1541356665065-22676f35dd40?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YWJzdHJhY3R8ZW58MHx8MHx8fDA%3D",
+      "https://res.cloudinary.com/abhi-server/image/upload/v1747631791/Screenshot_2025-05-19_104614_vhm9ye.png",
   },
   {
     id: 4,
     projectNumber: "4",
-    projectName: "PARALLEX VIEW",
-    projectLink: "https://www.mozillavit.in/",
+    projectName: "SOTY",
+    projectLink: "https://github.com/SuvidhJ/SOTY",
     projectImage:
-      "https://images.unsplash.com/photo-1481966115753-963394378f23?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGFic3RyYWN0fGVufDB8fDB8fHww",
+      "https://res.cloudinary.com/abhi-server/image/upload/v1747631030/Screenshot_2025-05-19_103257_yz4waw.png",
   },
   {
     id: 5,
     projectNumber: "5",
-    projectName: "VISION OF FUTURE",
-    projectLink: "https://www.mozillavit.in/",
+    projectName: "CODE TO SURVIVE",
+    projectLink: "https://github.com/MFC-VIT/CTS-Frontend.git",
     projectImage:
-      "https://images.unsplash.com/photo-1574169208507-84376144848b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGFic3RyYWN0fGVufDB8fDB8fHww",
+      "https://res.cloudinary.com/abhi-server/image/upload/v1747631613/Screenshot_2025-05-19_104318_ghngz0.png",
   },
 ];
