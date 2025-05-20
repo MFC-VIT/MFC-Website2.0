@@ -247,6 +247,16 @@ function App() {
               >
                 <Projects />
               </motion.section>
+
+              <motion.section
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+                variants={sectionVariants}
+                className="section-container"
+              >
+                <Domains/> 
+              </motion.section>
               
               <motion.section
                 initial="hidden"
@@ -300,8 +310,6 @@ function App() {
               
               <Footer />
               <EventsModal />
-
-               <Domains/> 
             </Suspense>
           </div>
         </motion.div>

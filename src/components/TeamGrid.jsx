@@ -696,9 +696,9 @@ const boardMembersData = {
       designation: "HR Head",
       image: "https://res.cloudinary.com/abhi-server/image/upload/v1744699329/IMG_8828_jaxvtl.jpg",
       socialLinks: {
-        linkedin: "http://www.linkedin.com/in/himika-bansal",
-        github: "https://github.com/himika-bansal",
-        instagram: "https://www.instagram.com/himika.bansal/",
+        linkedin: "https://www.linkedin.com/in/nandini-khantaal-69719628b",
+        github: "https://github.com/NandiniKhantaal",
+        instagram: "https://www.instagram.com/_nkhantaal_",
       },
     },
     {
@@ -726,9 +726,9 @@ const boardMembersData = {
       designation: "Public Relations Head",
       image: "https://res.cloudinary.com/abhi-server/image/upload/v1744698906/IMG_8924_k2h4ko.jpg",
       socialLinks: {
-        linkedin: "https://www.linkedin.com/in/samaksh-arjani-262a12253/",
-        github: "https://github.com/samaksharjani2004",
-        instagram: "https://www.instagram.com/chiiinuu._6/",
+        linkedin: "https://www.linkedin.com/in/saanvi-sharma-254b782a5/",
+        github: "https://github.com/saanvi3605",
+        instagram: "https://www.instagram.com/_saanvi_0306",
       },
     },
   ]

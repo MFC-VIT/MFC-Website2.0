@@ -21,7 +21,7 @@ export default function EnhancedNavbar() {
   const navItems = [
     { name: "ABOUT", id: "main-content" },
     { name: "PROJECTS", id: "projects" },
-    { name: "DOMAINS", id: "domain" },
+    { name: "DOMAINS", id: "domains" },
     { name: "WORKS", id: "events" },
     { name: "BLOG", id: "blogs" },
     { name: "NEWSLETTER", id: "newsletter" },
