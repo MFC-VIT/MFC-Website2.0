@@ -52,7 +52,7 @@ const Newsletters = lazy(() => import('./sections/NewsLetter'));
 const Team = lazy(() => import('./sections/Team'));
 const Form = lazy(() => import('./sections/Form').then(module => ({ default: module.Form })));
 const EventsModal = lazy(() => import('./sections/EventsModal'));
-
+const Domains = lazy(() => import('./sections/Domains'));
 const firefoxColors = {
   primary: '#FF9500',
   secondary: '#0060DF',
@@ -300,11 +300,17 @@ function App() {
               
               <Footer />
               <EventsModal />
+
+               <Domains/> 
             </Suspense>
           </div>
         </motion.div>
       )}
+       
     </AnimatePresence>
+  
+
+ 
   );
 }
 
