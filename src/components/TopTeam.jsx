@@ -35,7 +35,7 @@ const Toplayout = () => {
               the unique needs of learners. <br />
             </p>
           </div>
-          <h1 className="text-center font-apex font-normal leading-12 md:text-5xl lg:text-6xl">
+          <h1 className="text-5xl text-center font-apex font-normal leading-12 md:text-5xl lg:text-6xl">
             MEET <br /> OUR TEAM
           </h1>
 
