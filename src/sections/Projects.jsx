@@ -269,7 +269,7 @@ const Projects = () => {
           <p className="font-apex text-4xl sm:text-5xl md:text-6xl tracking-wider text-main uppercase">
             Featured Projects
           </p>
-          <p className="font-yoshiro text-xl sm:text-2xl text-secondary/80 mt-2">
+          <p className="font-yoshiro text-xl sm:text-2xl text-primary/80 mt-2">
             A Glimpse into Our Digital Craftsmanship
           </p>
         </div>
@@ -318,7 +318,7 @@ const Projects = () => {
                       <h3 className="project-name font-apex text-2xl sm:text-3xl md:text-4xl tracking-wide text-main">
                         {item.projectName}
                       </h3>
-                      <p className="text-sm font-light text-secondary mt-1 md:mt-2">
+                      <p className="text-sm font-light text-primary/60 mt-1 md:mt-2">
                         {item.tagline}
                       </p>
                     </div>
@@ -366,7 +366,7 @@ const Projects = () => {
                 ></h2>
                 <p
                   ref={previewDescRef}
-                  className="text-secondary text-sm md:text-base leading-relaxed mb-3 md:mb-4 flex-grow"
+                  className="text-primary/80 text-sm md:text-base leading-relaxed mb-3 md:mb-4 flex-grow"
                 ></p>
                 <div ref={previewTagsRef} className="mb-4 md:mb-6">
                   {activeProject?.tags.map((tag) => (

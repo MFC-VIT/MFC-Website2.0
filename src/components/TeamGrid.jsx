@@ -594,7 +594,7 @@ const boardMembersData = {
     {
       name: "Samriddhi Sharma",
       designation: "Vice Chairperson",
-      image: "https://res.cloudinary.com/abhi-server/image/upload/v1747631941/Screenshot_2025-05-19_104851_appdkh.png",
+      image: "https://res.cloudinary.com/abhi-server/image/upload/v1744699354/IMG_8844_wbksqt.jpg",
       socialLinks: {
         linkedin: "http://www.linkedin.com/in/samriddhi-s-",
         github: "https://github.com/ck-ss",
@@ -674,7 +674,7 @@ const boardMembersData = {
     {
       name: "Rishi Chalana",
       designation: "Management Head",
-      image: "https://res.cloudinary.com/abhi-server/image/upload/v1744721143/IMG_6670_qqx8at.jpg",
+      image: "https://res.cloudinary.com/abhi-server/image/upload/v1748281021/Screenshot_2025-05-26_230644_uhrava.png",
       socialLinks: {
         linkedin: "https://www.linkedin.com/in/rishi-chalana-08654520a",
         github: "https://github.com/RishiChalana",

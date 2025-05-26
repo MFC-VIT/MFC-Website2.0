@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/Domains.css';
-import technicalIcon from '../assets/images/tech.png';
+import technicalIcon from '../assets/images/tech_1.png';
 import designIcon from '../assets/images/Group.png';
 import managementIcon from '../assets/images/mang.png';
 
@@ -38,8 +38,8 @@ export default function Domains() {
           <div className="domains-grid pt-10"> 
             {DOMAIN_DATA.map((domain, index) => (
               <div className="domain-card" key={domain.key}>
-                <div className='domain-icon ml-2px flex w-20px h-20px'>
-                  <img src={domain.icon} alt="" className="domain-icon" />
+                <div className="domain-icon w-[320px] h-[192px] flex items-center justify-center">
+                  <img src={domain.icon} alt="" className="object-contain max-w-full max-h-full" />
                 </div>
                 <div className="domain-label font-apex text-4xl sm:text-5xl md:text-6xl tracking-wider text-main uppercase"><p>{domain.title}</p></div>
                 <div className="list-container">

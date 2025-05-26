@@ -214,7 +214,7 @@ export default function Content1() {
         }}
         transition={{ delay: 1, duration: 0.8 }}
       >
-        <motion.div 
+        {/* <motion.div 
           className="w-8 h-8 border-2 border-stone-300/50 rounded-full flex items-center justify-center cursor-pointer"
           animate={{ 
             y: [0, 8, 0],
@@ -239,7 +239,7 @@ export default function Content1() {
             }}
           />
         </motion.div>
-        <span className="text-stone-300/50 text-xs mt-2 font-light">Scroll Down</span>
+        {/* <span className="text-stone-300/50 text-xs mt-2 font-light">Scroll Down</span> */}
       </motion.div>
     </section>
   );

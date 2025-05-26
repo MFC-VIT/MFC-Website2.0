@@ -80,7 +80,7 @@ const fetchBlogPosts = () => {
           excerpt: 'The world of cybersecurity is constantly evolving, with new threats emerging regularly. To stay ahead of these ever-growing risks, organizations need to prepare proactively. One of the most effective ways to achieve this is through red teaming. This approach simulates real-world cyberattacks to evaluate an organization’s defenses, response strategies, and overall resilience. In this blog, we’ll delve into red teaming and focus on one of its most advanced techniques: the Golden Ticket Attack.',
           readTime: '4 min read',
           author: {
-            name: 'Utkarsh Tygai',
+            name: 'Utkarsh Tyagi',
             avatar: 'https://source.unsplash.com/random/100x100?portrait',
           },
           publishDate: '2024-12-28',
@@ -336,7 +336,7 @@ const BlogCard = ({ blog, index, priority }) => {
 
             <div className="absolute bottom-0 left-0 right-0 p-4 bg-gray-900 bg-opacity-80 backdrop-blur-sm flex items-center justify-between z-20">
               <div className="flex items-center space-x-2">
-                <div className="w-9 h-9 rounded-full bg-white overflow-hidden flex items-center justify-center">
+                {/* <div className="w-9 h-9 rounded-full bg-white overflow-hidden flex items-center justify-center">
                   <img
                     src={blog.author.avatar}
                     alt={blog.author.name}
@@ -345,7 +345,7 @@ const BlogCard = ({ blog, index, priority }) => {
                       e.target.src = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' fill='%23f97316'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='20' text-anchor='middle' dominant-baseline='middle' fill='white'%3E${blog.author.name.charAt(0)}%3C/text%3E%3C/svg%3E`;
                     }}
                   />
-                </div>
+                </div> */}
                 <div className="hidden sm:block">
                   <span className="text-gray-300 text-xs">{blog.readTime}</span>
                 </div>
@@ -401,14 +401,14 @@ const BlogCard = ({ blog, index, priority }) => {
               <div className="bg-gray-800 bg-opacity-70 backdrop-blur-lg rounded-lg p-3 flex items-center justify-between">
                 <div className="flex items-center space-x-2">
                   <div className="w-8 h-8 rounded-full overflow-hidden">
-                    <img
+                    {/* <img
                       src={blog.author.avatar}
                       alt={blog.author.name}
                       className="w-full h-full object-cover"
                       onError={(e) => {
                         e.target.src = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' fill='%23f97316'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='20' text-anchor='middle' dominant-baseline='middle' fill='white'%3E${blog.author.name.charAt(0)}%3C/text%3E%3C/svg%3E`;
                       }}
-                    />
+                    /> */}
                   </div>
                   <div>
                     <p className="text-white text-sm font-medium">{blog.author.name}</p>
@@ -489,13 +489,13 @@ const FeaturedBlog = ({ blog }) => {
 
           <div className="flex flex-wrap items-center gap-6">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 rounded-full overflow-hidden">
+              {/* <div className="w-10 h-10 rounded-full overflow-hidden">
                 <img
                   src={blog.author.avatar}
                   alt={blog.author.name}
                   className="w-full h-full object-cover"
                 />
-              </div>
+              </div> */}
               <div>
                 <p className="text-white text-sm">{blog.author.name}</p>
                 <p className="text-gray-400 text-xs">{new Date(blog.publishDate).toLocaleDateString('en-US', {
