@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
-import final from "../assets/images/finallogo2.svg";
+import final from "../../public/images/logo_main.png";
 import React from 'react';
 
 export default function EnhancedNavbar() {

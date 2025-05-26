@@ -456,7 +456,7 @@ const projects = [
     projectLink: "https://enrollments.mfcvit.in/",
     projectImage:
       "https://res.cloudinary.com/abhi-server/image/upload/v1744723075/Screenshot_2025-04-15_184737_htgyro.png",
-    tags: ["Next.js", "Firebase", "TailwindCSS"],
+    tags: ["Next.js", "MongoDB", "TailwindCSS", "Node.js", "Express"],
   },
   {
     id: 3,
@@ -468,7 +468,7 @@ const projects = [
     projectLink: "https://github.com/MFC-VIT/TechWars-Frontend.git",
     projectImage:
       "https://res.cloudinary.com/abhi-server/image/upload/v1747631791/Screenshot_2025-05-19_104614_vhm9ye.png",
-    tags: ["React", "Gatsby", "CMS", "Events"],
+    tags: ["React", "Gatsby", "CMS", "Events", "MongoDB", "Express"],
   },
   {
     id: 4,
@@ -480,7 +480,7 @@ const projects = [
     projectLink: "https://github.com/SuvidhJ/SOTY",
     projectImage:
       "https://res.cloudinary.com/abhi-server/image/upload/v1747631030/Screenshot_2025-05-19_103257_yz4waw.png",
-    tags: ["JavaScript", "GSAP", "UI/UX", "Web Design"],
+    tags: ["React", "GSAP", "UI/UX", "Web Design", "Node.js", "Express", "MongoDB"],
   },
   {
     id: 5,
@@ -492,6 +492,6 @@ const projects = [
     projectLink: "https://github.com/MFC-VIT/CTS-Frontend.git",
     projectImage:
       "https://res.cloudinary.com/abhi-server/image/upload/v1747631613/Screenshot_2025-05-19_104318_ghngz0.png",
-    tags: ["UI Design", "UX Research", "Prototyping", "Figma"],
+    tags: ["UI Design", "UX Research", "Prototyping", "Figma", "Next.js", "Golang", "MongoDB"],
   },
 ];
