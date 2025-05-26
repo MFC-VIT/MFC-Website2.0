@@ -335,7 +335,7 @@ const BlogCard = ({ blog, index, priority }) => {
             </div>
 
             <div className="absolute bottom-0 left-0 right-0 p-4 bg-gray-900 bg-opacity-80 backdrop-blur-sm flex items-center justify-between z-20">
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center">
                 {/* <div className="w-9 h-9 rounded-full bg-white overflow-hidden flex items-center justify-center">
                   <img
                     src={blog.author.avatar}
@@ -348,6 +348,7 @@ const BlogCard = ({ blog, index, priority }) => {
                 </div> */}
                 <div className="hidden sm:block">
                   <span className="text-gray-300 text-xs">{blog.readTime}</span>
+                  <p className="text-white text-sm font-medium">{blog.author.name}</p>
                 </div>
               </div>
               <div className="flex items-center space-x-2">
@@ -400,16 +401,16 @@ const BlogCard = ({ blog, index, priority }) => {
             <div className="mt-auto relative z-10">
               <div className="bg-gray-800 bg-opacity-70 backdrop-blur-lg rounded-lg p-3 flex items-center justify-between">
                 <div className="flex items-center space-x-2">
-                  <div className="w-8 h-8 rounded-full overflow-hidden">
-                    {/* <img
+                  {/* <div className="w-8 h-8 rounded-full overflow-hidden">
+                    <img
                       src={blog.author.avatar}
                       alt={blog.author.name}
                       className="w-full h-full object-cover"
                       onError={(e) => {
                         e.target.src = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' fill='%23f97316'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='20' text-anchor='middle' dominant-baseline='middle' fill='white'%3E${blog.author.name.charAt(0)}%3C/text%3E%3C/svg%3E`;
                       }}
-                    /> */}
-                  </div>
+                    />
+                  </div> */}
                   <div>
                     <p className="text-white text-sm font-medium">{blog.author.name}</p>
                     <p className="text-gray-400 text-xs">{formattedDate} · {blog.readTime}</p>

@@ -714,7 +714,7 @@ const boardMembersData = {
     {
       name: "Kokil Agarwal",
       designation: "Creative Head",
-      image: "https://res.cloudinary.com/abhi-server/image/upload/v1744698865/IMG_8987_poq27m.jpg",
+      image: "https://res.cloudinary.com/abhi-server/image/upload/v1748282976/IMG_6305_ygxulj.png",
       socialLinks: {
         linkedin: "https://www.linkedin.com/in/kokil-agarwal",
         github: "https://github.com/KokilAgarwal",
