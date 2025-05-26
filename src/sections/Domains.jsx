@@ -1,8 +1,8 @@
 import React from 'react';
 import '../styles/Domains.css';
-import technicalIcon from '../assets/images/technical.webp';
-import designIcon from '../assets/images/design.webp';
-import managementIcon from '../assets/images/management.webp';
+import technicalIcon from '../assets/images/tech.png';
+import designIcon from '../assets/images/Group.png';
+import managementIcon from '../assets/images/mang.png';
 
 const DOMAIN_DATA = [
   {

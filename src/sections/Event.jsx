@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import PropTypes from "prop-types";
 import { BsArrowUpRightCircle, BsCalendarEvent } from "react-icons/bs";
 import { events } from "../constants/events";
@@ -43,7 +43,7 @@ const Events = () => {
       className="w-[90%] max-w-7xl mx-auto flex flex-col gap-14 items-center my-12 relative"
       id="events"
     >
-      <motion.div 
+      <motion.div
         initial={{ y: -20 }}
         animate={isInView ? { y: 0 } : { y: -20 }}
         transition={{ duration: 0.5, delay: 0.2 }}
@@ -54,9 +54,9 @@ const Events = () => {
         </h2>
         <div className="h-1 w-24 bg-primary mt-3 mx-auto rounded-full"></div>
       </motion.div>
-      
+
       <div className="w-[25vw] aspect-square bg-primary blur-[300px] opacity-30 rounded-full absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 z-[10] animate-pulse"></div>
-      
+
       <div className="grid grid-cols-2 grid-rows-auto gap-12 max-md:gap-8 max-md:p-5 max-md:px-10 max-sm:px-6 max-lg:grid-cols-1 z-20 w-full">
         {events.slice(0, visibleEvents).map((event, index) => {
           return (
@@ -77,23 +77,27 @@ const Events = () => {
           );
         })}
       </div>
-      
+
       {events.length > visibleEvents ? (
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.5, delay: 0.7 }}
         >
-          <SeeMore 
-            link={links.instagram} 
+          <SeeMore
+            link={links.instagram}
             onClick={() => {
               if (visibleEvents < events.length) {
-                setVisibleEvents(prev => prev + 4);
+                setVisibleEvents((prev) => prev + 4);
               } else {
                 setIsOpen(true);
               }
             }}
-            text={visibleEvents < events.length ? "Load more events" : "Explore all events"}
+            text={
+              visibleEvents < events.length
+                ? "Load more events"
+                : "Explore all events"
+            }
           />
         </motion.div>
       ) : (
@@ -102,7 +106,11 @@ const Events = () => {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.5, delay: 0.7 }}
         >
-          <SeeMore link={links.instagram} onClick={() => setIsOpen(true)} text="Explore all events" />
+          <SeeMore
+            link={links.instagram}
+            onClick={() => setIsOpen(true)}
+            text="Explore all events"
+          />
         </motion.div>
       )}
     </motion.div>
@@ -111,8 +119,11 @@ const Events = () => {
 
 export const Event = ({ title, description, doe, image, link, isHovered }) => {
   return (
-    <div 
-      id="events" className={`flex max-sm:flex-col justify-between max-sm:justify-center border-[3px] ${isHovered ? 'border-primary/70' : 'border-primary/30'} rounded-2xl p-6 px-7 min-h-[280px] gap-5 max-sm:gap-3 bg-black/90 backdrop-blur-sm hover:shadow-lg transition-all duration-300 hover:shadow-primary/20 cursor-pointer sm:hover:scale-[1.02] group`}
+    <div
+      id="events"
+      className={`flex max-sm:flex-col justify-between max-sm:justify-center border-[3px] ${
+        isHovered ? "border-primary/70" : "border-primary/30"
+      } rounded-2xl p-6 px-7 min-h-[280px] gap-5 max-sm:gap-3 bg-black/90 backdrop-blur-sm hover:shadow-lg transition-all duration-300 hover:shadow-primary/20 cursor-pointer sm:hover:scale-[1.02] group`}
     >
       {image && (
         <div className="flex justify-center items-center">
@@ -130,18 +141,24 @@ export const Event = ({ title, description, doe, image, link, isHovered }) => {
           {title}
           <div className="h-[1px] bg-primary rounded-full"></div>
         </div>
-        
+
         <div className="font-yoshiro text-main/90 text-lg max-md:text-base tracking-wide leading-relaxed">
           {truncate(description, 180)}
         </div>
-        
+
         <div className="font-yoshiro text-stone-300 mb-8 flex items-center gap-2">
           <BsCalendarEvent className="text-orange-400" />
-          <span className="group-hover:text-orange-300 transition-colors duration-300">{doe}</span>
+          <span className="group-hover:text-orange-300 transition-colors duration-300">
+            {doe}
+          </span>
         </div>
-        
+
         <div className="w-full flex justify-end absolute bottom-0 right-0">
-          <Link link={link} text="Explore" textClass={"text-lg font-yoshiro tracking-wider"} />
+          <Link
+            link={link}
+            text="Explore"
+            textClass={"text-lg font-yoshiro tracking-wider"}
+          />
         </div>
       </div>
     </div>
@@ -166,7 +183,9 @@ const Link = ({ link, text, textClass }) => {
       <span className="text-main text-sm max-sm:text-xs tracking-wider group-hover:text-white transition-colors duration-300">
         {text}
       </span>
-      <BsArrowUpRightCircle className="text-base text-[#F7813F] opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:text-white" />
+       <span className="overflow-hidden max-w-0 opacity-0 group-hover:max-w-[20px] group-hover:opacity-100 transition-all duration-300">
+        <BsArrowUpRightCircle className="text-base text-[#F7813F] opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:text-white" />
+      </span>
     </a>
   );
 };
@@ -186,7 +205,9 @@ const SeeMore = ({ link, onClick, text = "Explore all events" }) => {
       <span className="text-orange-100 text-base max-sm:text-sm tracking-wider group-hover:text-white">
         {text}
       </span>
-      <BsArrowUpRightCircle className="text-[#F7813F] opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:text-white size-5" />
+       <span className="overflow-hidden max-w-0 opacity-0 group-hover:max-w-[20px] group-hover:opacity-100 transition-all duration-300">
+        <BsArrowUpRightCircle className="text-[#F7813F] opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:text-white size-5" />
+      </span>
     </button>
   );
 };
