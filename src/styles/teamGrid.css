@@ -1,3 +1,13 @@
+/* teamGrid.css */
+
+#team {
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* Dropdown */
 .dropdown-container {
   display: flex;
   flex-direction: column;
@@ -8,14 +18,12 @@
 }
 
 .dropdown-label {
-  margin-bottom: 10px;
   color: white;
   font-family: "Apex", sans-serif;
   font-size: 1.1rem;
   text-align: center;
   margin-bottom: 30px;
 }
-
 
 .dropdown {
   -webkit-appearance: none;
@@ -54,14 +62,14 @@
   font-size: 1rem;
 }
 
+/* Grid Layout */
 .marquee-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 30px;
-  width: 100%;
   padding: 20px;
+  width: 100%;
   box-sizing: border-box;
-  color: #e8ded5;
   margin-top: 25px;
 }
 
@@ -85,16 +93,19 @@
 .marquee-item img {
   margin-bottom: 1rem;
   border-radius: 100%;
-  height: 15vw;
-  width : 15vw;
+  width: clamp(80px, 15vw, 150px);
+  height: clamp(80px, 15vw, 150px);
+  object-fit: cover;
 }
 
+/* Typography */
 .name {
   margin: 0;
   font-family: "Apex", sans-serif;
   font-size: 1.6rem;
   text-align: center;
   color: #e8ded5;
+  word-wrap: break-word;
 }
 
 .designation {
@@ -103,8 +114,10 @@
   font-family: "Yoshiro", sans-serif;
   margin: 0;
   text-align: center;
+  word-wrap: break-word;
 }
 
+/* Social Links */
 .social-links {
   display: flex;
   justify-content: center;
@@ -113,6 +126,7 @@
 
 .social-links a {
   margin: 0 0.75rem;
+  padding: 8px;
   transition: transform 0.3s;
 }
 
@@ -127,6 +141,7 @@
   transform: scale(1.2);
 }
 
+/* Media Queries for Responsiveness */
 @media (max-width: 1200px) {
   .marquee-container {
     grid-template-columns: repeat(2, 1fr);
@@ -145,6 +160,8 @@
 @media (max-width: 768px) {
   .marquee-container {
     grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 0.5rem;
   }
 
   .marquee-item img {
@@ -154,5 +171,20 @@
 
   .name {
     font-size: 1rem;
+  }
+
+  .dropdown {
+    width: 90%;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .dropdown-label {
+    font-size: 1rem;
+  }
+
+  .designation {
+    font-size: 0.9rem;
   }
 }
