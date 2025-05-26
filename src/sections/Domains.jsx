@@ -29,13 +29,19 @@ export default function Domains() {
   return (
     <div id="domains">
       <section className="domains-section">
-        <h2 className="domains-heading">OUR DOMAINS</h2>
+        <p className="font-apex text-4xl sm:text-5xl md:text-6xl tracking-wider text-main uppercase">
+            Our Domains
+        </p>
+        <div className="w-[25vw] aspect-square bg-primary blur-[300px] opacity-30 rounded-full absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 z-[10] animate-pulse"></div>
+        <div className="h-1 w-24 bg-primary mt-3 mx-auto rounded-full"></div>
         <div className="domains-container">
-          <div className="domains-grid">
+          <div className="domains-grid pt-10"> 
             {DOMAIN_DATA.map((domain, index) => (
               <div className="domain-card" key={domain.key}>
-                <img src={domain.icon} alt="" className="domain-icon" />
-                <div className="domain-label">{domain.title}</div>
+                <div className='domain-icon ml-2px flex w-20px h-20px'>
+                  <img src={domain.icon} alt="" className="domain-icon" />
+                </div>
+                <div className="domain-label font-apex text-4xl sm:text-5xl md:text-6xl tracking-wider text-main uppercase"><p>{domain.title}</p></div>
                 <div className="list-container">
                   <ul className="subdomain-list">
                     {domain.subs.map((sub, subIndex) => (

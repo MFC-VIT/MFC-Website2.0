@@ -118,7 +118,7 @@ const fetchBlogPosts = () => {
             avatar: 'https://source.unsplash.com/random/100x100?portrait',
           },
           publishDate: '2024-11-11',
-          categories: ['Security', 'Technology'],
+          categories: ['Technology', 'Cybersecurity'],
           featured: false,
         },
         {

@@ -9,7 +9,7 @@
 }
 
 .domains-section {
-  background: #0e0e0e;
+  background: #00000e;
   color: #fff;
   padding: 4rem 2rem;
   text-align: center;
@@ -90,6 +90,7 @@
   height: 12rem !important;
   margin-bottom: 1rem !important;
   background-color: transparent !important;
+  transform: translateZ(0);
 }
 
 .domain-label {
@@ -221,3 +222,5 @@
     font-size: 1.8rem;
   }
 }
+
+

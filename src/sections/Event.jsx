@@ -202,7 +202,7 @@ const SeeMore = ({ link, onClick, text = "Explore all events" }) => {
       onClick={onClick}
       className="w-fit border-2 border-[#F7813F] bg-gradient-to-b from-neutral-800 via-neutral-900 to-black hover:bg-gradient-to-b hover:from-orange-500 hover:via-orange-400 hover:to-orange-500 border-x-orange-600 border-t-orange-500 border-y-orange-700 hover:border-none transition-all duration-300 hover:shadow-lg hover:shadow-orange-700/30 hover:-translate-y-1 active:translate-y-0 active:shadow-none py-3 px-6 rounded-full flex items-center font-apex gap-2 sm:gap-3 group mt-4"
     >
-      <span className="text-orange-100 text-base max-sm:text-sm tracking-wider group-hover:text-white text-justify  block">
+      <span className="text-orange-100 pl-2 text-base max-sm:text-sm tracking-wider group-hover:text-white text-justify  block">
         {text}
       </span>
        <span className="overflow-hidden max-w-0 opacity-0 group-hover:max-w-[20px] group-hover:opacity-100 transition-all duration-300">

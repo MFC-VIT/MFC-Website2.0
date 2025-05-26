@@ -70,7 +70,7 @@ const NewsletterShowcase = () => {
     visible: (isLeft) => ({
       opacity: 0.7,
       scale: 0.85,
-      x: isLeft ? -200 : 200,
+      x: isLeft ? -100 : 100,
       rotateY: isLeft ? 15 : -15,
       transition: {
         type: "spring",
@@ -220,7 +220,7 @@ const SubmitEmail = async (e) => {
   return (
     <section id="newsletter" className="bg-black min-h-screen relative overflow-hidden">
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <div className="w-[800px] h-[800px] bg-orange-500/20 rounded-full blur-[150px] animate-pulse-slow"></div>
+        <div className="w-[800px] h-[800px] bg-orange-500/40 rounded-full blur-[150px] animate-pulse-slow"></div>
       </div>
 
       <div className="container mx-auto px-4 py-16 relative z-10">
@@ -250,7 +250,7 @@ const SubmitEmail = async (e) => {
               onClick={handlePrev}
             >
               <NewsletterCard newsletter={newsletters[prevIndex]} isActive={false} />
-              <div className="absolute inset-0 bg-black/50 rounded-lg flex items-center justify-center">
+              <div className="absolute inset-0 bg-black/50 rounded-lg flex items-center justify-center ml-50 pl-10">
                 <span className="sr-only">Previous</span>
               </div>
             </motion.div>
@@ -302,7 +302,7 @@ const SubmitEmail = async (e) => {
               onClick={handleNext}
             >
               <NewsletterCard newsletter={newsletters[nextIndex]} isActive={false} />
-              <div className="absolute inset-0 bg-black/50 rounded-lg flex items-center justify-center">
+              <div className="absolute inset-0 bg-black/50 rounded-lg flex items-center justify-center pr-4 pl-8">
                 <span className="sr-only">Next</span>
               </div>
             </motion.div>
