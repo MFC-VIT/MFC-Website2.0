@@ -1,20 +1,21 @@
 /* teamGrid.css */
 
-#team {
+/* #team {
   width: 100%;
   padding: 1rem;
   box-sizing: border-box;
   overflow-x: hidden;
-}
+} */
 
 /* Dropdown */
 .dropdown-container {
+  margin-bottom: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: 50px 0;
-  z-index: 200;
+  z-index: 1000;
 }
 
 .dropdown-label {
@@ -65,11 +66,12 @@
 /* Grid Layout */
 .marquee-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 30px;
   padding: 20px;
   width: 100%;
   box-sizing: border-box;
+  color: #e8ded5;
   margin-top: 25px;
 }
 
@@ -105,7 +107,6 @@
   font-size: 1.6rem;
   text-align: center;
   color: #e8ded5;
-  word-wrap: break-word;
 }
 
 .designation {
@@ -126,7 +127,6 @@
 
 .social-links a {
   margin: 0 0.75rem;
-  padding: 8px;
   transition: transform 0.3s;
 }
 
@@ -160,8 +160,6 @@
 @media (max-width: 768px) {
   .marquee-container {
     grid-template-columns: 1fr;
-    gap: 16px;
-    padding: 0.5rem;
   }
 
   .marquee-item img {
@@ -173,13 +171,13 @@
     font-size: 1rem;
   }
 
-  .dropdown {
+  /* .dropdown {
     width: 90%;
     font-size: 1rem;
-  }
+  } */
 }
 
-@media (max-width: 400px) {
+/* @media (max-width: 400px) {
   .dropdown-label {
     font-size: 1rem;
   }
@@ -187,4 +185,4 @@
   .designation {
     font-size: 0.9rem;
   }
-}
+} */

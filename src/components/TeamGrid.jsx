@@ -554,7 +554,7 @@ const boardMembersData = {
       designation: "Outreach Head",
       image: "/images/board/24-25/outreach.webp",
       socialLinks: {
-        linkedin: "https://www.linkedin.com/in/kanha-khantaal-829302258",
+        linkedin: "https://res.cloudinary.com/abhi-server/image/upload/v1744699415/IMG_8886_axougi.jpg",
         github: "https://github.com/Kanha02052002",
         instagram: "https://www.instagram.com/k2g_02/",
       },
