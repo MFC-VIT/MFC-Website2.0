@@ -594,7 +594,7 @@ const boardMembersData = {
     {
       name: "Samriddhi Sharma",
       designation: "Vice Chairperson",
-      image: "https://res.cloudinary.com/abhi-server/image/upload/v1744699354/IMG_8844_wbksqt.jpg",
+      image: "https://res.cloudinary.com/abhi-server/image/upload/v1748318434/Screenshot_2025-05-27_093020_lsa2ng.png",
       socialLinks: {
         linkedin: "http://www.linkedin.com/in/samriddhi-s-",
         github: "https://github.com/ck-ss",
