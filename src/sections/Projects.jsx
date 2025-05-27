@@ -440,7 +440,7 @@ const projects = [
     projectName: "Roommate-Dhoondo",
     tagline: "Seamlessly find your next roommate.",
     description:
-      "A MERN stack platform connecting individuals seeking compatible roommates, featuring advanced search, profiles, and messaging.",
+      "Roommate matchmaking website for VIT students. Built using the MERN stack—Users can browse different configuration rooms to their liking based on search filters, connect through integrated chat system or shared contact info.",
     projectLink: "https://roommate-dhoondo.mfcvit.in",
     projectImage:
       "https://res.cloudinary.com/abhi-server/image/upload/v1744722884/Screenshot_2025-04-15_184405_bbuq2r.png",
@@ -452,7 +452,7 @@ const projects = [
     projectName: "Enrollment Portal",
     tagline: "Streamlined student enrollment system.",
     description:
-      "Digitizes MFC VIT's student enrollment for clubs, managing applications and communication efficiently.",
+      "MFC’s dynamic enrollment portal where students select domains, complete tasks and answer questions to advance to interview rounds—delivering a transparent, seamless and smooth experience.",
     projectLink: "https://enrollments.mfcvit.in/",
     projectImage:
       "https://res.cloudinary.com/abhi-server/image/upload/v1744723075/Screenshot_2025-04-15_184737_htgyro.png",
@@ -464,7 +464,7 @@ const projects = [
     projectName: "Tech Wars",
     tagline: "Engaging platform for competitive tech events.",
     description:
-      "Mozilla VIT's flagship event website with schedules, registration, and real-time updates. Designed for high traffic.",
+      "The flagship Gravitas event, built by MFC’s dev team using Next.js, Vite, Node.js, Express and MongoDB, is a challenging team-based game where participants compete, solve riddles, and defend real-world territory points on a battlefield.",
     projectLink: "https://github.com/MFC-VIT/TechWars-Frontend.git",
     projectImage:
       "https://res.cloudinary.com/abhi-server/image/upload/v1747631791/Screenshot_2025-05-19_104614_vhm9ye.png",
@@ -476,7 +476,7 @@ const projects = [
     projectName: "SOTY",
     tagline: "Immersive scrolling experiences.",
     description:
-      "An exploration of parallax scrolling for dynamic web narratives, showcasing advanced CSS and JavaScript for visual storytelling.",
+      "MFC's Premier annual treasure hunt—teams scan QRs across the campus, solve codes or level up through bonus games— all within the website. Parallax scrolling gives the user an immersive experience on the go.",
     projectLink: "https://github.com/SuvidhJ/SOTY",
     projectImage:
       "https://res.cloudinary.com/abhi-server/image/upload/v1747631030/Screenshot_2025-05-19_103257_yz4waw.png",
@@ -488,7 +488,7 @@ const projects = [
     projectName: "CODE TO SURVIVE",
     tagline: "Conceptualizing tomorrow's digital interfaces.",
     description:
-      "A design-driven project on futuristic UI/UX concepts, featuring interactive prototypes that push interface boundaries.",
+      "Code To Survive gamifies quizzes through interactive quizzes and clues. Featuring visionary UI/UX principles, this Gravitas project highlights MFC's excellence in innovation and design.",
     projectLink: "https://github.com/MFC-VIT/CTS-Frontend.git",
     projectImage:
       "https://res.cloudinary.com/abhi-server/image/upload/v1747631613/Screenshot_2025-05-19_104318_ghngz0.png",
