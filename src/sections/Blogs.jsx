@@ -680,7 +680,7 @@ const BlogSection = () => {
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="text-center mb-12"
         >
-          <h1 className="text-stone-300 font-apex text-5xl md:text-7xl font-bold tracking-wider inline-block relative">
+          <h1 className="text-stone-300 font-apex text-5xl md:text-7xl  tracking-wider inline-block relative">
             BLOGS
             <motion.span
               initial={{ scaleX: 0 }}

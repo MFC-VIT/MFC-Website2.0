@@ -60,25 +60,6 @@ const NewsletterShowcase = () => {
     trackMouse: true
   });
 
-  const sideCardVariants = {
-    hidden: (direction) => ({
-      opacity: 0.4,
-      scale: 0.7,
-      x: direction * 300,
-      rotateY: direction * 45
-    }),
-    visible: (isLeft) => ({
-      opacity: 0.7,
-      scale: 0.85,
-      x: isLeft ? -100 : 100,
-      rotateY: isLeft ? 15 : -15,
-      transition: {
-        type: "spring",
-        stiffness: 300,
-        damping: 30
-      }
-    })
-  };
   const formatDate = (dateString) => {
     try {
       const date = new Date(dateString);
@@ -214,8 +195,6 @@ const SubmitEmail = async (e) => {
   }
 
   const activeNewsletter = newsletters[activeIndex];
-  const prevIndex = (activeIndex - 1 + newsletters.length) % newsletters.length;
-  const nextIndex = (activeIndex + 1) % newsletters.length;
 
   return (
     <section id="newsletter" className="bg-black min-h-screen relative overflow-hidden">
@@ -226,7 +205,7 @@ const SubmitEmail = async (e) => {
       <div className="container mx-auto px-4 py-16 relative z-10">
         <div className="text-center mb-16">
           <div className="w-full max-w-4xl mx-auto h-0.5 bg-gradient-to-r from-transparent via-orange-500 to-transparent mb-8"></div>
-          <h1 className="text-white text-5xl md:text-6xl font-bold mb-4 uppercase tracking-wider">
+          <h1 className="text-white text-5xl md:text-6xl font-apex mb-4 uppercase tracking-wider">
             Our <span className="text-orange-500">Newsletter</span>
           </h1>
           <p className="text-white/70 max-w-2xl mx-auto">
@@ -238,80 +217,60 @@ const SubmitEmail = async (e) => {
         <div
           {...swipeHandlers}
           ref={carouselRef}
-          className="relative max-w-7xl mx-auto"
+          className="relative max-w-6xl mx-auto"
         >
-          <div className="flex items-center justify-center h-[600px] perspective">
-            <motion.div
-              variants={sideCardVariants}
-              initial="hidden"
-              animate="visible"
-              custom={true}
-              className="absolute left-0 md:left-10 z-10 cursor-pointer"
-              onClick={handlePrev}
-            >
-              <NewsletterCard newsletter={newsletters[prevIndex]} isActive={false} />
-              <div className="absolute inset-0 bg-black/50 rounded-lg flex items-center justify-center ml-50 pl-10">
-                <span className="sr-only">Previous</span>
-              </div>
-            </motion.div>
-
-            <AnimatePresence mode="wait" custom={animationDirection}>
-              <motion.div
-                key={activeIndex}
-                custom={animationDirection}
-                initial={(direction) => ({
-                  opacity: 0,
-                  rotateY: direction * 45,
-                  scale: 0.8,
-                  z: -200
-                })}
-                animate={{
-                  opacity: 1,
-                  rotateY: 0,
-                  scale: 1,
-                  z: 0
-                }}
-                exit={(direction) => ({
-                  opacity: 0,
-                  rotateY: direction * -45,
-                  scale: 0.8,
-                  z: -200
-                })}
-                transition={{
-                  type: "spring",
-                  stiffness: 300,
-                  damping: 30,
-                  mass: 1.2
-                }}
-                className="relative z-20 cursor-pointer transform scale-110 backface-hidden"
-                onClick={() => openNewsletter(activeNewsletter)}
-              >
-                <NewsletterCard newsletter={activeNewsletter} isActive={true} />
-                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-orange-600 text-white px-4 py-2 rounded-full shadow-lg">
-                  <span className="text-sm font-bold">View Details</span>
+          {/* Carousel Container */}
+          <div className="relative overflow-hidden rounded-xl">
+            <div className="flex transition-transform duration-500 ease-in-out" 
+                 style={{ transform: `translateX(-${activeIndex * 100}%)` }}>
+              {newsletters.map((newsletter, index) => (
+                <div key={newsletter._id} className="w-full flex-shrink-0 px-4">
+                  <div className="flex flex-col lg:flex-row items-center justify-center gap-8 py-8">
+                    {/* Newsletter Card */}
+                    <div 
+                      className="cursor-pointer transform transition-transform hover:scale-105"
+                      onClick={() => openNewsletter(newsletter)}
+                    >
+                      <NewsletterCard newsletter={newsletter} isActive={index === activeIndex} />
+                      {index === activeIndex && (
+                        <div className="mt-4 text-center">
+                          <div className="inline-block bg-orange-600 text-white px-4 py-2 rounded-full shadow-lg">
+                            <span className="text-sm font-bold">View Details</span>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                    
+                    {/* Newsletter Info */}
+                    <div className="flex-1 max-w-md text-center lg:text-left">
+                      <h2 className="text-white text-3xl font-bold mb-4 tracking-wide">
+                        {newsletter.title}
+                      </h2>
+                      <p className="text-orange-500 font-medium mb-6">
+                        {newsletter.formattedDate} • Edition {index + 1}
+                      </p>
+                      <p className="text-white/70 leading-relaxed mb-6">
+                        This newsletter covers the latest updates, insights, and developments in our field.
+                        Browse through the publication to discover valuable information and stay informed
+                        about recent trends and innovations.
+                      </p>
+                      <button
+                        onClick={() => openNewsletter(newsletter)}
+                        className="bg-orange-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-orange-700 transition-colors focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-black"
+                      >
+                        Read Newsletter
+                      </button>
+                    </div>
+                  </div>
                 </div>
-              </motion.div>
-            </AnimatePresence>
-
-            <motion.div
-              variants={sideCardVariants}
-              initial="hidden"
-              animate="visible"
-              custom={false}
-              className="absolute right-0 md:right-10 z-10 cursor-pointer"
-              onClick={handleNext}
-            >
-              <NewsletterCard newsletter={newsletters[nextIndex]} isActive={false} />
-              <div className="absolute inset-0 bg-black/50 rounded-lg flex items-center justify-center pr-4 pl-8">
-                <span className="sr-only">Next</span>
-              </div>
-            </motion.div>
+              ))}
+            </div>
           </div>
 
-
+          {/* Navigation Arrows */}
           <button
             onClick={handlePrev}
-            className="absolute left-4 top-1/2 -translate-y-1/2 z-30 
+            className="absolute left-4 top-1/3 -translate-y-1/2 z-30 
               w-12 h-12 rounded-full bg-black/50 backdrop-blur-sm border border-orange-500/30
               flex items-center justify-center text-white hover:bg-orange-600 
               transition-all focus:outline-none focus:ring-2 focus:ring-orange-500"
@@ -324,7 +283,7 @@ const SubmitEmail = async (e) => {
 
           <button
             onClick={handleNext}
-            className="absolute right-4 top-1/2 -translate-y-1/2 z-30 
+            className="absolute right-4 top-1/3 -translate-y-1/2 z-30 
               w-12 h-12 rounded-full bg-black/50 backdrop-blur-sm border border-orange-500/30
               flex items-center justify-center text-white hover:bg-orange-600 
               transition-all focus:outline-none focus:ring-2 focus:ring-orange-500"
@@ -335,7 +294,7 @@ const SubmitEmail = async (e) => {
             </svg>
           </button>
 
-
+          {/* Dot Navigation */}
           <div className="flex justify-center mt-8 space-x-2">
             {newsletters.map((_, index) => (
               <button
@@ -348,15 +307,6 @@ const SubmitEmail = async (e) => {
                 aria-label={`Go to newsletter ${index + 1}`}
               />
             ))}
-          </div>
-
-          <div className="text-center mt-8">
-            <h2 className="text-white text-2xl font-bold mb-2 tracking-wide">
-              {activeNewsletter.title}
-            </h2>
-            <p className="text-orange-500 font-medium">
-              {activeNewsletter.formattedDate} • Edition {activeIndex + 1}
-            </p>
           </div>
         </div>
       </div>

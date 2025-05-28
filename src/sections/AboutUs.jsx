@@ -122,11 +122,11 @@ const AboutUs = () => {
 
             <div className="relative z-10 max-w-7xl mx-auto">
                 <motion.h1
-                    className="text-5xl md:text-6xl lg:text-7xl font-bold mb-16 font-apex text-stone-300 tracking-widest uppercase text-center"
+                    className="text-5xl md:text-6xl lg:text-7xl mb-16 font-apex text-stone-300 tracking-widest uppercase text-center"
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
-                >
+                > 
                     <span className="inline-block">A</span>
                     <span className="inline-block">B</span>
                     <span className="inline-block">O</span>
@@ -134,6 +134,7 @@ const AboutUs = () => {
                     <span className="inline-block">T</span>
                     <span className="inline-block ml-4">U</span>
                     <span className="inline-block">S</span>
+                    <div className="h-1 w-24 bg-primary mt-3 mx-auto rounded-full"></div> 
                 </motion.h1>
 
                 <div className="w-full flex flex-col lg:flex-row items-center justify-between gap-10">
