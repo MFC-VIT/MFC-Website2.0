@@ -11,19 +11,19 @@ const AboutUs = () => {
     const slides = [
         {
             id: 1,
-            image: 'https://res.cloudinary.com/abhi-server/image/upload/v1744721073/WhatsApp_Image_2025-04-15_at_18.13.42_5e6e68d7_xfsros.jpg',
+            image: '/images/events/open.webp',
             alt: 'Team members collaborating on digital projects',
             caption: 'Our team working on open source initiatives'
         },
         {
             id: 2,
-            image: 'https://res.cloudinary.com/abhi-server/image/upload/v1744722058/WhatsApp_Image_2025-04-15_at_18.29.35_998d584c_hqeydz.jpg',
+            image: '/images/events/community.webp',
             alt: 'Community event with diverse participants',
             caption: 'Annual Mozilla Firefox Club hackathon'
         },
         {
             id: 3,
-            image: 'https://res.cloudinary.com/abhi-server/image/upload/v1744720703/WhatsApp_Image_2025-04-15_at_18.07.24_dc477423_q23lyf.jpg',
+            image: '/images/events/web_tech.webp',
             alt: 'Educational workshop session',
             caption: 'Teaching web technologies to new members'
         }

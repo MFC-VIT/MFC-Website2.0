@@ -9,7 +9,7 @@ const Toplayout = () => {
           <div className="flex justify-center items-center mt-5 md:mt-10 lg:mt-16">
             <img
               className="max-w-[250px] h-[300px] object-cover shadow-md filter grayscale(50%) rounded-lg"
-              src={"https://res.cloudinary.com/abhi-server/image/upload/v1747630779/WhatsApp_Image_2025-04-17_at_21.02.40_e09ad431_cv1xhe.jpg"}
+              src={"/images/board/25-26/jayakumarSir.webp"}
               alt="Team Member Image"
             />
           </div>
