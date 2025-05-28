@@ -287,7 +287,7 @@ const boardMembersData = {
     {
       name: "Vaishali Singh",
       designation: "Events Head",
-      image: "/images/board/23-24/events.webp",
+      image: "https://res.cloudinary.com/abhi-server/image/upload/v1748419016/Screenshot_2025-05-28_132646_ajirsu.png",
       socialLinks: {
         linkedin:
           "https://in.linkedin.com/in/vaishali-singh25?trk=public_profile_browsemap",
@@ -298,7 +298,7 @@ const boardMembersData = {
     {
       name: "Stuti Chaudhury",
       designation: "Editorial Head",
-      image: "/images/board/23-24/editorial.webp",
+      image: "https://res.cloudinary.com/abhi-server/image/upload/v1748419121/Screenshot_2025-05-28_132829_kkbno9.png",
       socialLinks: {
         linkedin:
           "https://in.linkedin.com/in/stuti-chaudhury-8419a3235?trk=public_profile_browsemap",
@@ -422,7 +422,7 @@ const boardMembersData = {
     {
       name: "Namah Singhal",
       designation: "General Secretary",
-      image: "/images/board/24-25/gensec.webp",
+      image: "https://res.cloudinary.com/abhi-server/image/upload/v1748418338/Screenshot_2025-05-28_130920_n3sa8c.png",
       socialLinks: {
         linkedin: "https://www.linkedin.com/in/namah-singhal-983446217/",
         github: "https://github.com/NAMAH942",
@@ -432,7 +432,7 @@ const boardMembersData = {
     {
       name: "Chaitanay Kapoor",
       designation: "Vice Chairperson",
-      image: "/images/board/24-25/vc.webp",
+      image: "https://res.cloudinary.com/abhi-server/image/upload/v1748419246/Screenshot_2025-05-28_133036_pe9gdn.png",
       socialLinks: {
         linkedin: "https://www.linkedin.com/in/chaitanay-kapoor-717bb8299/",
         github: "https://github.com/chaitanay2004",
@@ -512,7 +512,7 @@ const boardMembersData = {
     {
       name: "Himika Bansal",
       designation: "HR Head",
-      image: "/images/board/24-25/hr.webp",
+      image: "https://res.cloudinary.com/abhi-server/image/upload/v1748419347/Screenshot_2025-05-28_133214_ixwpxl.png",
       socialLinks: {
         linkedin: "http://www.linkedin.com/in/himika-bansal",
         github: "https://github.com/himika-bansal",
@@ -522,7 +522,7 @@ const boardMembersData = {
     {
       name: "Harshvardhan Singh",
       designation: "Management Head",
-      image: "/images/board/24-25/management.webp",
+      image: "https://res.cloudinary.com/abhi-server/image/upload/v1744698895/IMG_8940_ssejcl.jpg",
       socialLinks: {
         linkedin: "https://www.linkedin.com/in/harshvardhan-singh-b66728250/",
         github: "https://github.com/harshvar36",
@@ -552,9 +552,9 @@ const boardMembersData = {
     {
       name: "Kanha Khantaal",
       designation: "Outreach Head",
-      image: "/images/board/24-25/outreach.webp",
+      image: "https://res.cloudinary.com/abhi-server/image/upload/v1744699415/IMG_8886_axougi.jpg",
       socialLinks: {
-        linkedin: "https://res.cloudinary.com/abhi-server/image/upload/v1744699415/IMG_8886_axougi.jpg",
+        linkedin: "https://www.linkedin.com/in/kanha-khantaal-829302258",
         github: "https://github.com/Kanha02052002",
         instagram: "https://www.instagram.com/k2g_02/",
       },
