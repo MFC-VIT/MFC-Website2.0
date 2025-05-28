@@ -168,9 +168,10 @@ export default function Content1() {
       </motion.h1>
       
       <motion.p 
-        className="text-stone-300 font-bold text-[3.3739583333333335vw] lg:text-[2vw] font-yoshiro_b text-center mb-8"
+        className="text-stone-300 font-bold text-[3.3vw] lg:text-[2vw] font-yoshiro_b text-center mb-8"
         initial={{ opacity: 0, y: 20 }}
         animate={subtitleControls}
+        transition={{ duration: 0.1 }}
       >
         {subtitleText}
       </motion.p>

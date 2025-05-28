@@ -39,7 +39,7 @@ export default function Domains() {
             {DOMAIN_DATA.map((domain, index) => (
               <div className="domain-card font-apex" key={domain.key}>
                 <div className="domain-icon w-[320px] h-[192px] flex items-center justify-center">
-                  <img src={domain.icon} alt="" className="object-contain max-w-full max-h-full" />
+                  <img src={domain.icon} alt="icon" className="object-contain max-w-full max-h-full" />
                 </div>
                 <div className="domain-label font-apex text-4xl sm:text-5xl md:text-6xl tracking-wider uppercase">{domain.title}</div>
                 <div className="list-container">

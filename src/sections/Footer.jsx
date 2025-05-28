@@ -42,6 +42,7 @@ export const Footer = () => {
             <img
               src={social.src}
               className="md:size-8 size-6 transition-all duration-200 hover:scale-150 max-md:hover:scale-125 hover:mx-2 max-md:hover:mx-1 active:scale-100"
+              alt=""
             />
           </a>
         ))}

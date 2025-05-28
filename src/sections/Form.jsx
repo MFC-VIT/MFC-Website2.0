@@ -50,7 +50,7 @@ export const Form = () => {
           Get in touch with us today and let us help you with any question and inquiries you may have.
         </div>
         <div className="text-main p-1.5 px-4 rounded-full bg-amber-950 flex items-center gap-2">
-          <img src={images.gmailIcon} className="size-4" alt="" />
+          <img src={images.gmailIcon} className="size-4" alt="icon" />
           <span className="text-xs font-yoshiro text-main">mozillafirefox@vit.ac.in</span>
         </div>
         <FormElement
