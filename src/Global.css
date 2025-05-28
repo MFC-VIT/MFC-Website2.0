@@ -75,3 +75,9 @@ html {
     scroll-behavior: smooth;
     scroll-padding-top: 100px;
 }
+
+@media (hover: none) and (pointer: coarse) {
+  * {
+    cursor: none !important;
+  }
+}

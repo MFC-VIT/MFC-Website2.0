@@ -432,7 +432,7 @@ const boardMembersData = {
     {
       name: "Chaitanay Kapoor",
       designation: "Vice Chairperson",
-      image: "https://res.cloudinary.com/abhi-server/image/upload/v1748419246/Screenshot_2025-05-28_133036_pe9gdn.png",
+      image: "/images/board/24-25/vc.webp",
       socialLinks: {
         linkedin: "https://www.linkedin.com/in/chaitanay-kapoor-717bb8299/",
         github: "https://github.com/chaitanay2004",
@@ -462,7 +462,7 @@ const boardMembersData = {
     {
       name: "Harshit PG",
       designation: "Projects Head",
-      image: "https://res.cloudinary.com/abhi-server/image/upload/v1744698914/IMG_8908_ribuyq.jpg",
+      image: "/images/board/24-25/ph.webp",
       socialLinks: {
         linkedin: "https://www.linkedin.com/in/harshit-p-g-a87623272/",
         github: "https://github.com/HarshitPG",
@@ -522,7 +522,7 @@ const boardMembersData = {
     {
       name: "Harshvardhan Singh",
       designation: "Management Head",
-      image: "https://res.cloudinary.com/abhi-server/image/upload/v1744698895/IMG_8940_ssejcl.jpg",
+      image: "/images/board/25-26/chair.webp",
       socialLinks: {
         linkedin: "https://www.linkedin.com/in/harshvardhan-singh-b66728250/",
         github: "https://github.com/harshvar36",
@@ -552,7 +552,7 @@ const boardMembersData = {
     {
       name: "Kanha Khantaal",
       designation: "Outreach Head",
-      image: "https://res.cloudinary.com/abhi-server/image/upload/v1744699415/IMG_8886_axougi.jpg",
+      image: "/images/board/25-26/gensec.webp",
       socialLinks: {
         linkedin: "https://www.linkedin.com/in/kanha-khantaal-829302258",
         github: "https://github.com/Kanha02052002",
@@ -574,7 +574,7 @@ const boardMembersData = {
     {
       name: "Harshvardhan Singh",
       designation: "ChairPerson",
-      image: "https://res.cloudinary.com/abhi-server/image/upload/v1744698895/IMG_8940_ssejcl.jpg",
+      image: "/images/board/25-26/chair.webp",
       socialLinks: {
         linkedin: "https://www.linkedin.com/in/harshvardhan-singh-b66728250/",
         github: "https://github.com/harshvar36",
@@ -584,7 +584,7 @@ const boardMembersData = {
     {
       name: "Kanha Khantaal",
       designation: "General Secretary",
-      image: "https://res.cloudinary.com/abhi-server/image/upload/v1744699415/IMG_8886_axougi.jpg",
+      image: "/images/board/25-26/gensec.webp",
       socialLinks: {
         linkedin: "https://www.linkedin.com/in/kanha-khantaal-829302258",
         github: "https://github.com/Kanha02052002",
@@ -594,7 +594,7 @@ const boardMembersData = {
     {
       name: "Samriddhi Sharma",
       designation: "Vice Chairperson",
-      image: "https://res.cloudinary.com/abhi-server/image/upload/v1748318434/Screenshot_2025-05-27_093020_lsa2ng.png",
+      image: "/images/board/25-26/vc-25.webp",
       socialLinks: {
         linkedin: "http://www.linkedin.com/in/samriddhi-s-",
         github: "https://github.com/ck-ss",
@@ -604,7 +604,7 @@ const boardMembersData = {
     {
       name: "Keshav Gujrathi",
       designation: "Co-Secretary",
-      image: "https://res.cloudinary.com/abhi-server/image/upload/v1744699365/IMG_8851_celrwo.jpg",
+      image: "/images/board/25-26/cosec.webp",
       socialLinks: {
         linkedin: "http://www.linkedin.com/in/keshavgujrathi",
         github: "https://github.com/keshavgujrathi",
@@ -614,7 +614,7 @@ const boardMembersData = {
     {
       name: "Abhinav Garg",
       designation: "Technical Head",
-      image: "https://res.cloudinary.com/abhi-server/image/upload/v1744699403/IMG_8869_togwb7.jpg",
+      image: "/images/board/25-26/tech.webp",
       socialLinks: {
         linkedin: "https://www.linkedin.com/in/abhinav-garg05",
         github: "https://github.com/ABHINAVGARG05",
@@ -624,7 +624,7 @@ const boardMembersData = {
     {
       name: "Suvidh Jain",
       designation: "Projects Head",
-      image: "https://res.cloudinary.com/abhi-server/image/upload/v1744699404/IMG_8876_xybmsc.jpg",
+      image: "/images/board/25-26/projects.webp",
       socialLinks: {
         linkedin: "https://www.linkedin.com/in/suvidh-jain-72a88728a/",
         github: "https://github.com/SuvidhJ",
@@ -634,7 +634,7 @@ const boardMembersData = {
     {
       name: "Bihan Banerjee",
       designation: "Events Head",
-      image: "https://res.cloudinary.com/abhi-server/image/upload/v1744721350/WhatsApp_Image_2025-04-15_at_13.02.03_8b7a9ba6_rdn63h.jpg",
+      image: "/images/board/25-26/events.webp",
       socialLinks: {
         linkedin: "https://www.linkedin.com/in/bihan-banerjee-70905228b",
         github: "https://github.com/Bihan-Banerjee",
@@ -644,7 +644,7 @@ const boardMembersData = {
     {
       name: "Prateek Batra",
       designation: "Research and Development Head",
-      image: "https://res.cloudinary.com/abhi-server/image/upload/v1744699401/IMG_8868_lpiy3w.jpg",
+      image: "/images/board/25-26/rnd.webp",
       socialLinks: {
         linkedin: "http://www.linkedin.com/in/prateekbatradel",
         github: "https://github.com/PrateekBatra23",
@@ -654,7 +654,7 @@ const boardMembersData = {
     {
       name: "Mahima Gupta",
       designation: "Publicity Head",
-      image: "https://res.cloudinary.com/abhi-server/image/upload/v1744699352/IMG_8843_qxoka4.jpg",
+      image: "/images/board/25-26/publicity.webp",
       socialLinks: {
         linkedin: "http://www.linkedin.com/in/mahima-gupta-a51b1728a",
         github: "https://github.com/mahimag07",
@@ -664,7 +664,7 @@ const boardMembersData = {
     {
       name: "Linga Nikhil Arya",
       designation: "Design Head",
-      image: "https://res.cloudinary.com/abhi-server/image/upload/v1744698916/IMG_8905_rhfoee.jpg",
+      image: "/images/board/25-26/design.webp",
       socialLinks: {
         linkedin: "https://www.linkedin.com/in/nikhil-arya-linga-941a3028a/",
         github: "https://github.com/nikhillinga",
@@ -674,7 +674,7 @@ const boardMembersData = {
     {
       name: "Rishi Chalana",
       designation: "Management Head",
-      image: "https://res.cloudinary.com/abhi-server/image/upload/v1748281021/Screenshot_2025-05-26_230644_uhrava.png",
+      image: "/images/board/25-26/mang.webp",
       socialLinks: {
         linkedin: "https://www.linkedin.com/in/rishi-chalana-08654520a",
         github: "https://github.com/RishiChalana",
@@ -684,7 +684,7 @@ const boardMembersData = {
     {
       name: "Somil Gupta",
       designation: "Outreach Head",
-      image: "https://res.cloudinary.com/abhi-server/image/upload/v1744698903/IMG_8929_ofhgw7.jpg",
+      image: "/images/board/25-26/out.webp",
       socialLinks: {
         linkedin: "https://www.linkedin.com/in/somil-gupta-040479285/",
         github: "https://github.com/Somil1109",
@@ -694,7 +694,7 @@ const boardMembersData = {
     {
       name: "Nandini Khantaal",
       designation: "HR Head",
-      image: "https://res.cloudinary.com/abhi-server/image/upload/v1744699329/IMG_8828_jaxvtl.jpg",
+      image: "/images/board/25-26/hr.webp",
       socialLinks: {
         linkedin: "https://www.linkedin.com/in/nandini-khantaal-69719628b",
         github: "https://github.com/NandiniKhantaal",
@@ -704,7 +704,7 @@ const boardMembersData = {
     {
       name: "Ansh Jerath",
       designation: "Finance Head",
-      image: "https://res.cloudinary.com/abhi-server/image/upload/v1744699413/IMG_8881_etpdsr.jpg",
+      image: "/images/board/25-26/finance.webp",
       socialLinks: {
         linkedin: "http://www.linkedin.com/in/ansh-jerath-a25412214",
         github: "https://github.com/darkhorse0204",
@@ -714,7 +714,7 @@ const boardMembersData = {
     {
       name: "Kokil Agarwal",
       designation: "Creative Head",
-      image: "https://res.cloudinary.com/abhi-server/image/upload/v1748282976/IMG_6305_ygxulj.png",
+      image: "/images/board/25-26/creativity.webp",
       socialLinks: {
         linkedin: "https://www.linkedin.com/in/kokil-agarwal",
         github: "https://github.com/KokilAgarwal",
@@ -724,7 +724,7 @@ const boardMembersData = {
     {
       name: "Saanvi Sharma",
       designation: "Public Relations Head",
-      image: "https://res.cloudinary.com/abhi-server/image/upload/v1744698906/IMG_8924_k2h4ko.jpg",
+      image: "/images/board/25-26/pnr.webp",
       socialLinks: {
         linkedin: "https://www.linkedin.com/in/saanvi-sharma-254b782a5/",
         github: "https://github.com/saanvi3605",

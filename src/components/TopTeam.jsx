@@ -23,18 +23,19 @@ const Toplayout = () => {
             </h1>
           </div>
 
-          <div className="mt-3 md:mt-4 lg:mt-5 text-center font-CAYoshiroTRIAL text-sm md:text-base lg:text-lg">
-            <p>
-              Jayakumar Sadhasivam is an Assistant Professor Senior Grade 1 at
-              Vellore Institute of Technology (VIT) in <br /> the School of
-              Computer Science and Engineering (SCOPE). Jayakumar's areas of
-              expertise include Open <br /> Source Programming, Network
-              Security, Storage Technologies, and Machine Learning. His research{" "}
-              <br /> interests are in the use of technology in education and
-              developing open-source software that takes into <br /> consideration
-              the unique needs of learners. <br />
-            </p>
-          </div>
+          <div className="mt-3 md:mt-4 lg:mt-5 text-justify md:text-center font-CAYoshiroTRIAL text-sm md:text-base lg:text-lg">
+          <p>
+            Jayakumar Sadhasivam is an Assistant Professor Senior Grade 1 at
+            Vellore Institute of Technology (VIT) in <br /> the School of
+            Computer Science and Engineering (SCOPE). Jayakumar's areas of
+            expertise include Open <br /> Source Programming, Network
+            Security, Storage Technologies, and Machine Learning. His research{" "}
+            <br /> interests are in the use of technology in education and
+            developing open-source software that takes into <br /> consideration
+            the unique needs of learners. <br />
+          </p>
+        </div>
+
           <h1 className="text-5xl text-center font-apex font-normal leading-12 md:text-5xl lg:text-6xl">
             MEET <br /> OUR TEAM
           </h1>
