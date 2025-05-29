@@ -346,7 +346,7 @@ const BlogCard = ({ blog, index, priority }) => {
                     }}
                   />
                 </div> */}
-                <div className="hidden sm:block">
+                <div className="sm:block">
                   <span className="text-gray-300 text-xs">{blog.readTime}</span>
                   <p className="text-white text-sm font-medium">{blog.author.name}</p>
                 </div>
