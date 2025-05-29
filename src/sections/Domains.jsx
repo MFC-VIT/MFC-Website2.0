@@ -46,7 +46,7 @@ export default function Domains() {
                   <ul className="subdomain-list">
                     {domain.subs.map((sub, subIndex) => (
                       <li key={sub}>
-                        <span className="bullet">›</span>
+                        {/* <span className="bullet">›</span> */}
                         <span className="subtext">{sub}</span>
                         {subIndex < domain.subs.length - 1 && (
                           <div className="sub-divider"></div>

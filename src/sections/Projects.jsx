@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import FoxFallbackImage from "../assets/images/fox.png";
+
 const Projects = () => {
   const [hoveredProjectId, setHoveredProjectId] = useState(null);
   const [selectedProjectId, setSelectedProjectId] = useState(null);
@@ -16,6 +17,8 @@ const Projects = () => {
   const previewTagsRef = useRef(null);
   const previewNumberRef = useRef(null);
   const previewPaneRef = useRef(null);
+
+  const mobilePreviewRefs = useRef({});
 
   const foxImageRef = useRef(null);
   const foxTextLine1Ref = useRef(null);
@@ -48,6 +51,12 @@ const Projects = () => {
     }
   };
 
+  const addToMobilePreviewRefs = (el, projectId) => {
+    if (el) {
+      mobilePreviewRefs.current[projectId] = el;
+    }
+  };
+
   useEffect(() => {
     projectListRefs.current.forEach((el) => {
       const projectId = parseInt(el.dataset.projectId, 10);
@@ -68,12 +77,12 @@ const Projects = () => {
           color: "#ff6d00",
           duration: 0.3,
           ease: "power3.out",
-        }); // brand-orange
+        });
         gsap.to(name, {
           color: isSelected ? "#ff9a00" : "#ffeadb",
           duration: 0.3,
           ease: "power3.out",
-        }); // brand-orange-light
+        });
         el.classList.add("is-active-item");
       } else {
         gsap.to(content, { x: 0, duration: 0.3, ease: "power3.out" });
@@ -84,6 +93,35 @@ const Projects = () => {
         });
         gsap.to(name, { color: "#e8ded5", duration: 0.3, ease: "power3.out" });
         el.classList.remove("is-active-item");
+      }
+    });
+
+    Object.keys(mobilePreviewRefs.current).forEach((projectId) => {
+      const previewEl = mobilePreviewRefs.current[projectId];
+      if (previewEl) {
+        const isSelectedMobile = selectedProjectId === parseInt(projectId, 10);
+
+        gsap.killTweensOf(previewEl);
+        
+        if (isSelectedMobile) {
+          gsap.set(previewEl, { display: 'block', height: 0, opacity: 0 });
+          gsap.to(previewEl, {
+            height: "auto",
+            opacity: 1,
+            duration: 0.4,
+            ease: "power3.out",
+          });
+        } else {
+          gsap.to(previewEl, {
+            height: 0,
+            opacity: 0,
+            duration: 0.3,
+            ease: "power3.in",
+            onComplete: () => {
+              gsap.set(previewEl, { display: 'none' });
+            }
+          });
+        }
       }
     });
   }, [hoveredProjectId, selectedProjectId, projects]);
@@ -259,10 +297,75 @@ const Projects = () => {
     }
   };
 
+  const renderMobilePreview = (project) => (
+    <div
+      ref={(el) => addToMobilePreviewRefs(el, project.id)}
+      className="overflow-hidden"
+      style={{ 
+        height: 0, 
+        opacity: 0,
+        display: 'none'
+      }}
+    >
+      <div className="bg-neutral-900 rounded-xl shadow-2xl p-4 mx-4 mb-4 border border-neutral-700/50">
+        <div
+          className="w-full h-48 bg-cover bg-center rounded-lg mb-4 shadow-lg border border-neutral-700"
+          style={{
+            backgroundImage: `url(${project.projectImage || FoxFallbackImage})`,
+          }}
+        ></div>
+        <div className="flex flex-col">
+          <div className="flex justify-between items-start mb-2">
+            <h2 className="font-apex text-xl text-main">{project.projectName}</h2>
+            <p className="font-yoshiro text-3xl text-orange-500/40">
+              {project.projectNumber}
+            </p>
+          </div>
+          <p className="text-primary/80 text-sm leading-relaxed mb-3">
+            {project.description}
+          </p>
+          <div className="mb-4">
+            {project.tags.map((tag) => (
+              <span
+                key={tag}
+                className="inline-block bg-orange-600/20 text-orange-400 text-xs font-semibold mr-2 mb-2 px-3 py-1.5 rounded-full"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+          <a
+            href={project.projectLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center font-apex text-orange-500 hover:text-orange-400 transition-colors duration-300 group self-start text-base"
+            onClick={(e) => e.stopPropagation()}
+          >
+            View Project
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={2}
+              stroke="currentColor"
+              className="w-4 h-4 ml-2 transform transition-transform duration-300 group-hover:translate-x-1"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+
   return (
     <div
       id="projects"
-      className="min-h-screen h-fit w-full flex flex-col pt-24 md:pt-32 pb-20 md:pb-28 relative bg-black text-main"
+      className="h-fit w-full flex flex-col pt-24 md:pt-32 pb-20 md:pb-20 relative bg-black text-main"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 md:mb-24">
@@ -274,7 +377,80 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="flex flex-col md:flex-row gap-8 lg:gap-12">
+        <div className="block md:hidden">
+          <div className="w-full">
+            {projects.map((item) => (
+              <React.Fragment key={item.id}>
+                <div
+                  data-project-id={item.id}
+                  className={`project-item-wrapper border-b border-neutral-700 last:border-b-0
+                              transition-all duration-300 ease-in-out relative group
+                              ${
+                                selectedProjectId === item.id
+                                  ? "bg-neutral-800/70 border-l-4 border-orange-500"
+                                  : "hover:bg-neutral-800/50"
+                              }`}
+                  onMouseEnter={() => setHoveredProjectId(item.id)}
+                  onMouseLeave={() => setHoveredProjectId(null)}
+                  ref={addToRefs}
+                >
+                  <div
+                    className={`absolute top-0 left-0 h-full w-1 
+                                  bg-gradient-to-b from-orange-500/0 via-orange-500/60 to-orange-500/0
+                                  transition-opacity duration-300 opacity-0 
+                                  group-[.is-active-item]:opacity-100 
+                                  ${
+                                    selectedProjectId === item.id
+                                      ? "!opacity-100 !via-orange-500"
+                                      : ""
+                                  }`}
+                  ></div>
+
+                  <a
+                    href={item.projectLink}
+                    onClick={(e) => handleProjectClick(e, item.id)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block p-4 project-content"
+                  >
+                    <div className="flex items-start gap-4">
+                      <p className="project-number font-yoshiro text-3xl text-secondary/60 pt-1 flex-shrink-0">
+                        {item.projectNumber}
+                      </p>
+                      <div className="flex-grow min-w-0">
+                        <h3 className="project-name font-apex text-2xl sm:text-3xl tracking-wide text-main">
+                          {item.projectName}
+                        </h3>
+                        <p className="text-sm font-light text-primary/60 mt-1">
+                          {item.tagline}
+                        </p>
+                      </div>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth={1.5}
+                        stroke="currentColor"
+                        className={`w-5 h-5 text-secondary/50 self-center transition-transform duration-300 group-hover:translate-x-1 group-[.is-active-item]:text-orange-400 flex-shrink-0 ${
+                          selectedProjectId === item.id ? 'rotate-90' : ''
+                        }`}
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                        />
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+                {renderMobilePreview(item)}
+              </React.Fragment>
+            ))}
+          </div>
+        </div>
+
+        <div className="hidden md:flex md:flex-row gap-8 lg:gap-12">
           <div className="w-full md:w-[45%] lg:w-[40%] space-y-0">
             {projects.map((item) => (
               <div
@@ -342,14 +518,15 @@ const Projects = () => {
             ))}
           </div>
 
-          <div className="w-full md:w-[55%] lg:w-[60%] md:sticky md:top-24 h-[60vh] md:h-auto md:max-h-[70vh] mt-8 md:mt-0">
+          <div className="w-full md:w-[55%] lg:w-[60%] md:sticky md:top-24 md:h-auto md:max-h-[70vh] mt-8 md:mt-0">
             <div
               ref={previewPaneRef}
               onClick={handlePreviewPaneClick}
-              className="bg-neutral-900 rounded-xl shadow-2xl h-full flex flex-col 
+              className="bg-neutral-900 rounded-xl shadow-2xl flex flex-col 
                          p-6 md:p-8 relative overflow-hidden border border-neutral-700/50
                          transition-all duration-300 ease-in-out
-                         hover:border-neutral-600"
+                         hover:border-neutral-600
+                         md:h-full h-auto min-h-[500px]"
             >
               <div
                 ref={previewImageRef}
@@ -428,7 +605,7 @@ const Projects = () => {
         </div>
       </div>
     </div>
-  );
+  );  
 };
 
 export default Projects;
@@ -452,7 +629,7 @@ const projects = [
     projectName: "Enrollment Portal",
     tagline: "Streamlined student enrollment system.",
     description:
-      "MFC’s dynamic enrollment portal where students select domains, complete tasks and answer questions to advance to interview rounds—delivering a transparent, seamless and smooth experience.",
+      "MFC's dynamic enrollment portal where students select domains, complete tasks and answer questions to advance to interview rounds—delivering a transparent, seamless and smooth experience.",
     projectLink: "https://enrollments.mfcvit.in/",
     projectImage:
       "https://res.cloudinary.com/abhi-server/image/upload/v1744723075/Screenshot_2025-04-15_184737_htgyro.png",
@@ -464,7 +641,7 @@ const projects = [
     projectName: "Tech Wars",
     tagline: "Engaging platform for competitive tech events.",
     description:
-      "The flagship Gravitas event, built by MFC’s dev team using Next.js, Vite, Node.js, Express and MongoDB, is a challenging team-based game where participants compete, solve riddles, and defend real-world territory points on a battlefield.",
+      "The flagship Gravitas event, built by MFC's dev team using Next.js, Vite, Node.js, Express and MongoDB, is a challenging team-based game where participants compete, solve riddles, and defend real-world territory points on a battlefield.",
     projectLink: "https://github.com/MFC-VIT/TechWars-Frontend.git",
     projectImage:
       "https://res.cloudinary.com/abhi-server/image/upload/v1747631791/Screenshot_2025-05-19_104614_vhm9ye.png",
