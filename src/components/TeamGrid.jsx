@@ -512,7 +512,7 @@ const boardMembersData = {
     {
       name: "Himika Bansal",
       designation: "HR Head",
-      image: "https://res.cloudinary.com/abhi-server/image/upload/v1748419347/Screenshot_2025-05-28_133214_ixwpxl.png",
+      image: "/images/board/24-25/hr.webp",
       socialLinks: {
         linkedin: "http://www.linkedin.com/in/himika-bansal",
         github: "https://github.com/himika-bansal",
