@@ -61,10 +61,15 @@ const firefoxColors = {
   light: '#FFFFFF'
 };
 
+const isTouchDevice = () =>
+  'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+
 function App() {
   const [loading, setLoading] = useState(true);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
+  const [isMouse, setIsMouse] = useState(false);
   
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 1500);
@@ -84,10 +89,14 @@ function App() {
   }, []);
   
   useEffect(() => {
+
+    if (isTouchDevice()) return;
+    setIsMouse(true) 
+
     const handleMouseMove = (e) => {
       setCursorPosition({ x: e.clientX, y: e.clientY });
     };
-    
+
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
@@ -132,7 +141,7 @@ function App() {
           variants={pageVariants}
           className="bg-dark relative"
         >
-          <div 
+          (isMouse && <div 
             className="fixed w-6 h-6 rounded-full pointer-events-none z-50 mix-blend-difference"
             style={{
               background: `radial-gradient(circle, ${firefoxColors.primary} 0%, ${firefoxColors.accent} 100%)`,
@@ -140,7 +149,7 @@ function App() {
               transform: `translate(${cursorPosition.x - 3}px, ${cursorPosition.y - 3}px)`,
               transition: 'transform 0.05s linear'
             }}
-          />
+          />)
           
           <motion.div 
             className="fixed top-0 left-0 right-0 h-1 z-40"

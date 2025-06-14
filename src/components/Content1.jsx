@@ -14,7 +14,7 @@ export default function Content1() {
   const [typingComplete, setTypingComplete] = useState(false);
   const [currentCharIndex, setCurrentCharIndex] = useState(0);
   const carouselItems = useMemo(() => ["Open Minds", "Open Ideas", "Open Source"], []);
-  const titleText = "MOZILLA FIREFOX";
+  const titleText = "MOZILLA FIREFOX CLUB";
   const subtitleText = "Firefox Answers To No One But To You";
 
 

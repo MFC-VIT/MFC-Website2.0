@@ -178,6 +178,8 @@ const Link = ({ link, text, textClass }) => {
   return (
     <a
       href={link}
+      target="_blank"
+      rel="noopener noreferrer"
       className={`w-fit border-2 border-[#F7813F] bg-gradient-to-b from-neutral-800 via-neutral-900 to-black hover:bg-gradient-to-b hover:from-orange-500 hover:via-orange-400 hover:to-orange-500 border-x-orange-600 border-t-orange-500 border-y-orange-700 hover:border-none transition-all duration-300 hover:shadow-md hover:sm:shadow-orange-700/50 hover:sm:-translate-x-1 hover:sm:-translate-y-1 active:sm:translate-x-0 active:sm:translate-y-0 active:shadow-none py-2 px-4 sm:px-5 rounded-full flex items-center font-apex gap-1 sm:gap-2 group ${textClass}`}
     >
       <span className="text-main text-sm max-sm:text-xs pl-2 tracking-wider group-hover:text-white transition-colors duration-300">

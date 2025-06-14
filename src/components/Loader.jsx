@@ -40,7 +40,7 @@ const Loader = ({ colors, size = "lg" }) => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5 }}
       >
-        MOZILLA FIREFOX CLUB
+        MOZILLA FIREFOX CLUB - VIT VELLORE
       </motion.div>
     </div>
   );

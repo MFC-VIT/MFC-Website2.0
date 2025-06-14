@@ -21,11 +21,34 @@ const Toplayout = () => {
             <h1 className="text-orange-500 font-CAYoshiroTRIAL text-lg md:text-xl lg:text-2xl">
               Faculty Coordinator
             </h1>
+              <div className="social-links">
+                <a
+                  href={"https://www.linkedin.com/in/iamjayakumars/"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fab fa-linkedin-in text-orange-500"></i>
+                </a>
+                <a
+                  href={"https://github.com/iamjayakumars"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fab fa-github text-orange-500"></i>
+                </a>
+                <a
+                  href={"http://www.jayakumars.in/"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fa-solid fa-globe text-orange-500"></i>
+                </a>
+              </div>
           </div>
 
           <div className="mt-3 md:mt-4 lg:mt-5 text-justify md:text-center font-CAYoshiroTRIAL text-sm md:text-base lg:text-lg">
           <p>
-            Jayakumar Sadhasivam is an Assistant Professor Senior Grade 1 at
+            Jayakumar Sadhasivam is an Associate Professor Grade 1 at
             Vellore Institute of Technology (VIT) in <br /> the School of
             Computer Science and Engineering (SCOPE). Jayakumar's areas of
             expertise include Open <br /> Source Programming, Network
