@@ -512,6 +512,9 @@ const NewsletterCard = ({ newsletter, isActive }) => {
   };
 
   const imageVariants = {
+    rest: {
+    scale: 1
+  },
     hover: {
       scale: 1.15,
       transition: {
@@ -529,7 +532,7 @@ const NewsletterCard = ({ newsletter, isActive }) => {
       `}
       style={{
         width: '320px',
-        height: '460px',
+        height: '530px',
       }}
     >
       <div className="h-full flex flex-col">
