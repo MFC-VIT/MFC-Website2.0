@@ -223,7 +223,7 @@ const SubmitEmail = async (e) => {
           <div className="relative overflow-hidden rounded-xl">
             <div className="flex transition-transform duration-500 ease-in-out" 
                  style={{ transform: `translateX(-${activeIndex * 100}%)` }}>
-              {newsletters.map((newsletter, index) => (
+              {[...newsletters].reverse().map((newsletter, index) => (
                 <div key={newsletter._id} className="w-full flex-shrink-0 px-4">
                   <div className="flex flex-col lg:flex-row items-center justify-center gap-8 py-8">
                     {/* Newsletter Card */}
