@@ -66,7 +66,7 @@
 /* Grid Layout */
 .marquee-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 2fr);
   gap: 30px;
   padding: 20px;
   width: 100%;
@@ -144,7 +144,7 @@
 /* Media Queries for Responsiveness */
 @media (max-width: 1200px) {
   .marquee-container {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .marquee-item img {

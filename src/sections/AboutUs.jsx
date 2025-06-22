@@ -330,7 +330,8 @@ const AboutUs = () => {
                     </p>
                 </motion.div> */}
             </div>
-        </section>
+            </section>
+
     );
 };
 

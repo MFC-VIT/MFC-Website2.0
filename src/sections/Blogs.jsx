@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import PropTypes from 'prop-types'; 
-import { BsWindowSidebar } from 'react-icons/bs';
 import React from 'react';
 
 
