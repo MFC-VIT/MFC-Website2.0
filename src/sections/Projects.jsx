@@ -618,7 +618,7 @@ const projects = [
     tagline: "Seamlessly find your next roommate.",
     description:
       "Roommate matchmaking website for VIT students. Built using the MERN stack—Users can browse different configuration rooms to their liking based on search filters, connect through integrated chat system or shared contact info.",
-    projectLink: "https://roommate-dhoondo.mfcvit.in",
+    projectLink: "https://roommatedhoondo.mozillavit.in/",
     projectImage:
       "https://res.cloudinary.com/abhi-server/image/upload/v1744722884/Screenshot_2025-04-15_184405_bbuq2r.png",
     tags: ["React", "Node.js", "MongoDB", "Express"],
