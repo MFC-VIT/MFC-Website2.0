@@ -816,12 +816,12 @@ const boardMembersData = {
     },
     {
       name: "Dakshata Abhyankar",
-      designation: "UIUX Head",
+      designation: "UIUX Lead",
       image: "/images/board/26-27/uiux.webp",
       socialLinks: {
-        linkedin: "",
-        github: "",
-        instagram: "",
+        linkedin: "https://www.linkedin.com/in/dakshata-abhyankar-5aab57330",
+        github: "https://github.com/auradude01-arch ",
+        instagram: "#",
       },
     },
     {
