@@ -765,7 +765,7 @@ const boardMembersData = {
       },
     },
     {
-      name: "",
+      name: "Aayush Keshwani",
       designation: "Vice Chairperson",
       image: "/images/board/26-27/vc-27.webp",
       socialLinks: {
@@ -775,7 +775,7 @@ const boardMembersData = {
       },
     },
     {
-      name: "",
+      name: "Adithya Nachiyappan",
       designation: "Co-Secretary",
       image: "/images/board/26-27/cosec.webp",
       socialLinks: {
@@ -815,7 +815,7 @@ const boardMembersData = {
       },
     },
     {
-      name: "",
+      name: "Dakshata Abhyankar",
       designation: "UIUX Head",
       image: "/images/board/26-27/uiux.webp",
       socialLinks: {
@@ -825,7 +825,7 @@ const boardMembersData = {
       },
     },
     {
-      name: "",
+      name: "Rishita ",
       designation: "Design Head",
       image: "/images/board/26-27/design.webp",
       socialLinks: {
@@ -847,7 +847,7 @@ const boardMembersData = {
     {
       name: "Pranjal Sahay",
       designation: "General Operations Lead",
-      image: "/images/board/26-27/genops.webp",
+      image: "/images/board/26-27/genops.png",
       socialLinks: {
         linkedin: "https://www.linkedin.com/in/pranjal-sahay-1a995a318",
         github: "https://github.com/pranjalsahay",
@@ -887,7 +887,7 @@ const boardMembersData = {
     },
 
     {
-      name: "",
+      name: "Aadya Agrawal",
       designation: "Content Lead",
       image: "/images/board/26-27/content.webp",
       socialLinks: {
