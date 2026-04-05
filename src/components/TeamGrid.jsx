@@ -814,9 +814,28 @@ const boardMembersData = {
         instagram: "",
       },
     },
-
     {
       name: "",
+      designation: "UIUX Head",
+      image: "/images/board/26-27/uiux.webp",
+      socialLinks: {
+        linkedin: "",
+        github: "",
+        instagram: "",
+      },
+    },
+    {
+      name: "",
+      designation: "Design Head",
+      image: "/images/board/26-27/design.webp",
+      socialLinks: {
+        linkedin: "",
+        github: "",
+        instagram: "",
+      },
+    },
+    {
+      name: "Arshia Ghosh",
       designation: "Events Head",
       image: "/images/board/26-27/events.webp",
       socialLinks: {
@@ -845,28 +864,9 @@ const boardMembersData = {
         instagram: "https://www.instagram.com/neha_damani0909/",
       },
     },
+
     {
-      name: "",
-      designation: "Design Head",
-      image: "/images/board/26-27/design.webp",
-      socialLinks: {
-        linkedin: "",
-        github: "",
-        instagram: "",
-      },
-    },
-    {
-      name: "",
-      designation: "UIUX Head",
-      image: "/images/board/26-27/uiux.webp",
-      socialLinks: {
-        linkedin: "",
-        github: "",
-        instagram: "",
-      },
-    },
-    {
-      name: "",
+      name: "Traya Jawahar",
       designation: "Outreach Head",
       image: "/images/board/26-27/out.webp",
       socialLinks: {
@@ -876,7 +876,7 @@ const boardMembersData = {
       },
     },
     {
-      name: "",
+      name: "Pooja Goel",
       designation: "HR Head",
       image: "/images/board/26-27/hr.webp",
       socialLinks: {
@@ -897,7 +897,7 @@ const boardMembersData = {
       },
     },
     {
-      name: "",
+      name: "Manya Singh",
       designation: "Public Relations Head",
       image: "/images/board/26-27/pnr.webp",
       socialLinks: {
