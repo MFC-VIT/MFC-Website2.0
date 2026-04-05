@@ -779,9 +779,9 @@ const boardMembersData = {
       designation: "Co-Secretary",
       image: "/images/board/26-27/cosec.webp",
       socialLinks: {
-        linkedin: "",
-        github: "",
-        instagram: "",
+        linkedin: "https://in.linkedin.com/in/adithya-nachiyappan",
+        github: "https://github.com/Nachi2006",
+        instagram: "https://www.instagram.com/illumi_nachi",
       },
     },
     {
@@ -801,7 +801,7 @@ const boardMembersData = {
       socialLinks: {
         linkedin: "https://www.linkedin.com/in/yuvraj-bansal30",
         github: "https://github.com/codewithyuvi",
-        instagram: "",
+        instagram: "https://www.instagram.com/bansalyuvrajdec30",
       },
     },
     {
@@ -811,18 +811,17 @@ const boardMembersData = {
       socialLinks: {
         linkedin: "https://www.linkedin.com/in/riyanjohnson",
         github: "https://github.com/Riyanjohnson",
-        instagram:
-          "https://www.instagram.com/riyan.johnson16?igsh=cjV3enh0a3o5dGRr",
+        instagram: "https://www.instagram.com/riyan.johnson16",
       },
     },
     {
       name: "Dakshata Abhyankar",
-      designation: "UIUX Head",
+      designation: "UIUX Lead",
       image: "/images/board/26-27/uiux.webp",
       socialLinks: {
-        linkedin: "",
-        github: "",
-        instagram: "",
+        linkedin: "https://www.linkedin.com/in/dakshata-abhyankar-5aab57330",
+        github: "https://github.com/auradude01-arch ",
+        instagram: "#",
       },
     },
     {
@@ -830,9 +829,9 @@ const boardMembersData = {
       designation: "Design Head",
       image: "/images/board/26-27/design.webp",
       socialLinks: {
-        linkedin: "",
-        github: "",
-        instagram: "",
+        linkedin: "https://www.linkedin.com/in/rishita-khetan-0b3a3734b/",
+        github: "https://github.com/RishitaKhetan",
+        instagram: "https://www.instagram.com/rissytaaa/",
       },
     },
     {
@@ -840,9 +839,9 @@ const boardMembersData = {
       designation: "Events Head",
       image: "/images/board/26-27/events.png",
       socialLinks: {
-        linkedin: "",
-        github: "",
-        instagram: "",
+        linkedin: "https://www.linkedin.com/in/arshia-ghosh-93421a316/",
+        github: "https://github.com/arshia-2010",
+        instagram: "https://www.instagram.com/arshia_ghoshh",
       },
     },
     {
@@ -881,9 +880,9 @@ const boardMembersData = {
       designation: "HR Head",
       image: "/images/board/26-27/hr.webp",
       socialLinks: {
-        linkedin: "",
-        github: "",
-        instagram: "",
+        linkedin: "https://www.linkedin.com/in/pooja-goel-b16397329",
+        github: "https://github.com/Pooja-Goel07",
+        instagram: "https://www.instagram.com/pooja._goel07",
       },
     },
 
@@ -892,9 +891,9 @@ const boardMembersData = {
       designation: "Content Lead",
       image: "/images/board/26-27/content.webp",
       socialLinks: {
-        linkedin: "",
-        github: "",
-        instagram: "",
+        linkedin: "https://www.linkedin.com/in/aadya-agarwal-4a8362314/",
+        github: "https://github.com/aadya-agarwal",
+        instagram: "https://www.instagram.com/__a_adya_",
       },
     },
     {
