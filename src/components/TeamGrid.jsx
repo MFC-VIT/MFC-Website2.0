@@ -781,8 +781,7 @@ const boardMembersData = {
       socialLinks: {
         linkedin: "https://in.linkedin.com/in/adithya-nachiyappan",
         github: "https://github.com/Nachi2006",
-        instagram:
-          "https://www.instagram.com/illumi_nachi?igsh=ZDNteXRvMHM3OHVt",
+        instagram: "https://www.instagram.com/illumi_nachi",
       },
     },
     {
@@ -812,8 +811,7 @@ const boardMembersData = {
       socialLinks: {
         linkedin: "https://www.linkedin.com/in/riyanjohnson",
         github: "https://github.com/Riyanjohnson",
-        instagram:
-          "https://www.instagram.com/riyan.johnson16?igsh=cjV3enh0a3o5dGRr",
+        instagram: "https://www.instagram.com/riyan.johnson16",
       },
     },
     {
@@ -882,9 +880,9 @@ const boardMembersData = {
       designation: "HR Head",
       image: "/images/board/26-27/hr.webp",
       socialLinks: {
-        linkedin: "",
-        github: "",
-        instagram: "",
+        linkedin: "https://www.linkedin.com/in/pooja-goel-b16397329",
+        github: "https://github.com/Pooja-Goel07",
+        instagram: "https://www.instagram.com/pooja._goel07",
       },
     },
 
@@ -895,8 +893,7 @@ const boardMembersData = {
       socialLinks: {
         linkedin: "https://www.linkedin.com/in/aadya-agarwal-4a8362314/",
         github: "https://github.com/aadya-agarwal",
-        instagram:
-          "https://www.instagram.com/__a_adya_?igsh=MXR0emM2OTN5cDhpYg==",
+        instagram: "https://www.instagram.com/__a_adya_",
       },
     },
     {
