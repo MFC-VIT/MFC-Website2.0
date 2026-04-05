@@ -825,7 +825,7 @@ const boardMembersData = {
       },
     },
     {
-      name: "Rishita ",
+      name: "Rishita Khetan",
       designation: "Design Head",
       image: "/images/board/26-27/design.webp",
       socialLinks: {
