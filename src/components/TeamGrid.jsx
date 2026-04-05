@@ -892,9 +892,10 @@ const boardMembersData = {
       designation: "Content Lead",
       image: "/images/board/26-27/content.webp",
       socialLinks: {
-        linkedin: "",
-        github: "",
-        instagram: "",
+        linkedin: "https://www.linkedin.com/in/aadya-agarwal-4a8362314/",
+        github: "https://github.com/aadya-agarwal",
+        instagram:
+          "https://www.instagram.com/__a_adya_?igsh=MXR0emM2OTN5cDhpYg==",
       },
     },
     {
