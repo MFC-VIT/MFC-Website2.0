@@ -830,9 +830,9 @@ const boardMembersData = {
       designation: "Design Head",
       image: "/images/board/26-27/design.webp",
       socialLinks: {
-        linkedin: "",
-        github: "",
-        instagram: "",
+        linkedin: "https://www.linkedin.com/in/rishita-khetan-0b3a3734b/",
+        github: "https://github.com/RishitaKhetan",
+        instagram: "https://www.instagram.com/rissytaaa/",
       },
     },
     {
