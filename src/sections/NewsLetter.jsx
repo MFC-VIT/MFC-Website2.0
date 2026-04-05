@@ -6,6 +6,13 @@ import PropTypes from 'prop-types';
 import { useSwipeable } from 'react-swipeable';
 import axios from "axios";
 
+const getApiBaseUrl = () => {
+  const fromEnv = import.meta.env.VITE_API_URL || import.meta.env.VITE_DEV_URL || '';
+  const fallback = typeof window !== 'undefined' ? window.location.origin : '';
+  const base = (fromEnv || fallback).trim();
+  return base.replace(/\/+$/, '');
+};
+
 const NewsletterShowcase = () => {
   const [newsletters, setNewsletters] = useState([]);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -18,7 +25,7 @@ const NewsletterShowcase = () => {
   // const autoplayRef = useRef(null);
   const carouselRef = useRef(null);
 
-  const API_URL = import.meta.env.VITE_API_URL;
+  const API_URL = getApiBaseUrl();
 
   useEffect(() => {
     const fetchNewsletters = async () => {
@@ -31,11 +38,14 @@ const NewsletterShowcase = () => {
         }
 
         const result = await response.json();
+        const newslettersData = Array.isArray(result)
+          ? result
+          : (Array.isArray(result?.data) ? result.data : []);
 
-        const processedNewsletters = result.data
+        const processedNewsletters = newslettersData
           .map(newsletter => ({
             ...newsletter,
-            title: newsletter.title.replace(/^"|"$/g, ''),
+            title: (newsletter.title || '').replace(/^"|"$/g, ''),
             formattedDate: formatDate(newsletter.uploadDate)
           }))
           .sort((a, b) => new Date(b.uploadDate) - new Date(a.uploadDate));

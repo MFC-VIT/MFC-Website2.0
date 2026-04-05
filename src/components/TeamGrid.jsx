@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../styles/teamGrid.css";
-import '@fortawesome/fontawesome-free/css/all.min.css';
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const TeamGrid = () => {
   const [selectedYear, setSelectedYear] = useState("2025-26");
@@ -23,6 +23,7 @@ const TeamGrid = () => {
           <option value="2023-24">2023-24</option>
           <option value="2024-25">2024-25</option>
           <option value="2025-26">2025-26</option>
+          <option value="2026-27">2026-27</option>
         </select>
       </div>
 
@@ -287,7 +288,8 @@ const boardMembersData = {
     {
       name: "Vaishali Singh",
       designation: "Events Head",
-      image: "https://res.cloudinary.com/abhi-server/image/upload/v1748419016/Screenshot_2025-05-28_132646_ajirsu.png",
+      image:
+        "https://res.cloudinary.com/abhi-server/image/upload/v1748419016/Screenshot_2025-05-28_132646_ajirsu.png",
       socialLinks: {
         linkedin:
           "https://in.linkedin.com/in/vaishali-singh25?trk=public_profile_browsemap",
@@ -298,7 +300,8 @@ const boardMembersData = {
     {
       name: "Stuti Chaudhury",
       designation: "Editorial Head",
-      image: "https://res.cloudinary.com/abhi-server/image/upload/v1748419121/Screenshot_2025-05-28_132829_kkbno9.png",
+      image:
+        "https://res.cloudinary.com/abhi-server/image/upload/v1748419121/Screenshot_2025-05-28_132829_kkbno9.png",
       socialLinks: {
         linkedin:
           "https://in.linkedin.com/in/stuti-chaudhury-8419a3235?trk=public_profile_browsemap",
@@ -422,7 +425,8 @@ const boardMembersData = {
     {
       name: "Namah Singhal",
       designation: "General Secretary",
-      image: "https://res.cloudinary.com/abhi-server/image/upload/v1748418338/Screenshot_2025-05-28_130920_n3sa8c.png",
+      image:
+        "https://res.cloudinary.com/abhi-server/image/upload/v1748418338/Screenshot_2025-05-28_130920_n3sa8c.png",
       socialLinks: {
         linkedin: "https://www.linkedin.com/in/namah-singhal-983446217/",
         github: "https://github.com/NAMAH942",
@@ -570,7 +574,7 @@ const boardMembersData = {
       },
     },
   ],
-  "2025-26":[
+  "2025-26": [
     {
       name: "Harshvardhan Singh",
       designation: "ChairPerson",
@@ -668,7 +672,8 @@ const boardMembersData = {
       socialLinks: {
         linkedin: "https://www.linkedin.com/in/nikhil-arya-linga-941a3028a/",
         github: "https://github.com/nikhillinga",
-        instagram: "https://www.instagram.com/nikhil_linga?igsh=NDh3ZzNzaG1wcnJn&utm_source=qr",
+        instagram:
+          "https://www.instagram.com/nikhil_linga?igsh=NDh3ZzNzaG1wcnJn&utm_source=qr",
       },
     },
     {
@@ -731,6 +736,6 @@ const boardMembersData = {
         instagram: "https://www.instagram.com/_saanvi_0306",
       },
     },
-  ]
+  ],
+  
 };
-
