@@ -847,7 +847,7 @@ const boardMembersData = {
     {
       name: "Pranjal Sahay",
       designation: "General Operations Lead",
-      image: "/images/board/26-27/genops.png",
+      image: "/images/board/26-27/genops.jpeg",
       socialLinks: {
         linkedin: "https://www.linkedin.com/in/pranjal-sahay-1a995a318",
         github: "https://github.com/pranjalsahay",
