@@ -809,9 +809,10 @@ const boardMembersData = {
       designation: "Open Source Software Lead",
       image: "/images/board/26-27/oss.webp",
       socialLinks: {
-        linkedin: "",
-        github: "",
-        instagram: "",
+        linkedin: "https://www.linkedin.com/in/riyanjohnson",
+        github: "https://github.com/Riyanjohnson",
+        instagram:
+          "https://www.instagram.com/riyan.johnson16?igsh=cjV3enh0a3o5dGRr",
       },
     },
     {
@@ -837,7 +838,7 @@ const boardMembersData = {
     {
       name: "Arshia Ghosh",
       designation: "Events Head",
-      image: "/images/board/26-27/events.webp",
+      image: "/images/board/26-27/events.png",
       socialLinks: {
         linkedin: "",
         github: "",
