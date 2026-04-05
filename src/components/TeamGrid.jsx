@@ -801,7 +801,7 @@ const boardMembersData = {
       socialLinks: {
         linkedin: "https://www.linkedin.com/in/yuvraj-bansal30",
         github: "https://github.com/codewithyuvi",
-        instagram: "",
+        instagram: "https://www.instagram.com/bansalyuvrajdec30",
       },
     },
     {
@@ -839,9 +839,9 @@ const boardMembersData = {
       designation: "Events Head",
       image: "/images/board/26-27/events.png",
       socialLinks: {
-        linkedin: "",
-        github: "",
-        instagram: "",
+        linkedin: "https://www.linkedin.com/in/arshia-ghosh-93421a316/",
+        github: "https://github.com/arshia-2010",
+        instagram: "https://www.instagram.com/arshia_ghoshh",
       },
     },
     {
