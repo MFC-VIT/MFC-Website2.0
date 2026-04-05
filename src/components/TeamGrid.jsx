@@ -3,7 +3,7 @@ import "../styles/teamGrid.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const TeamGrid = () => {
-  const [selectedYear, setSelectedYear] = useState("2025-26");
+  const [selectedYear, setSelectedYear] = useState("2026-27");
 
   const boardMembers = boardMembersData[selectedYear] || [];
 
@@ -30,11 +30,17 @@ const TeamGrid = () => {
       <div className="marquee-container">
         {boardMembers.map((member, index) => (
           <div key={index} className="marquee-item">
-            <img
-              src={member.image}
-              alt={`${member.name} Image`}
-              className="object-fit border-orange-500 border-2"
-            />
+            <div className="avatar-shell border-orange-500 border-2">
+              <img
+                src={member.image}
+                alt={`${member.name} Image`}
+                className="object-fit"
+                style={{
+                  "--img-zoom": member.imageZoom || 1.12,
+                  "--img-position": member.imagePosition || "50% 28%",
+                }}
+              />
+            </div>
             <h2 className="name">{member.name}</h2>
             <p className="designation">{member.designation}</p>
             <div className="social-links">
@@ -783,21 +789,32 @@ const boardMembersData = {
       designation: "Technical Head",
       image: "/images/board/26-27/tech.webp",
       socialLinks: {
-        linkedin: "https://www.linkedin.com/in/adith-manikonda",
-        github: "",
+        linkedin: "https://www.linkedin.com/in/adith-manikonda/",
+        github: "https://github.com/Ad1th",
+        instagram: "https://www.instagram.com/byteryder_/",
+      },
+    },
+    {
+      name: "Yuvraj Bansal",
+      designation: "Web Development Lead",
+      image: "/images/board/26-27/webdev.webp",
+      socialLinks: {
+        linkedin: "https://www.linkedin.com/in/yuvraj-bansal30",
+        github: "https://github.com/codewithyuvi",
         instagram: "",
       },
     },
     {
-      name: "",
-      designation: "Projects Head",
-      image: "/images/board/26-27/projects.webp",
+      name: "Riyan Johnson",
+      designation: "Open Source Software Lead",
+      image: "/images/board/26-27/oss.webp",
       socialLinks: {
         linkedin: "",
         github: "",
         instagram: "",
       },
     },
+
     {
       name: "",
       designation: "Events Head",
@@ -809,23 +826,23 @@ const boardMembersData = {
       },
     },
     {
-      name: "",
-      designation: "Research and Development Head",
-      image: "/images/board/26-27/rnd.webp",
+      name: "Pranjal Sahay",
+      designation: "General Operations Lead",
+      image: "/images/board/26-27/genops.webp",
       socialLinks: {
-        linkedin: "",
-        github: "",
-        instagram: "",
+        linkedin: "https://www.linkedin.com/in/pranjal-sahay-1a995a318",
+        github: "https://github.com/pranjalsahay",
+        instagram: "https://www.instagram.com/ipranjalsahay/",
       },
     },
     {
-      name: "",
+      name: "Neha Damani",
       designation: "Publicity Head",
       image: "/images/board/26-27/publicity.webp",
       socialLinks: {
-        linkedin: "",
-        github: "",
-        instagram: "",
+        linkedin: "https://www.linkedin.com/in/neha-damani-727973316",
+        github: "https://github.com/nehadamani0909",
+        instagram: "https://www.instagram.com/neha_damani0909/",
       },
     },
     {
@@ -836,13 +853,12 @@ const boardMembersData = {
         linkedin: "",
         github: "",
         instagram: "",
-          "https://www.instagram.com/nikhil_linga?igsh=NDh3ZzNzaG1wcnJn&utm_source=qr",
       },
     },
     {
       name: "",
-      designation: "Management Head",
-      image: "/images/board/26-27/mang.webp",
+      designation: "UIUX Head",
+      image: "/images/board/26-27/uiux.webp",
       socialLinks: {
         linkedin: "",
         github: "",
@@ -869,20 +885,11 @@ const boardMembersData = {
         instagram: "",
       },
     },
+
     {
       name: "",
-      designation: "Finance Head",
-      image: "/images/board/26-27/finance.webp",
-      socialLinks: {
-        linkedin: "",
-        github: "",
-        instagram: "",
-      },
-    },
-    {
-      name: "",
-      designation: "Creative Head",
-      image: "/images/board/26-27/creativity.webp",
+      designation: "Content Lead",
+      image: "/images/board/26-27/content.webp",
       socialLinks: {
         linkedin: "",
         github: "",
