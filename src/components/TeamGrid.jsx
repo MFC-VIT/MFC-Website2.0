@@ -779,9 +779,10 @@ const boardMembersData = {
       designation: "Co-Secretary",
       image: "/images/board/26-27/cosec.webp",
       socialLinks: {
-        linkedin: "",
-        github: "",
-        instagram: "",
+        linkedin: "https://in.linkedin.com/in/adithya-nachiyappan",
+        github: "https://github.com/Nachi2006",
+        instagram:
+          "https://www.instagram.com/illumi_nachi?igsh=ZDNteXRvMHM3OHVt",
       },
     },
     {
