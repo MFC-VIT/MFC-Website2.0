@@ -92,12 +92,21 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
-.marquee-item img {
+.avatar-shell {
   margin-bottom: 1rem;
   border-radius: 100%;
   width: clamp(80px, 15vw, 150px);
   height: clamp(80px, 15vw, 150px);
+  overflow: hidden;
+}
+
+.marquee-item img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  object-position: var(--img-position, 50% 28%);
+  transform: scale(var(--img-zoom, 1.12));
+  transform-origin: center;
 }
 
 /* Typography */
@@ -147,7 +156,7 @@
     grid-template-columns: repeat(4, 1fr);
   }
 
-  .marquee-item img {
+  .avatar-shell {
     width: 120px;
     height: 120px;
   }
@@ -162,7 +171,7 @@
     grid-template-columns: 1fr;
   }
 
-  .marquee-item img {
+  .avatar-shell {
     width: 100px;
     height: 100px;
   }
