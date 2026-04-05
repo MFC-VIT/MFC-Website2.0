@@ -737,5 +737,167 @@ const boardMembersData = {
       },
     },
   ],
-  
+  "2026-27": [
+    {
+      name: "Ansh Jerath",
+      designation: "ChairPerson",
+      image: "/images/board/26-27/chair.webp",
+      socialLinks: {
+        linkedin: "https://www.linkedin.com/in/ansh-jerath-a25412214",
+        github: "https://github.com/darkhorse0204",
+        instagram: "https://www.instagram.com/ansh.jerath/",
+      },
+    },
+    {
+      name: "Bihan Banerjee",
+      designation: "General Secretary",
+      image: "/images/board/26-27/gensec.webp",
+      socialLinks: {
+        linkedin: "https://www.linkedin.com/in/bihan-banerjee-70905228b",
+        github: "https://github.com/Bihan-Banerjee",
+        instagram: "https://www.instagram.com/k2g_02/",
+      },
+    },
+    {
+      name: "",
+      designation: "Vice Chairperson",
+      image: "/images/board/26-27/vc-27.webp",
+      socialLinks: {
+        linkedin: "",
+        github: "",
+        instagram: "",
+      },
+    },
+    {
+      name: "",
+      designation: "Co-Secretary",
+      image: "/images/board/26-27/cosec.webp",
+      socialLinks: {
+        linkedin: "",
+        github: "",
+        instagram: "",
+      },
+    },
+    {
+      name: "Adith Manikonda",
+      designation: "Technical Head",
+      image: "/images/board/26-27/tech.webp",
+      socialLinks: {
+        linkedin: "https://www.linkedin.com/in/adith-manikonda",
+        github: "",
+        instagram: "",
+      },
+    },
+    {
+      name: "",
+      designation: "Projects Head",
+      image: "/images/board/26-27/projects.webp",
+      socialLinks: {
+        linkedin: "",
+        github: "",
+        instagram: "",
+      },
+    },
+    {
+      name: "",
+      designation: "Events Head",
+      image: "/images/board/26-27/events.webp",
+      socialLinks: {
+        linkedin: "",
+        github: "",
+        instagram: "",
+      },
+    },
+    {
+      name: "",
+      designation: "Research and Development Head",
+      image: "/images/board/26-27/rnd.webp",
+      socialLinks: {
+        linkedin: "",
+        github: "",
+        instagram: "",
+      },
+    },
+    {
+      name: "",
+      designation: "Publicity Head",
+      image: "/images/board/26-27/publicity.webp",
+      socialLinks: {
+        linkedin: "",
+        github: "",
+        instagram: "",
+      },
+    },
+    {
+      name: "",
+      designation: "Design Head",
+      image: "/images/board/26-27/design.webp",
+      socialLinks: {
+        linkedin: "",
+        github: "",
+        instagram: "",
+          "https://www.instagram.com/nikhil_linga?igsh=NDh3ZzNzaG1wcnJn&utm_source=qr",
+      },
+    },
+    {
+      name: "",
+      designation: "Management Head",
+      image: "/images/board/26-27/mang.webp",
+      socialLinks: {
+        linkedin: "",
+        github: "",
+        instagram: "",
+      },
+    },
+    {
+      name: "",
+      designation: "Outreach Head",
+      image: "/images/board/26-27/out.webp",
+      socialLinks: {
+        linkedin: "",
+        github: "",
+        instagram: "",
+      },
+    },
+    {
+      name: "",
+      designation: "HR Head",
+      image: "/images/board/26-27/hr.webp",
+      socialLinks: {
+        linkedin: "",
+        github: "",
+        instagram: "",
+      },
+    },
+    {
+      name: "",
+      designation: "Finance Head",
+      image: "/images/board/26-27/finance.webp",
+      socialLinks: {
+        linkedin: "",
+        github: "",
+        instagram: "",
+      },
+    },
+    {
+      name: "",
+      designation: "Creative Head",
+      image: "/images/board/26-27/creativity.webp",
+      socialLinks: {
+        linkedin: "",
+        github: "",
+        instagram: "",
+      },
+    },
+    {
+      name: "",
+      designation: "Public Relations Head",
+      image: "/images/board/26-27/pnr.webp",
+      socialLinks: {
+        linkedin: "",
+        github: "",
+        instagram: "",
+      },
+    },
+  ],
 };
