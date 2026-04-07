@@ -761,7 +761,7 @@ const boardMembersData = {
       socialLinks: {
         linkedin: "https://www.linkedin.com/in/bihan-banerjee-70905228b",
         github: "https://github.com/Bihan-Banerjee",
-        instagram: "https://www.instagram.com/k2g_02/",
+        instagram: "https://www.instagram.com/banerjee.bihan/",
       },
     },
     {
