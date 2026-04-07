@@ -761,7 +761,7 @@ const boardMembersData = {
       socialLinks: {
         linkedin: "https://www.linkedin.com/in/bihan-banerjee-70905228b",
         github: "https://github.com/Bihan-Banerjee",
-        instagram: "https://www.instagram.com/k2g_02/",
+        instagram: "https://www.instagram.com/banerjee.bihan/",
       },
     },
     {
@@ -870,9 +870,9 @@ const boardMembersData = {
       designation: "Outreach Head",
       image: "/images/board/26-27/out.webp",
       socialLinks: {
-        linkedin: "",
-        github: "",
-        instagram: "",
+        linkedin: "https://www.linkedin.com/in/traya-jawahar-2a13bb373",
+        github: "https://github.com/TrayaJawahar",
+        instagram: "https://www.instagram.com/traya_jawahar",
       },
     },
     {
