@@ -870,7 +870,7 @@ const boardMembersData = {
       designation: "Outreach Head",
       image: "/images/board/26-27/out.webp",
       socialLinks: {
-        linkedin: "",
+        linkedin: "https://www.linkedin.com/in/traya-jawahar-2a13bb373",
         github: "https://github.com/TrayaJawahar",
         instagram: "https://www.instagram.com/traya_jawahar",
       },
