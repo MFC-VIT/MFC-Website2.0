@@ -871,8 +871,8 @@ const boardMembersData = {
       image: "/images/board/26-27/out.webp",
       socialLinks: {
         linkedin: "",
-        github: "",
-        instagram: "",
+        github: "https://github.com/TrayaJawahar",
+        instagram: "https://www.instagram.com/traya_jawahar",
       },
     },
     {
