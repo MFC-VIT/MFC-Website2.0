@@ -769,9 +769,9 @@ const boardMembersData = {
       designation: "Vice Chairperson",
       image: "/images/board/26-27/vc-27.webp",
       socialLinks: {
-        linkedin: "",
-        github: "",
-        instagram: "",
+        linkedin: "https://www.linkedin.com/in/aayush-keshwani",
+        github: "https://github.com/Aayush-Keshwani",
+        instagram: "https://www.instagram.com/aayush_keshwani",
       },
     },
     {
