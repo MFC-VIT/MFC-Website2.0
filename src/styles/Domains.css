@@ -389,8 +389,9 @@
 
 .icon-wrapper {
   position: relative;
-  display: inline-block;
-  margin-bottom: 12px; /* slightly reduced from 20px to remove extra gap */
+  display: block;
+  width: fit-content;
+  margin: 0 auto 12px;
 }
 
 /* Keep icon display block to avoid inline image baseline gap */
